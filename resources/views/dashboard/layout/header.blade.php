@@ -42,14 +42,15 @@
         <div class="nav-link-container">
             <i class="fa-solid fa-xmark close-menu"></i>
             <ul class="nav-links">
-                <li class="nav-link-item"><a href="index.html">Home</a></li>
+                <li class="nav-link-item"><a href="{{url('/')}}">Home</a></li>
               
                 <li class="nav-link-item dropdown-menu-branch">
                     <a href="#" data-toggle="dropdown-menu">Admission <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-main-menu">
-                        <li class="dropdown-menu-item"><a href="#">Option 1</a></li>
-                        <li class="dropdown-menu-item"><a href="#">Option 2</a></li>
-                        <li class="dropdown-menu-item"><a href="#">Option 3</a></li>
+                        <li class="dropdown-menu-item"><a href="{{url('addmission')}}">How to apply</a></li>
+                        <li class="dropdown-menu-item"><a href="{{url('application-form')}}">Appliction Form</a></li>
+                        <li class="dropdown-menu-item"><a href="{{url('fees-structure')}}">Fees Structure</a></li>
+                        <li class="dropdown-menu-item"><a href="{{url('facility')}}">Facilities</a></li>
                     </ul>
                 </li>
                 <li class="nav-link-item"><a href="gallery.html">Gallery</a></li>

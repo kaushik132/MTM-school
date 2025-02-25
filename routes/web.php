@@ -18,5 +18,12 @@ Route::get('/',[HomeController::class,'index']);
 Route::get('about-us',[HomeController::class,'about']);
 Route::get('contact-us',[HomeController::class,'contact']);
 Route::get('activities',[HomeController::class,'activities']);
+Route::get('addmission',[HomeController::class,'addmission']);
+Route::get('application-form',[HomeController::class,'applicationForm']);
+Route::get('facility',[HomeController::class,'facility']);
+Route::get('fees-structure',[HomeController::class,'feesStructure']);
+Route::get('gallery',[HomeController::class,'gallery']);
+
+
 
 

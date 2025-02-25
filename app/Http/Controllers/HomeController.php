@@ -21,4 +21,26 @@ class HomeController extends Controller
     public function activities(){
         return view('activities');
     }
+
+    public function addmission(){
+        return view('addmission');
+    }
+
+    public function applicationForm(){
+        return view('applicationform');
+    }
+
+
+    public function facility(){
+        return view('facility');
+    }
+
+
+    public function feesStructure(){
+        return view('feesStructure');
+    }
+
+    public function gallery(){
+        return view('gallery');
+    }
 }
