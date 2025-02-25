@@ -53,9 +53,9 @@
                     </ul>
                 </li>
                 <li class="nav-link-item"><a href="gallery.html">Gallery</a></li>
-                <li class="nav-link-item"><a href="activities.html">Activities</a></li>
+                <li class="nav-link-item"><a href="{{url('activities')}}">Activities</a></li>
                 <li class="nav-link-item"><a href="{{url('about-us')}}">About Us</a></li>
-                <li class="nav-link-item"><a href="contact-us.html">Contact us</a></li>
+                <li class="nav-link-item"><a href="{{url('contact-us')}}">Contact us</a></li>
                 <li class="nav-link-item"><a href="#"><span class="nav-apply-btn">Apply Now</span></a></li>
             </ul>
         </div>
