@@ -23,6 +23,8 @@ Route::get('application-form',[HomeController::class,'applicationForm']);
 Route::get('facility',[HomeController::class,'facility']);
 Route::get('fees-structure',[HomeController::class,'feesStructure']);
 Route::get('gallery',[HomeController::class,'gallery']);
+Route::get('user-login',[HomeController::class,'userLogin']);
+Route::get('user-signup',[HomeController::class,'userRegister']);
 
 
 

@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\HomeBanner;
+use App\Models\Facility;
 class HomeController extends Controller
 {
     public function index(){
-        return view('home');
+        $banners = HomeBanner::all();
+        $facilty = Facility::limit(8)->get(); 
+        return view('home', compact('banners','facilty'));
     }
 
     public function about(){
@@ -42,5 +45,13 @@ class HomeController extends Controller
 
     public function gallery(){
         return view('gallery');
+    }
+
+    public function userLogin(){
+        return view('userlogin');
+    }
+
+    public function userRegister(){
+        return view('usersignup');
     }
 }

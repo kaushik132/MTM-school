@@ -5,51 +5,27 @@
             <div class="container-fluid">
                 <div class="swiper banner-slider mt-4 mb-4">
                     <div class="swiper-wrapper">
+
+                        @foreach ($banners as $banner)
+                            
+                    
                         <div class="swiper-slide main-user-slide">
                            <div class="banner-slider-container">
-                              <div><img src="https://img.freepik.com/premium-photo/asian-student-girl-wears-school-uniform-pointing-fingers-copy-space-yellow-background-isolated-clipping-paths-design-work-empty_45996-2125.jpg?w=996" alt="banner" class="img-fluid"></div>
+                              <div><img src="{{url('uploads/'.$banner->image)}}" alt="banner" class="img-fluid"></div>
                               <div class="banner-slider-content">
                                 <span class="sub-title-show"><i class="fa-solid fa-graduation-cap"></i> Welcome to MTM School</span>
-                                <h1>Start Your Beautiful<br>
-                                    and <span>Bright</span> Future</h1>
-                                    <p>Step into a world of endless possibilities, growth, and success—build the future you've always dreamed of starting today!</p>
+                             <h1>{!!$banner->title!!}</h1>
+                                    <p>{{$banner->short_description}}</p>
                                <div class="banner-btns">
-                                 <a href="#" class="text-decoration-none"><button class="about-more">About More</button></a>
-                                 <a href="#" class="text-decoration-none"><button class="learn-more">Learn More</button></a>
+                                 <a href="{{$banner->about_more}}" class="text-decoration-none"><button class="about-more">About More</button></a>
+                                 <a href="{{$banner->learn_more}}" class="text-decoration-none"><button class="learn-more">Learn More</button></a>
                                </div>
                                 </div>
                            </div>
                         </div>
-                        <div class="swiper-slide main-user-slide">
-                            <div class="banner-slider-container">
-                                <div><img src="https://img.freepik.com/premium-photo/happy-teen-girls-casual-checkered-shirt-carry-backpack-education-portrait-schoolgirl-student_545934-22385.jpg?w=826" alt="banner" class="img-fluid"></div>
-                                <div class="banner-slider-content">
-                                  <span class="sub-title-show"><i class="fa-solid fa-graduation-cap"></i> Welcome to MTM School</span>
-                                  <h1>Start Your Beautiful<br>
-                                      and <span>Bright</span> Future</h1>
-                                      <p>Step into a world of endless possibilities, growth, and success—build the future you've always dreamed of starting today!</p>
-                                 <div class="banner-btns">
-                                   <a href="#" class="text-decoration-none"><button class="about-more">About More</button></a>
-                                   <a href="#" class="text-decoration-none"><button class="learn-more">Learn More</button></a>
-                                 </div>
-                                  </div>
-                             </div>
-                        </div>
-                        <div class="swiper-slide main-user-slide">
-                            <div class="banner-slider-container">
-                                <div><img src="https://img.freepik.com/premium-photo/schoolgirl-with-backpack-wearing-casual-jeans-denim-shirt-outfit_113725-3150.jpg?w=900" alt="banner" class="img-fluid"></div>
-                                <div class="banner-slider-content">
-                                  <span class="sub-title-show"><i class="fa-solid fa-graduation-cap"></i> Welcome to MTM School</span>
-                                  <h1>Start Your Beautiful<br>
-                                      and <span>Bright</span> Future</h1>
-                                      <p>Step into a world of endless possibilities, growth, and success—build the future you've always dreamed of starting today!</p>
-                                 <div class="banner-btns">
-                                   <a href="#" class="text-decoration-none"><button class="about-more">About More</button></a>
-                                   <a href="#" class="text-decoration-none"><button class="learn-more">Learn More</button></a>
-                                 </div>
-                                  </div>
-                             </div>
-                        </div>
+                        @endforeach
+                    
+                 
                     </div>
     
                     <!-- Navigation buttons -->
@@ -65,70 +41,26 @@
                 <h2>Facility</h2>
             </div>
             <div class="row mt-3">
+            
+
+                @foreach ($facilty as $fac)
+                    
+              
                 <div class="col-md-3 mt-3">
                     <div class="facility-container">
-                        <div class="faclty-contain-img"><img src="./assets/images/facility-1.png" alt="icon"
+                        <div class="faclty-contain-img"><img src="{{url('uploads/'.$fac->image)}}" alt="icon"
                                 class="img-fluid"></div>
-                        <h3>Digital education</h3>
-                        <p>It is a long established fact that a reader will be distracted.</p>
+                        <h3>{{$fac->name}}</h3>
+                        <p>{{$fac->content}}</p>
                     </div>
                 </div>
-                <div class="col-md-3 mt-3">
-                    <div class="facility-container">
-                        <div class="faclty-contain-img"><img src="./assets/images/facility-2.png" alt="icon"
-                                class="img-fluid"></div>
-                        <h3>Digital education</h3>
-                        <p>It is a long established fact that a reader will be distracted.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-3">
-                    <div class="facility-container">
-                        <div class="faclty-contain-img"><img src="./assets/images/facility-3.png" alt="icon"
-                                class="img-fluid"></div>
-                        <h3>Digital education</h3>
-                        <p>It is a long established fact that a reader will be distracted.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-3">
-                    <div class="facility-container">
-                        <div class="faclty-contain-img"><img src="./assets/images/facility-4.png" alt="icon"
-                                class="img-fluid"></div>
-                        <h3>Digital education</h3>
-                        <p>It is a long established fact that a reader will be distracted.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-3">
-                    <div class="facility-container">
-                        <div class="faclty-contain-img"><img src="./assets/images/facility-5.png" alt="icon"
-                                class="img-fluid"></div>
-                        <h3>Digital education</h3>
-                        <p>It is a long established fact that a reader will be distracted.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-3">
-                    <div class="facility-container">
-                        <div class="faclty-contain-img"><img src="./assets/images/facility-2.png" alt="icon"
-                                class="img-fluid"></div>
-                        <h3>Digital education</h3>
-                        <p>It is a long established fact that a reader will be distracted.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-3">
-                    <div class="facility-container">
-                        <div class="faclty-contain-img"><img src="./assets/images/facility-1.png" alt="icon"
-                                class="img-fluid"></div>
-                        <h3>Digital education</h3>
-                        <p>It is a long established fact that a reader will be distracted.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-3">
-                    <div class="facility-container">
-                        <div class="faclty-contain-img"><img src="./assets/images/facility-3.png" alt="icon"
-                                class="img-fluid"></div>
-                        <h3>Digital education</h3>
-                        <p>It is a long established fact that a reader will be distracted.</p>
-                    </div>
-                </div>
+                @endforeach
+              
+            
+              
+          
+                
+             
             </div>
         </div>
     </section>

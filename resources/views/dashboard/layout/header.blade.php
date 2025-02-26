@@ -34,7 +34,7 @@
       <!-- --------------- Navbar-------------------------- -->
     <header class="nav-container">
         <div class="nav-logo">
-            <a href="index.html"><img src="./assets/images/logo.png" alt="logo"></a>
+            <a href="{{url('/')}}"><img src="./assets/images/logo.png" alt="logo"></a>
         </div>
         <i class="fa-solid fa-bars open-menu"></i>
         <div class="background"></div>
