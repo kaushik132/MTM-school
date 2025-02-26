@@ -20,134 +20,32 @@
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
     </div>
     <div class="row mt-3">
+    
+  
+        @foreach ($facal as $facs)
+                    
+              
         <div class="col-md-3 mt-3">
             <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-1.png" alt="icon"
+                <div class="faclty-contain-img"><img src="{{url('uploads/'.$facs->image)}}" alt="icon"
                         class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
+                <h3>{{$facs->name}}</h3>
+                <p>{{$facs->content}}</p>
             </div>
         </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-2.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-3.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-4.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-5.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-2.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-1.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-3.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-1.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-2.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-3.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-4.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-5.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-2.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-1.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
-        <div class="col-md-3 mt-3">
-            <div class="facility-container">
-                <div class="faclty-contain-img"><img src="./assets/images/facility-3.png" alt="icon"
-                        class="img-fluid"></div>
-                <h3>Digital education</h3>
-                <p>It is a long established fact that a reader will be distracted.</p>
-            </div>
-        </div>
+        @endforeach
+      
+    
+     
+      
+      
+  
+     
+      
+    
+   
+      
+    
     </div>
 </div>
 </section>

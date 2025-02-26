@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\HomeBanner;
 use App\Models\Facility;
+use App\Models\GalleryImage;
+use App\Models\GalleryVideo;
 class HomeController extends Controller
 {
     public function index(){
@@ -35,7 +37,8 @@ class HomeController extends Controller
 
 
     public function facility(){
-        return view('facility');
+        $facal = Facility::orderBy('id', 'desc')->get();
+        return view('facility', compact('facal'));
     }
 
 
@@ -44,7 +47,9 @@ class HomeController extends Controller
     }
 
     public function gallery(){
-        return view('gallery');
+        $galleryImages = GalleryImage::orderBy('id', 'desc')->get();
+        $galleryVideos = GalleryVideo::orderBy('id', 'desc')->get();
+        return view('gallery', compact('galleryImages','galleryVideos'));
     }
 
     public function userLogin(){

@@ -14,5 +14,7 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('home-banners', HomeBannerController::class);
     $router->resource('facilities', FacilityController::class);
+    $router->resource('gallery-images', GalleryImageController::class);
+    $router->resource('gallery-videos', GalleryVideoController::class);
 
 });

@@ -87,7 +87,7 @@
                     </div>
                     <div class="col-md-5 mt-3">
                         <div class="main-heading-with-show text-start">
-                            <span style="border-bottom: solid 2px yellow;"><i class="fa-solid fa-graduation-cap"></i> About Us</span>
+                            <span style="border-bottom : solid 2px yellow;"><i class="fa-solid fa-graduation-cap"></i> About Us</span>
                             <h2>Our Edukation System <span class="footer-icon-show">Inspires</span> You More.</h2>
                             <div style="text-align: justify;">
                                 <p>There are many variations of passages available but the majority have suffered alteration in some
