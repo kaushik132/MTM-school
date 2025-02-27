@@ -58,19 +58,49 @@
                             <div class="p-3">
                                 <h3 class="mt-3"><b>Get In Touch</b></h3>
                                 <p class="mt-2">It is a long established fact that a reader will be distracted by the readable content of a page randomised words which don't look even slightly when looking at its layout.</p>
-                                <form>
+                                @if (session()->has('message'))
+                                <div class="alert alert-success">
+                                 
+                                   
+                                   {{session()->get('message')}}
+                                </div>
+                                    
+                                @endif
+                                <form action="{{route('contact.post')}}" method="POST">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-6 mt-3">
-                                         <input type="text" placeholder="Your Name" class="input-box-show">
+                                         <input type="text" name="name" placeholder="Your Name" class="input-box-show">
+                                         <span>
+                                            @error('name')
+                                            <strong class="text-danger">{{$message}}</strong>
+                                            @enderror
+                                         </span>
                                         </div>
                                         <div class="col-md-6 mt-3">
-                                            <input type="email" placeholder="Your Email ID" class="input-box-show">
+                                            <input type="email"  name="email" placeholder="Your Email ID" class="input-box-show">
+                                            <span>
+                                                @error('email')
+                                                <strong class="text-danger">{{$message}}</strong>
+                                                @enderror
+                                             </span>
+                                            </span>
                                            </div>
                                            <div class="col-md-12 mt-3">
-                                            <input type="text" placeholder="Your Subject" class="input-box-show">      
+                                            <input type="text" name="subject" placeholder="Your Subject" class="input-box-show">
+                                            <span>
+                                                @error('subject')
+                                                <strong class="text-danger">{{$message}}</strong>
+                                                @enderror
+                                             </span>      
                                            </div>
                                            <div class="col-md-12 mt-3">
-                                            <textarea name="" id="" rows="4" cols="10" placeholder="Write your Message" class="input-box-show"></textarea>
+                                            <textarea name="message" id="" rows="4" cols="10" placeholder="Write your Message" class="input-box-show"></textarea>
+                                            <span>
+                                                @error('message')
+                                                <strong class="text-danger">{{$message}}</strong>
+                                                @enderror
+                                             </span>
                                            </div>
                                            <div class="col-md-12 mt-4">
                                             <div><button class="discover-more-btn">Send Message</button></div>

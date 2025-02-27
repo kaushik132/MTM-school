@@ -60,41 +60,37 @@
                    
                 </div>
                 <div class="quick-facts-bg mt-4">
-                  <div class="row">
-                    <div class="col-md-3 mt-3 col-6">
-                        <div class="facts-container">
-                            <div class="fact-contain-img"><img src="./assets/images/fact-icon1.png" alt="icon"
-                                class="img-fluid"></div>
-                                <h3>Student</h3>
-                                <h4 class="counter" data-target="1150">+0</h4>
+                    <div class="row">
+                        <div class="col-md-3 mt-3 col-6">
+                            <div class="facts-container">
+                                <div class="fact-contain-img"><img src="./assets/images/fact-icon1.png" alt="icon" class="img-fluid"></div>
+                                <h3>Students</h3>
+                                <h4 class="counter" data-target="{{ $quickFacts->student }}">+0</h4>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 mt-3 col-6">
-                        <div class="facts-container">
-                            <div class="fact-contain-img"><img src="./assets/images/fact-icon2.png" alt="icon"
-                                class="img-fluid"></div>
+                        <div class="col-md-3 mt-3 col-6">
+                            <div class="facts-container">
+                                <div class="fact-contain-img"><img src="./assets/images/fact-icon2.png" alt="icon" class="img-fluid"></div>
                                 <h3>Teachers</h3>
-                                <h4 class="counter" data-target="150">+0</h4>
+                                <h4 class="counter" data-target="{{ $quickFacts->teacher }}">+0</h4>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 mt-3 col-6">
-                        <div class="facts-container">
-                            <div class="fact-contain-img"><img src="./assets/images/fact-icon3.png" alt="icon"
-                                class="img-fluid"></div>
+                        <div class="col-md-3 mt-3 col-6">
+                            <div class="facts-container">
+                                <div class="fact-contain-img"><img src="./assets/images/fact-icon3.png" alt="icon" class="img-fluid"></div>
                                 <h3>Win Awards</h3>
-                                <h4 class="counter" data-target="60">+0</h4>
+                                <h4 class="counter" data-target="{{ $quickFacts->win_awards }}">+0</h4>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 mt-3 col-6">
-                        <div class="facts-container">
-                            <div class="fact-contain-img"><img src="./assets/images/fact-icon4.png" alt="icon"
-                                class="img-fluid"></div>
+                        <div class="col-md-3 mt-3 col-6">
+                            <div class="facts-container">
+                                <div class="fact-contain-img"><img src="./assets/images/fact-icon4.png" alt="icon" class="img-fluid"></div>
                                 <h3>Classes</h3>
-                                <h4 class="counter" data-target="90">+0</h4>
+                                <h4 class="counter" data-target="{{ $quickFacts->classes }}">+0</h4>
+                            </div>
                         </div>
                     </div>
-
-                  </div>
+                    
                 </div>
             </div>
          </section>
@@ -109,72 +105,25 @@
     </div>
     <div class="swiper our-team-slider mt-4 mb-4">
         <div class="swiper-wrapper">
-            <div class="swiper-slide main-user-slide">
-                <div class="team-slider-card">
-                    <div><img
-                            src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                            alt="icon" class="slider-user-image"></div>
-                    <div class="slider-user-details">
-                        <h3>Susan D. LunsFord</h3>
-                        <p>Principal</p>
+     
+        
+            @foreach ($teachers as  $teacher)
+                   
+               <div class="swiper-slide main-user-slide">
+                   <div class="team-slider-card">
+                       <div><img
+                        src="{{url('uploads/'.$teacher->image)}}" alt="icon" class="slider-user-image"></div>
+                    
+                        <div class="slider-user-details">
+                            <h3>{{$teacher->name}}</h3>
+                            <p>{{$teacher->profession}}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide main-user-slide">
-                <div class="team-slider-card">
-                    <div><img
-                            src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                            alt="icon" class="slider-user-image"></div>
-                    <div class="slider-user-details">
-                        <h3>Susan D. LunsFord</h3>
-                        <p>Principal</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide main-user-slide">
-                <div class="team-slider-card">
-                    <div><img
-                            src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                            alt="icon" class="slider-user-image"></div>
-                    <div class="slider-user-details">
-                        <h3>Susan D. LunsFord</h3>
-                        <p>Principal</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide main-user-slide">
-                <div class="team-slider-card">
-                    <div><img
-                            src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                            alt="icon" class="slider-user-image"></div>
-                    <div class="slider-user-details">
-                        <h3>Susan D. LunsFord</h3>
-                        <p>Principal</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide main-user-slide">
-                <div class="team-slider-card">
-                    <div><img
-                            src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                            alt="icon" class="slider-user-image"></div>
-                    <div class="slider-user-details">
-                        <h3>Susan D. LunsFord</h3>
-                        <p>Principal</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide main-user-slide">
-                <div class="team-slider-card">
-                    <div><img
-                            src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                            alt="icon" class="slider-user-image"></div>
-                    <div class="slider-user-details">
-                        <h3>Susan D. LunsFord</h3>
-                        <p>Principal</p>
-                    </div>
-                </div>
-            </div>
+                @endforeach
+                
+          
+        
         </div>
 
         <!-- Navigation buttons -->
@@ -183,5 +132,6 @@
     </div>
 </div>
 </section>
+
 
 @endsection

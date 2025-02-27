@@ -18,5 +18,10 @@ Route::group([
     $router->resource('gallery-videos', GalleryVideoController::class);
     $router->resource('activities', ActivitiesController::class);
     $router->resource('teachers', TeacherController::class);
+    $router->resource('quick-facts', QuickFactsController::class);
+    $router->resource('why-choose-uses', WhyChooseUsController::class);
+    $router->resource('faqs', FaqController::class);
+    $router->resource('contacts', ContactController::class);
+
 
 });

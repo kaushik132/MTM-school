@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2025 at 06:08 AM
+-- Generation Time: Feb 27, 2025 at 11:47 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -20,6 +20,33 @@ SET time_zone = "+00:00";
 --
 -- Database: `tmt_school`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `activities`
+--
+
+CREATE TABLE `activities` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `activities`
+--
+
+INSERT INTO `activities` (`id`, `image`, `alt`, `name`, `content`, `created_at`, `updated_at`) VALUES
+(1, 'images/HyUAbbjS8DPJxCXggd8t0Dxiy6VWQ7IZcUOwVHvq.jpeg', 'Annual Day', 'Annual Day', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', '2025-02-27 00:00:56', '2025-02-27 00:00:56'),
+(2, 'images/k_1527750852e.jpg', 'Sports Day', 'Sports Day', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', '2025-02-27 00:05:40', '2025-02-27 00:05:40'),
+(3, 'images/Scientific-demonstration-and-activities-during-National-Science-Day-celebration-at-IITGN-3.jpg', 'Science Fair', 'Science Fair', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', '2025-02-27 00:06:03', '2025-02-27 00:06:03'),
+(4, 'images/indian-festival-kathak-fb.jpg', 'Cultural Fest', 'Cultural Fest', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', '2025-02-27 00:06:24', '2025-02-27 00:06:24'),
+(5, 'images/02-1-1024x682.jpg', 'Debates & Quiz', 'Debates & Quiz', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', '2025-02-27 00:06:44', '2025-02-27 00:06:44');
 
 -- --------------------------------------------------------
 
@@ -51,16 +78,22 @@ INSERT INTO `admin_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `p
 (5, 2, 5, 'Permission', 'icon-ban', 'auth/permissions', NULL, NULL, NULL),
 (6, 2, 6, 'Menu', 'icon-bars', 'auth/menu', NULL, NULL, NULL),
 (7, 2, 7, 'Operation log', 'icon-history', 'auth/logs', NULL, NULL, NULL),
-(8, 0, 7, 'Helpers', 'icon-cogs', '', NULL, '2025-02-21 04:26:55', '2025-02-21 04:26:55'),
-(9, 8, 8, 'Scaffold', 'icon-keyboard', 'helpers/scaffold', NULL, '2025-02-21 04:26:55', '2025-02-21 04:26:55'),
-(10, 8, 9, 'Database terminal', 'icon-database', 'helpers/terminal/database', NULL, '2025-02-21 04:26:55', '2025-02-21 04:26:55'),
-(11, 8, 10, 'Laravel artisan', 'icon-terminal', 'helpers/terminal/artisan', NULL, '2025-02-21 04:26:55', '2025-02-21 04:26:55'),
-(12, 8, 11, 'Routes', 'icon-list-alt', 'helpers/routes', NULL, '2025-02-21 04:26:55', '2025-02-21 04:26:55'),
-(13, 0, 11, 'Home-banners', 'icon-file', 'home-banners', NULL, '2025-02-25 23:24:50', '2025-02-25 23:24:50'),
-(14, 0, 11, 'Facilities', 'icon-file', 'facilities', NULL, '2025-02-26 00:22:09', '2025-02-26 00:22:09'),
-(15, 0, 0, 'Galley', 'icon-air-freshener', NULL, '*', '2025-02-26 01:38:57', '2025-02-26 01:38:57'),
-(16, 15, 11, 'Gallery-images', 'icon-file', 'gallery-images', NULL, '2025-02-26 01:42:43', '2025-02-26 01:43:14'),
-(17, 15, 11, 'Gallery-videos', 'icon-file', 'gallery-videos', NULL, '2025-02-26 01:46:23', '2025-02-26 01:47:00');
+(8, 0, 8, 'Helpers', 'icon-cogs', '', NULL, '2025-02-21 04:26:55', '2025-02-26 23:55:08'),
+(9, 8, 9, 'Scaffold', 'icon-keyboard', 'helpers/scaffold', NULL, '2025-02-21 04:26:55', '2025-02-26 23:55:08'),
+(10, 8, 10, 'Database terminal', 'icon-database', 'helpers/terminal/database', NULL, '2025-02-21 04:26:55', '2025-02-26 23:55:08'),
+(11, 8, 11, 'Laravel artisan', 'icon-terminal', 'helpers/terminal/artisan', NULL, '2025-02-21 04:26:55', '2025-02-26 23:55:08'),
+(12, 8, 12, 'Routes', 'icon-list-alt', 'helpers/routes', NULL, '2025-02-21 04:26:55', '2025-02-26 23:55:08'),
+(13, 0, 13, 'Home-banners', 'icon-file', 'home-banners', NULL, '2025-02-25 23:24:50', '2025-02-26 23:55:08'),
+(14, 0, 14, 'Facilities', 'icon-file', 'facilities', NULL, '2025-02-26 00:22:09', '2025-02-26 23:55:08'),
+(15, 0, 15, 'Gallery', 'icon-air-freshener', NULL, '*', '2025-02-26 01:38:57', '2025-02-26 23:55:08'),
+(16, 15, 16, 'Gallery-images', 'icon-file', 'gallery-images', NULL, '2025-02-26 01:42:43', '2025-02-26 23:55:08'),
+(17, 15, 17, 'Gallery-videos', 'icon-file', 'gallery-videos', NULL, '2025-02-26 01:46:23', '2025-02-26 23:55:08'),
+(18, 0, 17, 'Activities', 'icon-file', 'activities', NULL, '2025-02-26 23:56:53', '2025-02-26 23:56:53'),
+(19, 0, 17, 'Teachers', 'icon-file', 'teachers', NULL, '2025-02-27 00:52:54', '2025-02-27 00:52:54'),
+(21, 0, 17, 'Quick-facts', 'icon-file', 'quick-facts', NULL, '2025-02-27 01:36:28', '2025-02-27 01:36:28'),
+(22, 0, 17, 'Why-choose-uses', 'icon-file', 'why-choose-uses', NULL, '2025-02-27 02:01:46', '2025-02-27 02:01:46'),
+(23, 0, 17, 'Faqs', 'icon-file', 'faqs', NULL, '2025-02-27 03:22:09', '2025-02-27 03:22:09'),
+(24, 0, 17, 'Contacts', 'icon-file', 'contacts', NULL, '2025-02-27 04:11:12', '2025-02-27 04:11:12');
 
 -- --------------------------------------------------------
 
@@ -309,7 +342,188 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (223, 1, 'admin/gallery-images', 'GET', '127.0.0.1', '[]', '2025-02-26 01:57:16', '2025-02-26 01:57:16'),
 (224, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-26 02:02:48', '2025-02-26 02:02:48'),
 (225, 1, 'admin/home-banners', 'GET', '127.0.0.1', '[]', '2025-02-26 02:02:50', '2025-02-26 02:02:50'),
-(226, 1, 'admin/facilities', 'GET', '127.0.0.1', '[]', '2025-02-26 02:02:51', '2025-02-26 02:02:51');
+(226, 1, 'admin/facilities', 'GET', '127.0.0.1', '[]', '2025-02-26 02:02:51', '2025-02-26 02:02:51'),
+(227, 1, 'admin', 'GET', '127.0.0.1', '[]', '2025-02-26 23:53:39', '2025-02-26 23:53:39'),
+(228, 1, 'admin/home-banners', 'GET', '127.0.0.1', '[]', '2025-02-26 23:53:45', '2025-02-26 23:53:45'),
+(229, 1, 'admin/facilities', 'GET', '127.0.0.1', '[]', '2025-02-26 23:53:49', '2025-02-26 23:53:49'),
+(230, 1, 'admin', 'GET', '127.0.0.1', '[]', '2025-02-26 23:53:53', '2025-02-26 23:53:53'),
+(231, 1, 'admin/gallery-images', 'GET', '127.0.0.1', '[]', '2025-02-26 23:53:55', '2025-02-26 23:53:55'),
+(232, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-02-26 23:54:15', '2025-02-26 23:54:15'),
+(233, 1, 'admin/auth/menu/15/edit', 'GET', '127.0.0.1', '[]', '2025-02-26 23:54:18', '2025-02-26 23:54:18'),
+(234, 1, 'admin/auth/menu/15', 'PUT', '127.0.0.1', '{\"parent_id\":\"0\",\"search_terms\":null,\"title\":\"Gallery\",\"icon\":\"icon-air-freshener\",\"uri\":null,\"roles\":[\"1\",null],\"permission\":\"*\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_method\":\"PUT\"}', '2025-02-26 23:54:30', '2025-02-26 23:54:30'),
+(235, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-02-26 23:54:31', '2025-02-26 23:54:31'),
+(236, 1, 'admin/gallery-images', 'GET', '127.0.0.1', '[]', '2025-02-26 23:54:35', '2025-02-26 23:54:35'),
+(237, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-02-26 23:54:41', '2025-02-26 23:54:41'),
+(238, 1, 'admin/auth/menu/16/edit', 'GET', '127.0.0.1', '[]', '2025-02-26 23:54:43', '2025-02-26 23:54:43'),
+(239, 1, 'admin/auth/menu/16', 'PUT', '127.0.0.1', '{\"parent_id\":\"15\",\"search_terms\":null,\"title\":\"Gallery-images\",\"icon\":\"icon-file\",\"uri\":\"gallery-images\",\"roles\":[null],\"permission\":null,\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_method\":\"PUT\"}', '2025-02-26 23:54:50', '2025-02-26 23:54:50'),
+(240, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-02-26 23:54:50', '2025-02-26 23:54:50'),
+(241, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-26 23:54:53', '2025-02-26 23:54:53'),
+(242, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-02-26 23:54:54', '2025-02-26 23:54:54'),
+(243, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_order\":\"[{\\\"id\\\":\\\"1\\\"},{\\\"id\\\":\\\"2\\\",\\\"children\\\":[{\\\"id\\\":\\\"3\\\"},{\\\"id\\\":\\\"4\\\"},{\\\"id\\\":\\\"5\\\"},{\\\"id\\\":\\\"6\\\"},{\\\"id\\\":\\\"7\\\"}]},{\\\"id\\\":\\\"8\\\",\\\"children\\\":[{\\\"id\\\":\\\"9\\\"},{\\\"id\\\":\\\"10\\\"},{\\\"id\\\":\\\"11\\\"},{\\\"id\\\":\\\"12\\\"}]},{\\\"id\\\":\\\"13\\\"},{\\\"id\\\":\\\"14\\\"},{\\\"id\\\":\\\"15\\\",\\\"children\\\":[{\\\"id\\\":\\\"16\\\"},{\\\"id\\\":\\\"17\\\"}]}]\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-26 23:55:08', '2025-02-26 23:55:08'),
+(244, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-02-26 23:55:08', '2025-02-26 23:55:08'),
+(245, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-02-26 23:55:11', '2025-02-26 23:55:11'),
+(246, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-26 23:56:09', '2025-02-26 23:56:09'),
+(247, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"activities\",\"model_name\":\"App\\\\Models\\\\Activities\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\ActivitiesController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"alt\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"name\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"content\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-26 23:56:52', '2025-02-26 23:56:52'),
+(248, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-26 23:56:56', '2025-02-26 23:56:56'),
+(249, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-26 23:57:08', '2025-02-26 23:57:08'),
+(250, 1, 'admin/activities', 'GET', '127.0.0.1', '[]', '2025-02-26 23:57:11', '2025-02-26 23:57:11'),
+(251, 1, 'admin/activities', 'GET', '127.0.0.1', '[]', '2025-02-26 23:57:25', '2025-02-26 23:57:25'),
+(252, 1, 'admin/activities/create', 'GET', '127.0.0.1', '[]', '2025-02-27 00:00:19', '2025-02-27 00:00:19'),
+(253, 1, 'admin/activities', 'POST', '127.0.0.1', '{\"alt\":\"Annual Day\",\"name\":\"Annual Day\",\"content\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\\r\\n\\r\\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 00:00:56', '2025-02-27 00:00:56'),
+(254, 1, 'admin/activities', 'GET', '127.0.0.1', '[]', '2025-02-27 00:00:57', '2025-02-27 00:00:57'),
+(255, 1, 'admin/activities', 'GET', '127.0.0.1', '[]', '2025-02-27 00:05:08', '2025-02-27 00:05:08'),
+(256, 1, 'admin/activities/create', 'GET', '127.0.0.1', '[]', '2025-02-27 00:05:17', '2025-02-27 00:05:17'),
+(257, 1, 'admin/activities', 'POST', '127.0.0.1', '{\"alt\":\"Sports Day\",\"name\":\"Sports Day\",\"content\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\\r\\n\\r\\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 00:05:40', '2025-02-27 00:05:40'),
+(258, 1, 'admin/activities', 'GET', '127.0.0.1', '[]', '2025-02-27 00:05:40', '2025-02-27 00:05:40'),
+(259, 1, 'admin/activities/create', 'GET', '127.0.0.1', '[]', '2025-02-27 00:05:47', '2025-02-27 00:05:47'),
+(260, 1, 'admin/activities', 'POST', '127.0.0.1', '{\"alt\":\"Science Fair\",\"name\":\"Science Fair\",\"content\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\\r\\n\\r\\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 00:06:02', '2025-02-27 00:06:02'),
+(261, 1, 'admin/activities', 'GET', '127.0.0.1', '[]', '2025-02-27 00:06:03', '2025-02-27 00:06:03'),
+(262, 1, 'admin/activities/create', 'GET', '127.0.0.1', '[]', '2025-02-27 00:06:10', '2025-02-27 00:06:10'),
+(263, 1, 'admin/activities', 'POST', '127.0.0.1', '{\"alt\":\"Cultural Fest\",\"name\":\"Cultural Fest\",\"content\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\\r\\n\\r\\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 00:06:24', '2025-02-27 00:06:24'),
+(264, 1, 'admin/activities', 'GET', '127.0.0.1', '[]', '2025-02-27 00:06:24', '2025-02-27 00:06:24'),
+(265, 1, 'admin/activities/create', 'GET', '127.0.0.1', '[]', '2025-02-27 00:06:26', '2025-02-27 00:06:26'),
+(266, 1, 'admin/activities', 'POST', '127.0.0.1', '{\"alt\":\"Debates & Quiz\",\"name\":\"Debates & Quiz\",\"content\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\\r\\n\\r\\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 00:06:44', '2025-02-27 00:06:44'),
+(267, 1, 'admin/activities', 'GET', '127.0.0.1', '[]', '2025-02-27 00:06:44', '2025-02-27 00:06:44'),
+(268, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-02-27 00:50:45', '2025-02-27 00:50:45'),
+(269, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 00:50:52', '2025-02-27 00:50:52'),
+(270, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"teachers\",\"model_name\":\"App\\\\Models\\\\Teachers\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\TeacherController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"alt\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"name\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"profession\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 00:52:54', '2025-02-27 00:52:54'),
+(271, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 00:52:54', '2025-02-27 00:52:54'),
+(272, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 00:53:17', '2025-02-27 00:53:17'),
+(273, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 00:53:23', '2025-02-27 00:53:23'),
+(274, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 00:58:34', '2025-02-27 00:58:34'),
+(275, 1, 'admin/teachers/create', 'GET', '127.0.0.1', '[]', '2025-02-27 00:58:37', '2025-02-27 00:58:37'),
+(276, 1, 'admin/teachers', 'POST', '127.0.0.1', '{\"alt\":\"Rajesh Sharma\",\"name\":\"Rajesh Sharma\",\"profession\":\"Rajesh Sharma \\u2013 Mathematics Teacher\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 00:59:27', '2025-02-27 00:59:27'),
+(277, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 00:59:28', '2025-02-27 00:59:28'),
+(278, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 00:59:49', '2025-02-27 00:59:49'),
+(279, 1, 'admin/teachers/create', 'GET', '127.0.0.1', '[]', '2025-02-27 01:00:11', '2025-02-27 01:00:11'),
+(280, 1, 'admin/teachers', 'POST', '127.0.0.1', '{\"alt\":\"Anita Iyer\",\"name\":\"Anita Iyer\",\"profession\":\"Anita Iyer \\u2013 English Literature Teacher\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 01:00:37', '2025-02-27 01:00:37'),
+(281, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 01:00:38', '2025-02-27 01:00:38'),
+(282, 1, 'admin/teachers/create', 'GET', '127.0.0.1', '[]', '2025-02-27 01:00:44', '2025-02-27 01:00:44'),
+(283, 1, 'admin/teachers', 'POST', '127.0.0.1', '{\"alt\":\"Vikram Patel\",\"name\":\"Vikram Patel\",\"profession\":\"Physics Teacher\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 01:01:14', '2025-02-27 01:01:14'),
+(284, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 01:01:14', '2025-02-27 01:01:14'),
+(285, 1, 'admin/teachers/2/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:01:18', '2025-02-27 01:01:18'),
+(286, 1, 'admin/teachers/2', 'PUT', '127.0.0.1', '{\"alt\":\"Anita Iyer\",\"name\":\"Anita Iyer\",\"profession\":\"English Literature Teacher\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_method\":\"PUT\"}', '2025-02-27 01:01:23', '2025-02-27 01:01:23'),
+(287, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 01:01:23', '2025-02-27 01:01:23'),
+(288, 1, 'admin/teachers/1/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:01:26', '2025-02-27 01:01:26'),
+(289, 1, 'admin/teachers/1', 'PUT', '127.0.0.1', '{\"alt\":\"Rajesh Sharma\",\"name\":\"Rajesh Sharma\",\"profession\":\"Mathematics Teacher\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_method\":\"PUT\"}', '2025-02-27 01:01:35', '2025-02-27 01:01:35'),
+(290, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 01:01:35', '2025-02-27 01:01:35');
+INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `input`, `created_at`, `updated_at`) VALUES
+(291, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 01:01:37', '2025-02-27 01:01:37'),
+(292, 1, 'admin/teachers/create', 'GET', '127.0.0.1', '[]', '2025-02-27 01:01:42', '2025-02-27 01:01:42'),
+(293, 1, 'admin/teachers', 'POST', '127.0.0.1', '{\"alt\":\"Meera Nair\",\"name\":\"Meera Nair\",\"profession\":\"History Teacher\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 01:02:08', '2025-02-27 01:02:08'),
+(294, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 01:02:09', '2025-02-27 01:02:09'),
+(295, 1, 'admin/teachers/create', 'GET', '127.0.0.1', '[]', '2025-02-27 01:02:21', '2025-02-27 01:02:21'),
+(296, 1, 'admin/teachers', 'POST', '127.0.0.1', '{\"alt\":\"Sandeep Verma\",\"name\":\"Sandeep Verma\",\"profession\":\"Computer Science Teacher\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 01:02:41', '2025-02-27 01:02:41'),
+(297, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 01:02:41', '2025-02-27 01:02:41'),
+(298, 1, 'admin/teachers/5/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:02:43', '2025-02-27 01:02:43'),
+(299, 1, 'admin/teachers/5', 'PUT', '127.0.0.1', '{\"alt\":\"Sandeep Verma\",\"name\":\"Sandeep Verma\",\"profession\":\"Computer Science Teacher\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_method\":\"PUT\"}', '2025-02-27 01:02:50', '2025-02-27 01:02:50'),
+(300, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2025-02-27 01:02:50', '2025-02-27 01:02:50'),
+(301, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 01:32:09', '2025-02-27 01:32:09'),
+(302, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"quickfacts\",\"model_name\":\"App\\\\Models\\\\QuickFacts\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\QuickFactsController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"student\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"teachers\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"winawards\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"classes\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 01:33:34', '2025-02-27 01:33:34'),
+(303, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 01:33:37', '2025-02-27 01:33:37'),
+(304, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 01:33:49', '2025-02-27 01:33:49'),
+(305, 1, 'admin/quick-facts', 'GET', '127.0.0.1', '[]', '2025-02-27 01:33:53', '2025-02-27 01:33:53'),
+(306, 1, 'admin/quick-facts', 'GET', '127.0.0.1', '[]', '2025-02-27 01:34:03', '2025-02-27 01:34:03'),
+(307, 1, 'admin/quick-facts', 'GET', '127.0.0.1', '[]', '2025-02-27 01:34:05', '2025-02-27 01:34:05'),
+(308, 1, 'admin/quick-facts', 'GET', '127.0.0.1', '[]', '2025-02-27 01:34:10', '2025-02-27 01:34:10'),
+(309, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-02-27 01:34:29', '2025-02-27 01:34:29'),
+(310, 1, 'admin/auth/menu/20', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 01:34:34', '2025-02-27 01:34:34'),
+(311, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-02-27 01:34:35', '2025-02-27 01:34:35'),
+(312, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-02-27 01:34:58', '2025-02-27 01:34:58'),
+(313, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 01:35:01', '2025-02-27 01:35:01'),
+(314, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"quick_facts\",\"model_name\":\"App\\\\Models\\\\QuickFacts\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\QuickFactsController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"student\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"teacher\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"win_awards\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"classes\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 01:36:27', '2025-02-27 01:36:27'),
+(315, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 01:36:29', '2025-02-27 01:36:29'),
+(316, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 01:36:39', '2025-02-27 01:36:39'),
+(317, 1, 'admin/quick-facts', 'GET', '127.0.0.1', '[]', '2025-02-27 01:36:41', '2025-02-27 01:36:41'),
+(318, 1, 'admin/quick-facts', 'GET', '127.0.0.1', '[]', '2025-02-27 01:37:50', '2025-02-27 01:37:50'),
+(319, 1, 'admin/quick-facts/create', 'GET', '127.0.0.1', '[]', '2025-02-27 01:38:07', '2025-02-27 01:38:07'),
+(320, 1, 'admin/quick-facts', 'POST', '127.0.0.1', '{\"student\":\"1150\",\"teacher\":\"150\",\"win_awards\":\"60\",\"classes\":\"90\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 01:38:22', '2025-02-27 01:38:22'),
+(321, 1, 'admin/quick-facts', 'GET', '127.0.0.1', '[]', '2025-02-27 01:38:23', '2025-02-27 01:38:23'),
+(322, 1, 'admin/quick-facts/1/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:45:54', '2025-02-27 01:45:54'),
+(323, 1, 'admin/quick-facts/1', 'PUT', '127.0.0.1', '{\"student\":\"1150\",\"teacher\":\"150\",\"win_awards\":\"60\",\"classes\":\"80\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_method\":\"PUT\"}', '2025-02-27 01:46:02', '2025-02-27 01:46:02'),
+(324, 1, 'admin/quick-facts', 'GET', '127.0.0.1', '[]', '2025-02-27 01:46:02', '2025-02-27 01:46:02'),
+(325, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-27 01:53:48', '2025-02-27 01:53:48'),
+(326, 1, 'admin/gallery-videos/create', 'GET', '127.0.0.1', '[]', '2025-02-27 01:53:50', '2025-02-27 01:53:50'),
+(327, 1, 'admin/gallery-videos', 'POST', '127.0.0.1', '{\"alt\":\"Dance Video\",\"video_link\":\"https:\\/\\/www.youtube.com\\/watch?v=Imhi98dHa5w&list=PLRqSftyTJ5ZzRnmo-nmQqepm4b8Ni17rZ&index=1&ab_channel=KooKoo\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 01:54:58', '2025-02-27 01:54:58'),
+(328, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-27 01:54:59', '2025-02-27 01:54:59'),
+(329, 1, 'admin/gallery-videos/2/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:56:29', '2025-02-27 01:56:29'),
+(330, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-27 01:56:39', '2025-02-27 01:56:39'),
+(331, 1, 'admin/gallery-videos/2/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:56:41', '2025-02-27 01:56:41'),
+(332, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-27 01:56:42', '2025-02-27 01:56:42'),
+(333, 1, 'admin/gallery-videos/1/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:56:44', '2025-02-27 01:56:44'),
+(334, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-27 01:56:48', '2025-02-27 01:56:48'),
+(335, 1, 'admin/gallery-videos/2/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:56:50', '2025-02-27 01:56:50'),
+(336, 1, 'admin/gallery-videos/2', 'PUT', '127.0.0.1', '{\"alt\":\"Dance Video\",\"video_link\":\"https:\\/\\/www.youtube.com\\/watch?v=Imhi98dHa5w&list=PLRqSftyTJ5ZzRnmo-nmQqepm4b8Ni17rZ\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_method\":\"PUT\"}', '2025-02-27 01:57:05', '2025-02-27 01:57:05'),
+(337, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-27 01:57:05', '2025-02-27 01:57:05'),
+(338, 1, 'admin/gallery-videos/2/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:57:23', '2025-02-27 01:57:23'),
+(339, 1, 'admin/gallery-videos/2', 'PUT', '127.0.0.1', '{\"alt\":\"Dance Video\",\"video_link\":\"https:\\/\\/www.youtube.com\\/watch?v=NXDcea-5IfA&ab_channel=T-SeriesBollywoodClassics\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_method\":\"PUT\"}', '2025-02-27 01:57:26', '2025-02-27 01:57:26'),
+(340, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-27 01:57:27', '2025-02-27 01:57:27'),
+(341, 1, 'admin/gallery-videos/2/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:58:15', '2025-02-27 01:58:15'),
+(342, 1, 'admin/gallery-videos/2', 'PUT', '127.0.0.1', '{\"alt\":\"Dance Video\",\"video_link\":null,\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_method\":\"PUT\"}', '2025-02-27 01:58:19', '2025-02-27 01:58:19'),
+(343, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-27 01:58:20', '2025-02-27 01:58:20'),
+(344, 1, 'admin/gallery-videos/1/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:58:21', '2025-02-27 01:58:21'),
+(345, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-27 01:58:27', '2025-02-27 01:58:27'),
+(346, 1, 'admin/gallery-videos/2/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 01:58:29', '2025-02-27 01:58:29'),
+(347, 1, 'admin/gallery-videos/2', 'PUT', '127.0.0.1', '{\"alt\":\"Dance Video\",\"video_link\":\"https:\\/\\/www.youtube.com\\/embed\\/-5krrl0eiKc?si=OU2BP1t1d86ksS74\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_method\":\"PUT\"}', '2025-02-27 01:58:32', '2025-02-27 01:58:32'),
+(348, 1, 'admin/gallery-videos', 'GET', '127.0.0.1', '[]', '2025-02-27 01:58:32', '2025-02-27 01:58:32'),
+(349, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 02:00:40', '2025-02-27 02:00:40'),
+(350, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"why_choose_us\",\"model_name\":\"App\\\\Models\\\\WhyChooseUs\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\WhyChooseUsController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"alt\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"name\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"content\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 02:01:46', '2025-02-27 02:01:46'),
+(351, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 02:01:46', '2025-02-27 02:01:46'),
+(352, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 02:02:01', '2025-02-27 02:02:01'),
+(353, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-02-27 02:03:00', '2025-02-27 02:03:00'),
+(354, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-02-27 02:03:07', '2025-02-27 02:03:07'),
+(355, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-02-27 02:03:30', '2025-02-27 02:03:30'),
+(356, 1, 'admin/why-choose-uses/create', 'GET', '127.0.0.1', '[]', '2025-02-27 02:03:32', '2025-02-27 02:03:32'),
+(357, 1, 'admin/why-choose-uses', 'POST', '127.0.0.1', '{\"alt\":\"Quality Education\",\"name\":\"Quality Education\",\"content\":\"CBSE\\/ICSE\\/State Board curriculum ke saath high-quality education aur modern teaching methods.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 02:04:40', '2025-02-27 02:04:40'),
+(358, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-02-27 02:04:40', '2025-02-27 02:04:40'),
+(359, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-02-27 02:05:01', '2025-02-27 02:05:01'),
+(360, 1, 'admin/why-choose-uses/create', 'GET', '127.0.0.1', '[]', '2025-02-27 02:05:04', '2025-02-27 02:05:04'),
+(361, 1, 'admin/why-choose-uses', 'POST', '127.0.0.1', '{\"alt\":\"Quality Education\",\"name\":\"Quality Education\",\"content\":null,\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 02:05:13', '2025-02-27 02:05:13'),
+(362, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-02-27 02:05:13', '2025-02-27 02:05:13'),
+(363, 1, 'admin/why-choose-uses/2/edit', 'GET', '127.0.0.1', '[]', '2025-02-27 02:05:16', '2025-02-27 02:05:16'),
+(364, 1, 'admin/why-choose-uses/2', 'PUT', '127.0.0.1', '{\"alt\":\"Quality Education\",\"name\":\"Quality Education\",\"content\":\"CBSE\\/ICSE\\/State Board curriculum ke saath high-quality education aur modern teaching methods.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_method\":\"PUT\"}', '2025-02-27 02:05:22', '2025-02-27 02:05:22'),
+(365, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-02-27 02:05:22', '2025-02-27 02:05:22'),
+(366, 1, 'admin/why-choose-uses/create', 'GET', '127.0.0.1', '[]', '2025-02-27 02:05:24', '2025-02-27 02:05:24'),
+(367, 1, 'admin/why-choose-uses', 'POST', '127.0.0.1', '{\"alt\":\"Quality Education\",\"name\":\"Quality Education\",\"content\":\"CBSE\\/ICSE\\/State Board curriculum ke saath high-quality education aur modern teaching methods.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 02:05:37', '2025-02-27 02:05:37'),
+(368, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-02-27 02:05:37', '2025-02-27 02:05:37'),
+(369, 1, 'admin/why-choose-uses/create', 'GET', '127.0.0.1', '[]', '2025-02-27 02:05:39', '2025-02-27 02:05:39'),
+(370, 1, 'admin/why-choose-uses', 'POST', '127.0.0.1', '{\"alt\":\"Quality Education\",\"name\":\"Quality Education\",\"content\":\"CBSE\\/ICSE\\/State Board curriculum ke saath high-quality education aur modern teaching methods.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 02:05:55', '2025-02-27 02:05:55'),
+(371, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-02-27 02:05:56', '2025-02-27 02:05:56'),
+(372, 1, 'admin/why-choose-uses/create', 'GET', '127.0.0.1', '[]', '2025-02-27 02:05:58', '2025-02-27 02:05:58'),
+(373, 1, 'admin/why-choose-uses', 'POST', '127.0.0.1', '{\"alt\":\"Quality Education\",\"name\":\"Quality Education\",\"content\":\"CBSE\\/ICSE\\/State Board curriculum ke saath high-quality education aur modern teaching methods.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 02:06:10', '2025-02-27 02:06:10'),
+(374, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-02-27 02:06:10', '2025-02-27 02:06:10'),
+(375, 1, 'admin/why-choose-uses/create', 'GET', '127.0.0.1', '[]', '2025-02-27 02:06:13', '2025-02-27 02:06:13'),
+(376, 1, 'admin/why-choose-uses', 'POST', '127.0.0.1', '{\"alt\":\"Quality Education\",\"name\":\"Quality Education\",\"content\":\"CBSE\\/ICSE\\/State Board curriculum ke saath high-quality education aur modern teaching methods.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 02:06:25', '2025-02-27 02:06:25'),
+(377, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-02-27 02:06:25', '2025-02-27 02:06:25'),
+(378, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 03:21:21', '2025-02-27 03:21:21'),
+(379, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"faq\",\"model_name\":\"App\\\\Models\\\\Faq\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\FaqController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"question\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"answer\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 03:22:09', '2025-02-27 03:22:09'),
+(380, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 03:22:10', '2025-02-27 03:22:10'),
+(381, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 03:22:22', '2025-02-27 03:22:22'),
+(382, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2025-02-27 03:22:24', '2025-02-27 03:22:24'),
+(383, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2025-02-27 03:22:41', '2025-02-27 03:22:41'),
+(384, 1, 'admin/faqs/create', 'GET', '127.0.0.1', '[]', '2025-02-27 03:22:43', '2025-02-27 03:22:43'),
+(385, 1, 'admin/faqs/create', 'GET', '127.0.0.1', '[]', '2025-02-27 03:22:56', '2025-02-27 03:22:56'),
+(386, 1, 'admin/faqs', 'POST', '127.0.0.1', '{\"question\":\"Question\",\"answer\":\"Placeholder content for this accordion, which is intended to demonstrate the .accordion-flush class. This is the first item\'s accordion body.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/faqs\"}', '2025-02-27 03:26:36', '2025-02-27 03:26:36'),
+(387, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2025-02-27 03:26:36', '2025-02-27 03:26:36'),
+(388, 1, 'admin/faqs/create', 'GET', '127.0.0.1', '[]', '2025-02-27 03:26:38', '2025-02-27 03:26:38'),
+(389, 1, 'admin/faqs', 'POST', '127.0.0.1', '{\"question\":\"Question\",\"answer\":\"Placeholder content for this accordion, which is intended to demonstrate the .accordion-flush class. This is the first item\'s accordion body.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 03:26:47', '2025-02-27 03:26:47'),
+(390, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2025-02-27 03:26:47', '2025-02-27 03:26:47'),
+(391, 1, 'admin/faqs/create', 'GET', '127.0.0.1', '[]', '2025-02-27 03:26:48', '2025-02-27 03:26:48'),
+(392, 1, 'admin/faqs', 'POST', '127.0.0.1', '{\"question\":\"Question\",\"answer\":\"Placeholder content for this accordion, which is intended to demonstrate the .accordion-flush class. This is the first item\'s accordion body.\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 03:26:57', '2025-02-27 03:26:57'),
+(393, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2025-02-27 03:26:57', '2025-02-27 03:26:57'),
+(394, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2025-02-27 03:43:00', '2025-02-27 03:43:00'),
+(395, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 04:10:20', '2025-02-27 04:10:20'),
+(396, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"contact\",\"model_name\":\"App\\\\Models\\\\Contact\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\ContactController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"name\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"email\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"subject\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"message\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 04:11:12', '2025-02-27 04:11:12'),
+(397, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 04:11:13', '2025-02-27 04:11:13'),
+(398, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-02-27 04:11:30', '2025-02-27 04:11:30'),
+(399, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2025-02-27 04:11:34', '2025-02-27 04:11:34'),
+(400, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2025-02-27 04:11:50', '2025-02-27 04:11:50'),
+(401, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2025-02-27 04:31:02', '2025-02-27 04:31:02'),
+(402, 1, 'admin/contacts/1', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 04:43:53', '2025-02-27 04:43:53'),
+(403, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2025-02-27 04:43:53', '2025-02-27 04:43:53'),
+(404, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2025-02-27 04:47:37', '2025-02-27 04:47:37'),
+(405, 1, 'admin/contacts/2', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"itfqrSGRqdf9f6KqdFitv56GTUMYZcqn9sHj8U5h\"}', '2025-02-27 04:47:41', '2025-02-27 04:47:41'),
+(406, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2025-02-27 04:47:41', '2025-02-27 04:47:41');
 
 -- --------------------------------------------------------
 
@@ -461,6 +675,22 @@ CREATE TABLE `admin_user_permissions` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `subject` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `facility`
 --
 
@@ -514,6 +744,29 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `faq`
+--
+
+CREATE TABLE `faq` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `question` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `answer` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `faq`
+--
+
+INSERT INTO `faq` (`id`, `question`, `answer`, `created_at`, `updated_at`) VALUES
+(1, 'Question', 'Placeholder content for this accordion, which is intended to demonstrate the .accordion-flush class. This is the first item\'s accordion body.', '2025-02-27 03:26:36', '2025-02-27 03:26:36'),
+(2, 'Question', 'Placeholder content for this accordion, which is intended to demonstrate the .accordion-flush class. This is the first item\'s accordion body.', '2025-02-27 03:26:47', '2025-02-27 03:26:47'),
+(3, 'Question', 'Placeholder content for this accordion, which is intended to demonstrate the .accordion-flush class. This is the first item\'s accordion body.', '2025-02-27 03:26:57', '2025-02-27 03:26:57');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `gallery_image`
 --
 
@@ -557,7 +810,8 @@ CREATE TABLE `gallery_video` (
 --
 
 INSERT INTO `gallery_video` (`id`, `image`, `alt`, `video_link`, `created_at`, `updated_at`) VALUES
-(1, 'images/login-page-bg_1.png', 'Nature Image', 'https://www.youtube.com/embed/-5krrl0eiKc?si=OU2BP1t1d86ksS74', '2025-02-26 01:47:57', '2025-02-26 01:47:57');
+(1, 'images/login-page-bg_1.png', 'Nature Image', 'https://www.youtube.com/embed/-5krrl0eiKc?si=OU2BP1t1d86ksS74', '2025-02-26 01:47:57', '2025-02-26 01:47:57'),
+(2, 'images/indian-festival-kathak-fb_1.jpg', 'Dance Video', 'https://www.youtube.com/embed/-5krrl0eiKc?si=OU2BP1t1d86ksS74', '2025-02-27 01:54:58', '2025-02-27 01:58:32');
 
 -- --------------------------------------------------------
 
@@ -611,7 +865,14 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2025_02_26_045450_create_homebanner_table', 2),
 (7, '2025_02_26_055209_create_facility_table', 3),
 (8, '2025_02_26_071242_create_gallery_image_table', 4),
-(9, '2025_02_26_071623_create_gallery_video_table', 5);
+(9, '2025_02_26_071623_create_gallery_video_table', 5),
+(10, '2025_02_27_052652_create_activities_table', 6),
+(11, '2025_02_27_062254_create_teachers_table', 7),
+(12, '2025_02_27_070334_create_quickfacts_table', 8),
+(13, '2025_02_27_070627_create_quick_facts_table', 9),
+(14, '2025_02_27_073146_create_why_choose_us_table', 10),
+(15, '2025_02_27_085209_create_faq_table', 11),
+(16, '2025_02_27_094112_create_contact_table', 12);
 
 -- --------------------------------------------------------
 
@@ -647,6 +908,72 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `quickfacts`
+--
+
+CREATE TABLE `quickfacts` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `student` int(11) DEFAULT NULL,
+  `teachers` int(11) DEFAULT NULL,
+  `winawards` int(11) DEFAULT NULL,
+  `classes` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quick_facts`
+--
+
+CREATE TABLE `quick_facts` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `student` int(11) DEFAULT NULL,
+  `teacher` int(11) DEFAULT NULL,
+  `win_awards` int(11) DEFAULT NULL,
+  `classes` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `quick_facts`
+--
+
+INSERT INTO `quick_facts` (`id`, `student`, `teacher`, `win_awards`, `classes`, `created_at`, `updated_at`) VALUES
+(1, 1150, 150, 60, 80, '2025-02-27 01:38:22', '2025-02-27 01:46:02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teachers`
+--
+
+CREATE TABLE `teachers` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `profession` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `teachers`
+--
+
+INSERT INTO `teachers` (`id`, `image`, `alt`, `name`, `profession`, `created_at`, `updated_at`) VALUES
+(1, 'images/DALL·E 2025-02-27 11.58.50 - A professional Indian male mathematics teacher in a classroom, wearing a formal shirt and glasses, explaining a math concept on the board. The backgro.webp', 'Rajesh Sharma', 'Rajesh Sharma', 'Mathematics Teacher', '2025-02-27 00:59:28', '2025-02-27 01:01:35'),
+(2, 'images/DALL·E 2025-02-27 11.58.52 - A professional Indian female English literature teacher in a classroom, wearing a saree and glasses, holding a book while explaining literature to stu.webp', 'Anita Iyer', 'Anita Iyer', 'English Literature Teacher', '2025-02-27 01:00:37', '2025-02-27 01:01:23'),
+(3, 'images/DALL·E 2025-02-27 11.58.53 - A professional Indian male physics teacher in a classroom, wearing a formal shirt and a blazer, explaining a physics concept with a model of an atom i.webp', 'Vikram Patel', 'Vikram Patel', 'Physics Teacher', '2025-02-27 01:01:14', '2025-02-27 01:01:14'),
+(4, 'images/DALL·E 2025-02-27 11.58.55 - A professional Indian female history teacher in a classroom, wearing a traditional kurta and a scarf, holding a pointer while explaining a historical .webp', 'Meera Nair', 'Meera Nair', 'History Teacher', '2025-02-27 01:02:09', '2025-02-27 01:02:09'),
+(5, 'images/DALL·E 2025-02-27 11.58.56 - A professional Indian male biology teacher in a classroom, wearing a lab coat and glasses, explaining a biological diagram on a digital screen. He is .webp', 'Sandeep Verma', 'Sandeep Verma', 'Computer Science Teacher', '2025-02-27 01:02:41', '2025-02-27 01:02:50');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -661,9 +988,43 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `why_choose_us`
+--
+
+CREATE TABLE `why_choose_us` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `why_choose_us`
+--
+
+INSERT INTO `why_choose_us` (`id`, `image`, `alt`, `name`, `content`, `created_at`, `updated_at`) VALUES
+(1, 'images/choose-icon1.png', 'Quality Education', 'Quality Education', 'CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.', '2025-02-27 02:04:40', '2025-02-27 02:04:40'),
+(2, 'images/choose-icon2.png', 'Quality Education', 'Quality Education', 'CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.', '2025-02-27 02:05:13', '2025-02-27 02:05:22'),
+(3, 'images/choose-icon3.png', 'Quality Education', 'Quality Education', 'CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.', '2025-02-27 02:05:37', '2025-02-27 02:05:37'),
+(4, 'images/choose-icon4.png', 'Quality Education', 'Quality Education', 'CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.', '2025-02-27 02:05:55', '2025-02-27 02:05:55'),
+(5, 'images/choose-icon5.png', 'Quality Education', 'Quality Education', 'CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.', '2025-02-27 02:06:10', '2025-02-27 02:06:10'),
+(6, 'images/choose-icon6.png', 'Quality Education', 'Quality Education', 'CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.', '2025-02-27 02:06:25', '2025-02-27 02:06:25');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `activities`
+--
+ALTER TABLE `activities`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `admin_menu`
@@ -726,6 +1087,12 @@ ALTER TABLE `admin_user_permissions`
   ADD KEY `admin_user_permissions_user_id_permission_id_index` (`user_id`,`permission_id`);
 
 --
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `facility`
 --
 ALTER TABLE `facility`
@@ -737,6 +1104,12 @@ ALTER TABLE `facility`
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `faq`
+--
+ALTER TABLE `faq`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `gallery_image`
@@ -777,6 +1150,24 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Indexes for table `quickfacts`
+--
+ALTER TABLE `quickfacts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `quick_facts`
+--
+ALTER TABLE `quick_facts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `teachers`
+--
+ALTER TABLE `teachers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -784,20 +1175,32 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
+-- Indexes for table `why_choose_us`
+--
+ALTER TABLE `why_choose_us`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `activities`
+--
+ALTER TABLE `activities`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=227;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=407;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -818,6 +1221,12 @@ ALTER TABLE `admin_users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `facility`
 --
 ALTER TABLE `facility`
@@ -830,6 +1239,12 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `faq`
+--
+ALTER TABLE `faq`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `gallery_image`
 --
 ALTER TABLE `gallery_image`
@@ -839,7 +1254,7 @@ ALTER TABLE `gallery_image`
 -- AUTO_INCREMENT for table `gallery_video`
 --
 ALTER TABLE `gallery_video`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `homebanner`
@@ -851,7 +1266,7 @@ ALTER TABLE `homebanner`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -860,10 +1275,34 @@ ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `quickfacts`
+--
+ALTER TABLE `quickfacts`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `quick_facts`
+--
+ALTER TABLE `quick_facts`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `teachers`
+--
+ALTER TABLE `teachers`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `why_choose_us`
+--
+ALTER TABLE `why_choose_us`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

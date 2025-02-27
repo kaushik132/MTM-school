@@ -113,41 +113,37 @@
                            
                         </div>
                         <div class="quick-facts-bg mt-4">
-                          <div class="row">
-                            <div class="col-md-3 mt-3 col-6">
-                                <div class="facts-container">
-                                    <div class="fact-contain-img"><img src="./assets/images/fact-icon1.png" alt="icon"
-                                        class="img-fluid"></div>
-                                        <h3>Student</h3>
-                                        <h4 class="counter" data-target="1150">+0</h4>
+                            <div class="row">
+                                <div class="col-md-3 mt-3 col-6">
+                                    <div class="facts-container">
+                                        <div class="fact-contain-img"><img src="./assets/images/fact-icon1.png" alt="icon" class="img-fluid"></div>
+                                        <h3>Students</h3>
+                                        <h4 class="counter" data-target="{{ $quickFacts->student }}">+0</h4>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3 mt-3 col-6">
-                                <div class="facts-container">
-                                    <div class="fact-contain-img"><img src="./assets/images/fact-icon2.png" alt="icon"
-                                        class="img-fluid"></div>
+                                <div class="col-md-3 mt-3 col-6">
+                                    <div class="facts-container">
+                                        <div class="fact-contain-img"><img src="./assets/images/fact-icon2.png" alt="icon" class="img-fluid"></div>
                                         <h3>Teachers</h3>
-                                        <h4 class="counter" data-target="150">+0</h4>
+                                        <h4 class="counter" data-target="{{ $quickFacts->teacher }}">+0</h4>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3 mt-3 col-6">
-                                <div class="facts-container">
-                                    <div class="fact-contain-img"><img src="./assets/images/fact-icon3.png" alt="icon"
-                                        class="img-fluid"></div>
+                                <div class="col-md-3 mt-3 col-6">
+                                    <div class="facts-container">
+                                        <div class="fact-contain-img"><img src="./assets/images/fact-icon3.png" alt="icon" class="img-fluid"></div>
                                         <h3>Win Awards</h3>
-                                        <h4 class="counter" data-target="60">+0</h4>
+                                        <h4 class="counter" data-target="{{ $quickFacts->win_awards }}">+0</h4>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3 mt-3 col-6">
-                                <div class="facts-container">
-                                    <div class="fact-contain-img"><img src="./assets/images/fact-icon4.png" alt="icon"
-                                        class="img-fluid"></div>
+                                <div class="col-md-3 mt-3 col-6">
+                                    <div class="facts-container">
+                                        <div class="fact-contain-img"><img src="./assets/images/fact-icon4.png" alt="icon" class="img-fluid"></div>
                                         <h3>Classes</h3>
-                                        <h4 class="counter" data-target="90">+0</h4>
+                                        <h4 class="counter" data-target="{{ $quickFacts->classes }}">+0</h4>
+                                    </div>
                                 </div>
                             </div>
-
-                          </div>
+                            
                         </div>
                     </div>
                  </section>
@@ -161,13 +157,16 @@
                     form by injected humour randomised words which don't look even slightly believable. </p>
             </div>
 
+            @foreach ($galleryVideos as $galleryVideo)
+                
             <div class="latest-video-container" id="videoContainer">
-                <img src="https://www.perkypet.com/media/Articles/Perky-Pet/Connecting-Kids-with-Nature.jpg" alt="video-img" class="img-fluid" id="videoThumbnail">
+                <img src="{{url('uploads/',$galleryVideo->image)}}" alt="{{$galleryVideo->alt}}" class="img-fluid" id="videoThumbnail">
                 <div class="video-play-btn" id="playButton"><i class="bi bi-play-fill"></i></div>
                 
                 <!-- Video Element (Initially Hidden) -->
-                <iframe id="videoFrame" class="video-frame" src="https://www.youtube.com/embed/-5krrl0eiKc?si=b77Txf3xioySoNLO" frameborder="0" allowfullscreen></iframe>
+                <iframe id="videoFrame" class="video-frame" src="{{$galleryVideo->video_link}}" frameborder="0" allowfullscreen></iframe>
             </div>
+            @endforeach
         </div>
     </section>
     <!-- ================================ Choose us =================================== -->
@@ -180,54 +179,22 @@
                     when looking at its layout.</p>
             </div>
             <div class="row mt-3">
+        
+                @foreach ($wcus as $wcu)
+                    
                 <div class="col-md-4 mt-3">
                     <div class="choose-us-container">
-                        <div><img src="./assets/images/choose-icon1.png" alt="icon" class="img-fluid"></div>
-                        <h3>Quality Education</h3>
-                        <p>CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.
+                        <div><img src="{{url('uploads/',$wcu->image)}}" alt="{{$wcu->alt}}" class="img-fluid"></div>
+                        <h3>{{$wcu->name}}</h3>
+                        <p>{{$wcu->content}}
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3">
-                    <div class="choose-us-container">
-                        <div><img src="./assets/images/choose-icon2.png" alt="icon" class="img-fluid"></div>
-                        <h3>Quality Education</h3>
-                        <p>CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-3">
-                    <div class="choose-us-container">
-                        <div><img src="./assets/images/choose-icon3.png" alt="icon" class="img-fluid"></div>
-                        <h3>Quality Education</h3>
-                        <p>CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-3">
-                    <div class="choose-us-container">
-                        <div><img src="./assets/images/choose-icon4.png" alt="icon" class="img-fluid"></div>
-                        <h3>Quality Education</h3>
-                        <p>CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-3">
-                    <div class="choose-us-container">
-                        <div><img src="./assets/images/choose-icon5.png" alt="icon" class="img-fluid"></div>
-                        <h3>Quality Education</h3>
-                        <p>CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-3">
-                    <div class="choose-us-container">
-                        <div><img src="./assets/images/choose-icon6.png" alt="icon" class="img-fluid"></div>
-                        <h3>Quality Education</h3>
-                        <p>CBSE/ICSE/State Board curriculum ke saath high-quality education aur modern teaching methods.
-                        </p>
-                    </div>
-                </div>
+                
+                @endforeach
+              
+            
+             
 
             </div>
         </div>
@@ -258,7 +225,7 @@
 
 
             </div>
-            <a href="#" class="text-decoration-none"><div class="text-center"><button class="gallery-explore-btn">Explore More <i class="bi bi-arrow-right"></i></button></div></a>
+            <a href="{{url('gallery')}}" class="text-decoration-none"><div class="text-center"><button class="gallery-explore-btn">Explore More <i class="bi bi-arrow-right"></i></button></div></a>
         </div>
     </section>
     <!-- ================================ Our Teachers =================================== -->

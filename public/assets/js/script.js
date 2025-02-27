@@ -208,3 +208,25 @@ function closeVideo() {
   iframe.src = ""; // Reset iframe to stop playback
   document.getElementById("popup-video").style.display = "none"; // Hide modal
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".counter");
+  
+  counters.forEach(counter => {
+      let target = +counter.getAttribute("data-target");
+      let count = 0;
+      let speed = target / 100; 
+
+      let updateCounter = () => {
+          if (count < target) {
+              count += speed;
+              counter.innerText = `+${Math.floor(count)}`;
+              setTimeout(updateCounter, 30);
+          } else {
+              counter.innerText = `+${target}`;
+          }
+      };
+      updateCounter();
+  });
+});
