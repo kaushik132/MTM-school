@@ -18,66 +18,33 @@
         <h2>Details About Recent <br>Student <span class="footer-icon-show">Activity.</span></h2>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
     </div>
-    <div class="activities-box-show mb-4">
-        <div class="row">
-         <div class="col-md-5">
-          <div class="text-center"><img src="https://mbiis.in/storage/website-upload/HyUAbbjS8DPJxCXggd8t0Dxiy6VWQ7IZcUOwVHvq.jpeg" alt="image" class="img-fluid"></div>
-         </div>
-         <div class="col-md-7">
-            <h3>Annual Day</h3>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-         </div>
+
+    @foreach($activities as $activity)
+    <div class="activities-box-show mb-4 p-4 rounded shadow bg-white">
+        <div class="row align-items-center">
+            @if($loop->index % 2 == 0)
+                <div class="col-md-5 text-center">
+                    <img src="{{ url('uploads/'.$activity->image) }}" alt="{{ $activity->alt }}" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+                </div>
+                <div class="col-md-7">
+                    <h3 class="fw-bold">{{ $activity->name }}</h3>
+                    <p>{{ $activity->content }}</p>
+                </div>
+            @else
+                <div class="col-md-7">
+                    <h3 class="fw-bold">{{ $activity->name }}</h3>
+                    <p>{{ $activity->content }}</p>
+                </div>
+                <div class="col-md-5 text-center">
+                    <img src="{{ url('uploads/'.$activity->image) }}" alt="{{ $activity->alt }}" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+                </div>
+            @endif
         </div>
     </div>
-    <div class="activities-box-show mb-4">
-        <div class="row">
-         <div class="col-md-7">
-            <h3>Sports Day</h3>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-         </div>
-         <div class="col-md-5">
-            <div class="text-center"><img src="https://www.hlimg.com/images/events/738X538/k_1527750852e.jpg" alt="image" class="img-fluid"></div>
-           </div>
-        </div>
-    </div>
-    <div class="activities-box-show mb-4">
-        <div class="row">
-         <div class="col-md-5">
-          <div class="text-center"><img src="https://news.iitgn.ac.in/wp/wp-content/uploads/2023/03/Scientific-demonstration-and-activities-during-National-Science-Day-celebration-at-IITGN-3.jpg" alt="image" class="img-fluid"></div>
-         </div>
-         <div class="col-md-7">
-            <h3>Science Fair</h3>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-         </div>
-        </div>
-    </div>
-    <div class="activities-box-show mb-4">
-        <div class="row">
-         <div class="col-md-7">
-            <h3>Cultural Fest</h3>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-         </div>
-         <div class="col-md-5">
-            <div class="text-center"><img src="https://www.t2india.com/includes/images/indian-festival-kathak-fb.jpg" alt="image" class="img-fluid"></div>
-           </div>
-        </div>
-    </div>
-    <div class="activities-box-show mb-4">
-        <div class="row">
-         <div class="col-md-5">
-          <div class="text-center"><img src="https://saywhat.org.zw/wp-content/uploads/2022/03/02-1-1024x682.jpg" alt="image" class="img-fluid"></div>
-         </div>
-         <div class="col-md-7">
-            <h3>Debates & Quiz</h3>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-         </div>
-        </div>
-    </div>
+@endforeach
+
+
+
 </div>
 </section>
 

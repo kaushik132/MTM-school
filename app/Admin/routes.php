@@ -16,5 +16,6 @@ Route::group([
     $router->resource('facilities', FacilityController::class);
     $router->resource('gallery-images', GalleryImageController::class);
     $router->resource('gallery-videos', GalleryVideoController::class);
+    $router->resource('activities', ActivitiesController::class);
 
 });

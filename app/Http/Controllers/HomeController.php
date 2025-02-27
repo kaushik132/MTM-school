@@ -7,6 +7,7 @@ use App\Models\HomeBanner;
 use App\Models\Facility;
 use App\Models\GalleryImage;
 use App\Models\GalleryVideo;
+use App\Models\Activities;
 class HomeController extends Controller
 {
     public function index(){
@@ -24,7 +25,8 @@ class HomeController extends Controller
     }
 
     public function activities(){
-        return view('activities');
+        $activities = Activities::orderBy('id', 'desc')->get();
+        return view('activities', compact('activities'));
     }
 
     public function addmission(){
