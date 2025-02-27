@@ -15,7 +15,7 @@ class GalleryImageController extends AdminController
      *
      * @var string
      */
-    protected $title = 'GalleryImage';
+    protected $title = 'Gallery Image';
 
     /**
      * Make a grid builder.

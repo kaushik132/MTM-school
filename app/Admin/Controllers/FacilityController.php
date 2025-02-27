@@ -26,15 +26,16 @@ class FacilityController extends AdminController
     {
         $grid = new Grid(new Facility());
 
-   
+        
+        $grid->column('id', __('ID'));
         $grid->column('image', __('Image'))->image(url('/uploads/'),100,150);
         $grid->column('name', __('Name'));
         $grid->column('content', __('Content'));
-
+        
 
         return $grid;
     }
-
+        
     /**
      * Make a show builder.
      *
