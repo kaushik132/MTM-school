@@ -8,12 +8,15 @@ use App\Models\Facility;
 use App\Models\GalleryImage;
 use App\Models\GalleryVideo;
 use App\Models\Activities;
+use App\Models\Teachers;
 class HomeController extends Controller
 {
     public function index(){
         $banners = HomeBanner::all();
         $facilty = Facility::limit(8)->get(); 
-        return view('home', compact('banners','facilty'));
+        $teachers = Teachers::limit(8)->get();
+        $galleryImages = GalleryImage::limit(5)->get();
+        return view('home', compact('banners','facilty','teachers','galleryImages'));
     }
 
     public function about(){

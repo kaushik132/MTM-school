@@ -242,26 +242,21 @@
                     when looking at its layout.</p>
             </div>
             <div class="row mt-4">
-                <div class="col-md-5 mt-3 col-6">
-                    <img src="https://www.ecolemondiale.org/public/img/banner1.jpg" alt="gallery-image"
-                        class="gallery-img">
+               
+          
+                <div class="gallery-container">
+                    @foreach ($galleryImages as $index => $gallery)
+                        <div class="gallery-item item-{{ $index }}">
+                            <img src="{{ url('uploads/'.$gallery->image) }}" 
+                                 alt="{{ $gallery->alt }}" 
+                                 class="gallery-img">
+                        </div>
+                    @endforeach
                 </div>
-                <div class="col-md-4 mt-3 col-6">
-                    <img src="https://www.shutterstock.com/image-photo/portrait-two-diligent-girls-looking-600nw-130517294.jpg"
-                        alt="gallery-image" class="gallery-img">
-                </div>
-                <div class="col-md-3 mt-3 col-6">
-                    <img src="https://img.freepik.com/premium-photo/school-child-isolated-background-kids-education-learning-studying-knowledge-children_265223-171924.jpg"
-                        alt="gallery-image" class="gallery-img">
-                </div>
-                <div class="col-md-5 mt-3 col-6">
-                    <img src="https://st2.depositphotos.com/5653638/11536/i/450/depositphotos_115369356-stock-photo-indian-boy-and-girl-studying.jpg"
-                        alt="gallery-image" class="gallery-img">
-                </div>
-                <div class="col-md-7 mt-3 col-6">
-                    <img src="https://static.toiimg.com/thumb/msid-96781628,width-1280,height-720,imgsize-123068,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
-                        alt="gallery-image" class="gallery-img">
-                </div>
+                
+                
+
+
             </div>
             <a href="#" class="text-decoration-none"><div class="text-center"><button class="gallery-explore-btn">Explore More <i class="bi bi-arrow-right"></i></button></div></a>
         </div>
@@ -277,72 +272,24 @@
             </div>
             <div class="swiper our-team-slider mt-4 mb-4">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide main-user-slide">
-                        <div class="team-slider-card">
-                            <div><img
-                                    src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                                    alt="icon" class="slider-user-image"></div>
-                            <div class="slider-user-details">
-                                <h3>Susan D. LunsFord</h3>
-                                <p>Principal</p>
-                            </div>
+
+                 
+               @foreach ($teachers as  $teacher)
+                   
+               <div class="swiper-slide main-user-slide">
+                   <div class="team-slider-card">
+                       <div><img
+                        src="{{url('uploads/'.$teacher->image)}}" alt="icon" class="slider-user-image"></div>
+                    
+                        <div class="slider-user-details">
+                            <h3>{{$teacher->name}}</h3>
+                            <p>{{$teacher->profession}}</p>
                         </div>
                     </div>
-                    <div class="swiper-slide main-user-slide">
-                        <div class="team-slider-card">
-                            <div><img
-                                    src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                                    alt="icon" class="slider-user-image"></div>
-                            <div class="slider-user-details">
-                                <h3>Susan D. LunsFord</h3>
-                                <p>Principal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide main-user-slide">
-                        <div class="team-slider-card">
-                            <div><img
-                                    src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                                    alt="icon" class="slider-user-image"></div>
-                            <div class="slider-user-details">
-                                <h3>Susan D. LunsFord</h3>
-                                <p>Principal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide main-user-slide">
-                        <div class="team-slider-card">
-                            <div><img
-                                    src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                                    alt="icon" class="slider-user-image"></div>
-                            <div class="slider-user-details">
-                                <h3>Susan D. LunsFord</h3>
-                                <p>Principal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide main-user-slide">
-                        <div class="team-slider-card">
-                            <div><img
-                                    src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                                    alt="icon" class="slider-user-image"></div>
-                            <div class="slider-user-details">
-                                <h3>Susan D. LunsFord</h3>
-                                <p>Principal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide main-user-slide">
-                        <div class="team-slider-card">
-                            <div><img
-                                    src="https://public-media.interaction-design.org/images/courses/hds/course_50--square_thumbnail.jpg?tr=fo-auto"
-                                    alt="icon" class="slider-user-image"></div>
-                            <div class="slider-user-details">
-                                <h3>Susan D. LunsFord</h3>
-                                <p>Principal</p>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                @endforeach
+                
+               
                 </div>
 
                 <!-- Navigation buttons -->
