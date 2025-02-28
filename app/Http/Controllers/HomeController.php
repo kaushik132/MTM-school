@@ -13,6 +13,10 @@ use App\Models\QuickFacts;
 use App\Models\WhyChooseUs;
 use App\Models\Faq;
 use App\Models\Contact;
+use App\Models\ApplicationForm;
+use App\Models\Seo;
+
+
 class HomeController extends Controller
 {
     public function index(){
@@ -23,17 +27,33 @@ class HomeController extends Controller
         $quickFacts = QuickFacts::first(); 
         $galleryVideos = GalleryVideo::orderBy('created_at', 'desc')->limit(1)->get();
         $wcus = WhyChooseUs::limit(6)->get();
-        return view('home', compact('banners','facilty','teachers','galleryImages','quickFacts','galleryVideos','wcus'));
+
+        $homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_home_title;
+        $seo_data['seo_description'] = $homepage->seo_home_des;
+        $seo_data['keywords'] = $homepage->seo_home_key;
+      
+        return view('home', compact('banners','facilty','teachers','galleryImages','quickFacts','galleryVideos','wcus','seo_data'));
     }
 
     public function about(){
+        $homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_about_title;
+        $seo_data['seo_description'] = $homepage->seo_about_des;
+        $seo_data['keywords'] = $homepage->seo_about_key;
+
         $teachers = Teachers::limit(8)->get();
         $quickFacts = QuickFacts::first(); 
-        return view('about',compact('teachers','quickFacts'));
+        return view('about',compact('teachers','quickFacts','seo_data'));
     }
 
     public function contact(){
-        return view('contact');
+        $homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_contact_title;
+        $seo_data['seo_description'] = $homepage->seo_contact_des;
+        $seo_data['keywords'] = $homepage->seo_contact_key;
+
+        return view('contact',compact('seo_data'));
     }
 
     public function contactPost(Request $request){
@@ -62,41 +82,154 @@ class HomeController extends Controller
     }
 
     public function activities(){
+        $homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_activities_title;
+        $seo_data['seo_description'] = $homepage->seo_activities_des;
+        $seo_data['keywords'] = $homepage->seo_activities_key;
+
         $activities = Activities::orderBy('id', 'desc')->get();
-        return view('activities', compact('activities'));
+        return view('activities', compact('activities','seo_data'));
     }
 
     public function addmission(){
+$homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_addmission_title;
+        $seo_data['seo_description'] = $homepage->seo_addmission_des;
+        $seo_data['keywords'] = $homepage->seo_addmission_key;
+
       $faqs = Faq::orderBy('id', 'desc')->get();
-        return view('addmission',compact('faqs'));
+        return view('addmission',compact('faqs','seo_data'));
     }
 
     public function applicationForm(){
-        return view('applicationform');
+        $homepage = Seo::first();       
+        $seo_data['seo_title'] = $homepage->seo_application_title;
+        $seo_data['seo_description'] = $homepage->seo_application_des;
+        $seo_data['keywords'] = $homepage->seo_application_key;
+
+        return view('applicationform',compact('seo_data'));
     }
 
 
+
+    public function applicationFormPost(Request $request) {
+     
+        $request->validate([
+            'fname' => 'required',
+            'lname' => 'required',
+            'father_name' => 'required',
+            'mother_name' => 'required',
+            'contact_no' => 'required|numeric',
+            'email' => 'required|email',
+            'present_address' => 'required',
+            'dob' => 'required|date',
+            'gender' => 'required',
+            'desire_class' => 'required',
+            'present_school' => 'required',
+            'student_photo' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'birth_document' => 'mimes:pdf,doc,docx|max:2048', 
+        ],[
+            'fname.required' => 'First Name is required',
+            'lname.required' => 'Last Name is required',
+            'father_name.required' => 'Father Name is required',
+            'mother_name.required' => 'Mother Name is required',
+            'contact_no.required' => 'Contact Number is required',
+            'contact_no.numeric' => 'Contact Number must be numeric',
+            'email.required' => 'Email is required',
+            'email.email' => 'Email is not valid',
+            'present_address.required' => 'Present Address is required',
+            'dob.required' => 'Date of Birth is required',
+            'dob.date' => 'Date of Birth is not valid',
+        ]);
+    
+     
+        $application = new ApplicationForm();
+        $application->fname = $request->fname;
+        $application->lname = $request->lname;
+        $application->father_name = $request->father_name;
+        $application->mother_name = $request->mother_name;
+        $application->contact_no = $request->contact_no;
+        $application->email = $request->email;
+        $application->present_address = $request->present_address;
+        $application->dob = $request->dob;
+        $application->gender = $request->gender;
+        $application->desire_class = $request->desire_class;
+        $application->present_school = $request->present_school;
+  
+        if ($request->hasFile('student_photo')) {
+            $file = $request->file('student_photo'); // File ko retrieve karna
+            $extension = $file->getClientOriginalExtension(); // File extension lena
+            $filename = time() . '_student.' . $extension; // Unique filename generate karna
+            $file->move('uploads/student_photos/', $filename); // File ko manually move karna
+            $application->student_photo = 'uploads/student_photos/' . $filename; // Database me save karna
+        }
+        
+        if ($request->hasFile('birth_document')) {
+            $file = $request->file('birth_document'); // File ko retrieve karna
+            $extension = $file->getClientOriginalExtension(); // File extension lena
+            $filename = time() . '_birth_doc.' . $extension; // Unique filename generate karna
+            $file->move('uploads/birth_documents/', $filename); // File ko manually move karna
+            $application->birth_document = 'uploads/birth_documents/' . $filename; // Database me save karna
+        }
+        
+    
+        $application->save(); 
+    
+ 
+        return redirect()->back()->with('success', 'Application submitted successfully!');
+    }
+
+
+
     public function facility(){
+$homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_facility_title;
+        $seo_data['seo_description'] = $homepage->seo_facility_des;
+        $seo_data['keywords'] = $homepage->seo_facility_key;
+
+
+
+
         $facal = Facility::orderBy('id', 'desc')->get();
-        return view('facility', compact('facal'));
+        return view('facility', compact('facal','seo_data'));
     }
 
 
     public function feesStructure(){
-        return view('feesStructure');
+$homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_fees_title;
+        $seo_data['seo_description'] = $homepage->seo_fees_des;
+        $seo_data['keywords'] = $homepage->seo_fees_key;
+
+
+        return view('feesStructure',compact('seo_data'));
     }
 
     public function gallery(){
+$homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_gallery_title;
+        $seo_data['seo_description'] = $homepage->seo_gallery_des;
+        $seo_data['keywords'] = $homepage->seo_gallery_key;
+
         $galleryImages = GalleryImage::orderBy('id', 'desc')->get();
         $galleryVideos = GalleryVideo::orderBy('id', 'desc')->get();
-        return view('gallery', compact('galleryImages','galleryVideos'));
+        return view('gallery', compact('galleryImages','galleryVideos','seo_data'));
     }
 
     public function userLogin(){
-        return view('userlogin');
+        $homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_user_login_title;
+        $seo_data['seo_description'] = $homepage->seo_user_login_des;
+        $seo_data['keywords'] = $homepage->seo_user_login_key;
+
+        return view('userlogin',compact('seo_data'));
     }
 
     public function userRegister(){
-        return view('usersignup');
+        $homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_user_signup_title;
+        $seo_data['seo_description'] = $homepage->seo_user_signup_des;
+        $seo_data['keywords'] = $homepage->seo_user_signup_key;
+        return view('usersignup' ,compact('seo_data'));
     }
 }

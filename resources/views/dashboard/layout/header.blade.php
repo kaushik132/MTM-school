@@ -3,6 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
+    @if(isset($seo_data['seo_title']))
+    <title>{{ $seo_data['seo_title'] }}</title>
+    @endif
+  
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    @if(isset($seo_data['seo_description']))
+      <meta name="description" content="{{$seo_data['seo_description']}}" />
+      @endif
+
+      @if(isset($seo_data['keywords']))
+      <meta name="keywords"  content="{{$seo_data['keywords']}}" />
+      @endif  
+
+      <link href="{{url('assets/images/logo.png')}}" rel="shortcut icon" type="image/x-icon">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/contact-us.css">

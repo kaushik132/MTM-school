@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index']);
 Route::get('about-us',[HomeController::class,'about']);
 Route::get('contact-us',[HomeController::class,'contact']);
-Route::post('contact-us-post',[HomeController::class,'contactPost'])->name('contact.post');
-
-
 Route::get('activities',[HomeController::class,'activities']);
 Route::get('addmission',[HomeController::class,'addmission']);
 Route::get('application-form',[HomeController::class,'applicationForm']);
@@ -30,5 +28,10 @@ Route::get('user-login',[HomeController::class,'userLogin']);
 Route::get('user-signup',[HomeController::class,'userRegister']);
 
 
+Route::post('contact-us-post',[HomeController::class,'contactPost'])->name('contact.post');
+Route::post('application-form-post',[HomeController::class,'applicationFormPost'])->name('application-form.post');
 
 
+
+
+Route::get('sitemap.xml',[SitemapController::class, 'index']);

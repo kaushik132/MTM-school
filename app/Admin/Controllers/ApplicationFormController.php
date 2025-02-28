@@ -15,7 +15,7 @@ class ApplicationFormController extends AdminController
      *
      * @var string
      */
-    protected $title = 'ApplicationForm';
+    protected $title = 'Application Form';
 
     /**
      * Make a grid builder.
@@ -38,11 +38,17 @@ class ApplicationFormController extends AdminController
         $grid->column('gender', __('Gender'));
         $grid->column('desire_class', __('Desire Class'));
         $grid->column('present_school', __('Present School'));
-        $grid->column('student_photo', __('Student Photo'));
-        $grid->column('birth_document', __('Birth Document'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('student_photo', __('Student Photo'))->image(url(''), 100, 150);
+    
 
+        $grid->column('birth_document', __('Birth Document'))->display(function ($document) {
+            $url = asset('' . $document);
+            return "<a href='{$url}' target='_blank'>Download Birth Document</a>";
+        });
+        
+        $grid->column('created_at', __('Created At'))->display(function ($date) {
+            return \Carbon\Carbon::parse($date)->format('d-m-Y'); // Output: 28-02-2025
+        });
         return $grid;
     }
 

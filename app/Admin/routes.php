@@ -23,6 +23,7 @@ Route::group([
     $router->resource('faqs', FaqController::class);
     $router->resource('contacts', ContactController::class);
     $router->resource('application-forms', ApplicationFormController::class);
+    $router->resource('seos', SeoController::class);
 
 
 });
