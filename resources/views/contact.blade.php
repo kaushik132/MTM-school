@@ -117,7 +117,7 @@
          <!-- ================================ Map =================================== -->
           <section class="mt-5">
             <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d28455.41097053146!2d75.81641777077732!3d26.93754856408036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x396db14a97a649cb%3A0x2eadbd24babbd234!2sBadi%20Chaupar%2C%20Jaipur%2C%20Rajasthan!3m2!1d26.923893699999997!2d75.8316064!4m5!1s0x396db1182c52c96b%3A0xebc34703cc089151!2s110%20-A%2C%20Hazrat%20Ali%20Nagar%2C%20Ramgarh%20Mode%2C%20Jaipur%2C%20Rajasthan%20302002!3m2!1d26.9492452!2d75.8423918!5e0!3m2!1sen!2sin!4v1739857162411!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="contact-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d28455.41097053146!2d75.81641777077732!3d26.93754856408036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x396db14a97a649cb%3A0x2eadbd24babbd234!2sBadi%20Chaupar%2C%20Jaipur%2C%20Rajasthan!3m2!1d26.923893699999997!2d75.8316064!4m5!1s0x396db1182c52c96b%3A0xebc34703cc089151!2s110%20-A%2C%20Hazrat%20Ali%20Nagar%2C%20Ramgarh%20Mode%2C%20Jaipur%2C%20Rajasthan%20302002!3m2!1d26.9492452!2d75.8423918!5e0!3m2!1sen!2sin!4v1739857162411!5m2!1sen!2sin" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </section>
 

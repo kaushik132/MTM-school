@@ -22,6 +22,7 @@ Route::group([
     $router->resource('why-choose-uses', WhyChooseUsController::class);
     $router->resource('faqs', FaqController::class);
     $router->resource('contacts', ContactController::class);
+    $router->resource('application-forms', ApplicationFormController::class);
 
 
 });

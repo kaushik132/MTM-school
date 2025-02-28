@@ -19,7 +19,7 @@ class HomeController extends Controller
         $banners = HomeBanner::all();
         $facilty = Facility::limit(8)->get(); 
         $teachers = Teachers::limit(8)->get();
-        $galleryImages = GalleryImage::limit(5)->get();
+        $galleryImages = GalleryImage::limit(7)->get();
         $quickFacts = QuickFacts::first(); 
         $galleryVideos = GalleryVideo::orderBy('created_at', 'desc')->limit(1)->get();
         $wcus = WhyChooseUs::limit(6)->get();

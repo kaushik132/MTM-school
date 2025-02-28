@@ -223,14 +223,14 @@
   overflow-x: hidden;
 }
 
-.gallery-item {
+.gallery-item-show {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
 }
 
-.gallery-item img {
+.gallery-item-show img {
   width: 100%;
   display: block;
   transition: transform 0.3s ease;
@@ -238,7 +238,7 @@
   
 }
 
-.gallery-item:hover img {
+.gallery-item-show:hover img {
   transform: scale(1.1);
 }
 
@@ -257,7 +257,7 @@
   font-size: 14px;
 }
 
-.gallery-item:hover .fullview-btn {
+.gallery-item-show:hover .fullview-btn {
   display: block;
   
 }
@@ -326,10 +326,13 @@
 }
 iframe {
   width: 100%;
-  max-width: 500px !important;
+  /* max-width: 500px; */
   height:500px;
   border-radius: 10px;
   border: none;
+}
+.contact-iframe{
+  width:100% !important
 }
 @keyframes fadeIn {
   from {

@@ -30,7 +30,7 @@
             
 
                 @foreach ($galleryImages as $galleryImage)
-                <div class="gallery-item">
+                <div class="gallery-item-show">
                     <img src="{{ asset('uploads/'.$galleryImage->image) }}" alt="{{$galleryImage->alt}}">
                     <button class="fullview-btn" onclick="openPopup(this)">Full View</button>
                 </div>
@@ -50,7 +50,7 @@
             <div class="gallery">
            
 @foreach ($galleryVideos as $galleryVideo)
-                <div class="gallery-item">
+                <div class="gallery-item-show">
                     <img src="{{ asset('uploads/'.$galleryVideo->image) }}" alt="{{$galleryVideo->alt}}">
                     <button class="play-btn" onclick="openVideo('{{ $galleryVideo->video_link}}')"></button>    
                 </div>
