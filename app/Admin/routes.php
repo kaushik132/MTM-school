@@ -24,6 +24,8 @@ Route::group([
     $router->resource('contacts', ContactController::class);
     $router->resource('application-forms', ApplicationFormController::class);
     $router->resource('seos', SeoController::class);
+    $router->resource('class-models', ClassContoller::class);
+    $router->resource('elibraries', ElibraryController::class);
 
 
 });

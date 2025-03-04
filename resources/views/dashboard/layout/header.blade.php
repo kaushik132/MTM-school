@@ -20,10 +20,11 @@
       <link href="{{url('assets/images/logo.png')}}" rel="shortcut icon" type="image/x-icon">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/contact-us.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{url('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{url('assets/css/contact-us.css')}}">
+    <link rel="stylesheet" href="{{url('assets/css/admission.css')}}">
+    <link rel="stylesheet" href="{{url('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url('assets/css/swiper-bundle.min.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -50,7 +51,7 @@
       <!-- --------------- Navbar-------------------------- -->
     <header class="nav-container">
         <div class="nav-logo">
-            <a href="{{url('/')}}"><img src="./assets/images/logo.png" alt="logo"></a>
+            <a href="{{url('/')}}"><img src="{{url('assets/images/logo.png')}}" alt="logo"></a>
         </div>
         <i class="fa-solid fa-bars open-menu"></i>
         <div class="background"></div>
@@ -65,14 +66,17 @@
                     <ul class="dropdown-main-menu">
                         <li class="dropdown-menu-item"><a href="{{url('addmission')}}">How to apply</a></li>
                         <li class="dropdown-menu-item"><a href="{{url('application-form')}}">Appliction Form</a></li>
+                        <li class="dropdown-menu-item"><a href="{{url('admission-procedure')}}">Admission Procedure</a></li>
                         <li class="dropdown-menu-item"><a href="{{url('fees-structure')}}">Fees Structure</a></li>
                         <li class="dropdown-menu-item"><a href="{{url('facility')}}">Facilities</a></li> 
                     </ul>
                 </li>
                 <li class="nav-link-item"><a href="{{url('gallery')}}">Gallery</a></li>
+                <li class="nav-link-item"><a href="{{url('beyond-academic')}}">Beyond Academic</a></li>
                 <li class="nav-link-item"><a href="{{url('activities')}}">Activities</a></li>
                 <li class="nav-link-item"><a href="{{url('about-us')}}">About Us</a></li>
                 <li class="nav-link-item"><a href="{{url('contact-us')}}">Contact us</a></li>
+                <li class="nav-link-item"><a href="{{url('e-library')}}">E-Library</a></li>
 
                 @if (Auth::check())
                 <li class="nav-link-item">

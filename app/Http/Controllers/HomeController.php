@@ -15,6 +15,10 @@ use App\Models\Faq;
 use App\Models\Contact;
 use App\Models\ApplicationForm;
 use App\Models\Seo;
+use App\Models\ClassModel;
+use App\Models\Elibrary;
+use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Facades\Storage;
 
 
 class HomeController extends Controller
@@ -100,6 +104,64 @@ $homepage = Seo::first();
       $faqs = Faq::orderBy('id', 'desc')->get();
         return view('addmission',compact('faqs','seo_data'));
     }
+
+    public function admissionProcedure(){
+// $homepage = Seo::first();
+//         $seo_data['seo_title'] = $homepage->seo_admission_procedure_title;
+//         $seo_data['seo_description'] = $homepage->seo_admission_procedure_des;
+//         $seo_data['keywords'] = $homepage->seo_admission_procedure_key;
+
+        return view('admissionProcedure');
+    }
+
+
+    public function beyondAcademic(){
+
+        return view('beyondAcademic');
+    }
+
+public function eLibrary($slug=null){
+
+    if($slug!=null){
+        $class = ClassModel::where('slug',$slug)->first();
+        $elist = Elibrary::latest()->with('class')->where('category_id',$class->id)->paginate(4);
+
+
+     
+
+    }else{
+        $elist = Elibrary::latest()->with('class')->paginate(4);
+
+     }
+
+        return view('elibrary',compact('elist'));
+    }
+
+
+
+
+
+
+    public function blogs(){
+        // $homepage = Seo::first();
+        // $seo_data['seo_title'] = $homepage->seo_blogs_title;
+        // $seo_data['seo_description'] = $homepage->seo_blogs_des;
+        // $seo_data['keywords'] = $homepage->seo_blogs_key;
+
+        return view('blog');
+    }
+
+
+    public function blogDetail(){
+        // $homepage = Seo::first();
+        // $seo_data['seo_title'] = $homepage->seo_blog_detail_title;
+        // $seo_data['seo_description'] = $homepage->seo_blog_detail_des;
+        // $seo_data['keywords'] = $homepage->seo_blog_detail_key;
+
+        return view('blogDetails');
+    }
+
+
 
     public function applicationForm(){
         $homepage = Seo::first();       
@@ -232,4 +294,7 @@ $homepage = Seo::first();
         $seo_data['keywords'] = $homepage->seo_user_signup_key;
         return view('usersignup' ,compact('seo_data'));
     }
+
+
+    
 }

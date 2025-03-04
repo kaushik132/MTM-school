@@ -1,0 +1,133 @@
+.admission-procedure{
+    width:100%;
+    height:370px;
+    border-radius: 13px;
+    margin-bottom: 35px;
+}
+.e-books-show-box{
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding:10px;
+}
+.main-blog-box-show{
+    background-color: #fff;
+    padding:15px;
+    border-radius: 20px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    position: relative;
+}
+.main-blog-box-show .main-blog-image{
+    border-radius: 20px;
+    width: 100%;
+    height:300px
+}
+.updation-title-show{
+    position: absolute;
+    background-color: var(--first-color);
+    padding:5px 20px;
+    border-radius: 20px;
+    color:#fff;
+    font-size: 14px;
+    font-weight: 500;
+    top:25px;
+    left:25px;
+}
+.main-blog-box-show h3{
+    font-size: 20px;
+    font-weight: 600;
+    color:#000000;
+    margin-top: 20px;
+}
+.main-blog-box-show p{
+    font-size: 15px;
+    font-weight: 500;
+    color:var(--text-color);
+    margin-top: 10px;
+}
+.page-link{
+    margin:5px !important;
+    border:solid 1px var(--first-color) !important;
+    border-radius: 5px !important;
+}
+.pagination {
+    --bs-pagination-active-bg: var(--first-color) !important;
+    --bs-pagination-color:var(--first-color) !important;
+}
+.related-blog-box-show{
+    background-color: #fff;
+    padding:15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.related-blog-box-show h5{
+    font-size: 23px;
+    font-weight: 600;
+    /* text-align: center; */
+    letter-spacing: 0.50px;
+  
+}
+.underline-show{
+    border-bottom: solid 1px var(--first-color);
+    width:150px
+}
+.related-blog-box-show span{
+    color:var(--first-color)
+}
+.related-blog-link{
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 15px;
+    letter-spacing: 0.50px;
+    color:var(--text-color)
+}
+.related-blog-link:hover{
+    color:var(--first-color)
+}
+.related-blog-link small{
+    color:var(--first-color)
+}
+.related-main-image{
+    width:100%;
+    max-width: 120px;
+    height:80px;
+    object-fit: cover;
+    border-radius: 13px;
+}
+.main-blog-input{
+    /* position: relative; */
+    width:100%;
+    padding:10px;
+    border:solid 1px rgb(207, 207, 207);
+    border-radius: 10px;
+    outline:none;
+    margin-top:20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.blog-search-box{
+    position:absolute;
+    top:0px;
+    right:15px;
+    margin-top:23px;
+    font-size: 25px;
+    cursor:pointer;
+    
+}
+.popular-tag-show{
+    font-size: 16px;
+    color:var(--text-color);
+    font-weight: 500;
+    margin-top:10px;
+    margin-left:10px
+}
+.popular-tag-show:hover{
+    color:var(--first-color)
+}
+@media only screen and (max-width:768px){
+    .admission-procedure{
+        height:auto;
+    }
+    .main-blog-box-show .main-blog-image{
+        height:auto;
+    }
+}

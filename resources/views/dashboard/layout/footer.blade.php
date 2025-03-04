@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div><img src="./assets/images/logo.png" alt="logo" class="footer-logo"></div>
+                <div><img src="{{url('assets/images/logo.png')}}" alt="logo" class="footer-logo"></div>
                 <p class="footer-logo-dtls">It is a long established fact that a reader will be distracted by the
                     readable content of a page when looking at its layout.</p>
                 <div class="footer-logo-dtls"><span class="footer-icon-show fs-5"><i
@@ -63,11 +63,11 @@
 </footer>
 <!-- ==================WhatsApp Icon======================== -->
 <div class="whatsapp-icon">
-    <img src="./assets/images/wp-icon.png" alt="icon" class="img-fluid">
+    <img src="{{url('assets/images/wp-icon.png')}}" alt="icon" class="img-fluid">
 </div>
-<script src="./assets/js/bootstrap.bundle.min.js"></script>
-<script src="./assets/js/swiper-bundle.min.js"></script>
-<script src="./assets/js/script.js"></script>
+<script src="{{url('assets/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{url('assets/js/swiper-bundle.min.js')}}"></script>
+<script src="{{url('assets/js/script.js')}}"></script>
 </body>
 
 </html>
