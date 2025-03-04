@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,13 +25,26 @@ Route::get('application-form',[HomeController::class,'applicationForm']);
 Route::get('facility',[HomeController::class,'facility']);
 Route::get('fees-structure',[HomeController::class,'feesStructure']);
 Route::get('gallery',[HomeController::class,'gallery']);
-Route::get('user-login',[HomeController::class,'userLogin']);
-Route::get('user-signup',[HomeController::class,'userRegister']);
+
 
 
 Route::post('contact-us-post',[HomeController::class,'contactPost'])->name('contact.post');
 Route::post('application-form-post',[HomeController::class,'applicationFormPost'])->name('application-form.post');
 
+
+
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/user-signup', [AuthController::class, 'register'])->name('register');
+    Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
+    Route::get('/user-login', [AuthController::class, 'login'])->name('user-login');
+    Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
+});
+
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', [HomeController::class, 'index']);
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+});
 
 
 

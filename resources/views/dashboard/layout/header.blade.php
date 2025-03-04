@@ -66,14 +66,27 @@
                         <li class="dropdown-menu-item"><a href="{{url('addmission')}}">How to apply</a></li>
                         <li class="dropdown-menu-item"><a href="{{url('application-form')}}">Appliction Form</a></li>
                         <li class="dropdown-menu-item"><a href="{{url('fees-structure')}}">Fees Structure</a></li>
-                        <li class="dropdown-menu-item"><a href="{{url('facility')}}">Facilities</a></li>
+                        <li class="dropdown-menu-item"><a href="{{url('facility')}}">Facilities</a></li> 
                     </ul>
                 </li>
                 <li class="nav-link-item"><a href="{{url('gallery')}}">Gallery</a></li>
                 <li class="nav-link-item"><a href="{{url('activities')}}">Activities</a></li>
                 <li class="nav-link-item"><a href="{{url('about-us')}}">About Us</a></li>
                 <li class="nav-link-item"><a href="{{url('contact-us')}}">Contact us</a></li>
-                <li class="nav-link-item"><a href="{{url('application-form')}}"><span class="nav-apply-btn">Apply Now</span></a></li>
+
+                @if (Auth::check())
+                <li class="nav-link-item">
+                    <form   action="{{ route('logout') }}" method="POST"  role="search">
+                        @csrf
+                       <span class="nav-apply-btn"> <button   type="submit">{{ Auth::user()->name ?? ""}}</button></span>
+                     </form>
+                    
+                    </li>
+               
+                @else
+                <li class="nav-link-item"><a href="{{url('/user-login')}}"><span class="nav-apply-btn">Login</span></a></li>
+                @endif
+               
             </ul>
         </div>
     </header>
