@@ -26,6 +26,7 @@ Route::group([
     $router->resource('seos', SeoController::class);
     $router->resource('class-models', ClassContoller::class);
     $router->resource('elibraries', ElibraryController::class);
+    $router->resource('admission-procedures', AdmissionProcedureController::class);
 
 
 });
