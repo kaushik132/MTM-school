@@ -17,6 +17,7 @@ use App\Models\ApplicationForm;
 use App\Models\Seo;
 use App\Models\ClassModel;
 use App\Models\Elibrary;
+use App\Models\AdmissionProcedure;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\Storage;
 
@@ -25,10 +26,10 @@ class HomeController extends Controller
 {
     public function index(){
         $banners = HomeBanner::all();
-        $facilty = Facility::limit(8)->get(); 
+        $facilty = Facility::limit(8)->get();
         $teachers = Teachers::limit(8)->get();
         $galleryImages = GalleryImage::limit(7)->get();
-        $quickFacts = QuickFacts::first(); 
+        $quickFacts = QuickFacts::first();
         $galleryVideos = GalleryVideo::orderBy('created_at', 'desc')->limit(1)->get();
         $wcus = WhyChooseUs::limit(6)->get();
 
@@ -36,7 +37,7 @@ class HomeController extends Controller
         $seo_data['seo_title'] = $homepage->seo_home_title;
         $seo_data['seo_description'] = $homepage->seo_home_des;
         $seo_data['keywords'] = $homepage->seo_home_key;
-      
+
         return view('home', compact('banners','facilty','teachers','galleryImages','quickFacts','galleryVideos','wcus','seo_data'));
     }
 
@@ -47,7 +48,7 @@ class HomeController extends Controller
         $seo_data['keywords'] = $homepage->seo_about_key;
 
         $teachers = Teachers::limit(8)->get();
-        $quickFacts = QuickFacts::first(); 
+        $quickFacts = QuickFacts::first();
         return view('about',compact('teachers','quickFacts','seo_data'));
     }
 
@@ -106,12 +107,13 @@ $homepage = Seo::first();
     }
 
     public function admissionProcedure(){
-// $homepage = Seo::first();
-//         $seo_data['seo_title'] = $homepage->seo_admission_procedure_title;
-//         $seo_data['seo_description'] = $homepage->seo_admission_procedure_des;
-//         $seo_data['keywords'] = $homepage->seo_admission_procedure_key;
+$admition = AdmissionProcedure::orderBy('id', 'desc')->get();
+$homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_admission_procedure_title;
+        $seo_data['seo_description'] = $homepage->seo_admission_procedure_des;
+        $seo_data['keywords'] = $homepage->seo_admission_procedure_key;
 
-        return view('admissionProcedure');
+        return view('admissionProcedure',compact('admition','seo_data'));
     }
 
 
@@ -121,20 +123,25 @@ $homepage = Seo::first();
     }
 
 public function eLibrary($slug=null){
-
+    $homepage = Seo::select('seo_e_labrary_title','seo_e_labrary_des','seo_e_labraby_key')->first();
     if($slug!=null){
         $class = ClassModel::where('slug',$slug)->first();
         $elist = Elibrary::latest()->with('class')->where('category_id',$class->id)->paginate(4);
 
+        $seo_data['seo_title'] ="E-Library Title ";
+        $seo_data['seo_description'] ="E-Library Description";
+       $seo_data['keywords'] =" E-Library Keywords";
 
-     
 
     }else{
         $elist = Elibrary::latest()->with('class')->paginate(4);
+        $seo_data['seo_title'] =$homepage->seo_e_labrary_title;
+        $seo_data['seo_description'] =$homepage->seo_e_labrary_des;
+        $seo_data['keywords'] =$homepage->seo_e_labraby_key;
 
      }
 
-        return view('elibrary',compact('elist'));
+        return view('elibrary',compact('elist','seo_data'));
     }
 
 
@@ -164,7 +171,7 @@ public function eLibrary($slug=null){
 
 
     public function applicationForm(){
-        $homepage = Seo::first();       
+        $homepage = Seo::first();
         $seo_data['seo_title'] = $homepage->seo_application_title;
         $seo_data['seo_description'] = $homepage->seo_application_des;
         $seo_data['keywords'] = $homepage->seo_application_key;
@@ -175,7 +182,7 @@ public function eLibrary($slug=null){
 
 
     public function applicationFormPost(Request $request) {
-     
+
         $request->validate([
             'fname' => 'required',
             'lname' => 'required',
@@ -189,7 +196,7 @@ public function eLibrary($slug=null){
             'desire_class' => 'required',
             'present_school' => 'required',
             'student_photo' => 'image|mimes:jpeg,png,jpg|max:2048',
-            'birth_document' => 'mimes:pdf,doc,docx|max:2048', 
+            'birth_document' => 'mimes:pdf,doc,docx|max:2048',
         ],[
             'fname.required' => 'First Name is required',
             'lname.required' => 'Last Name is required',
@@ -203,8 +210,8 @@ public function eLibrary($slug=null){
             'dob.required' => 'Date of Birth is required',
             'dob.date' => 'Date of Birth is not valid',
         ]);
-    
-     
+
+
         $application = new ApplicationForm();
         $application->fname = $request->fname;
         $application->lname = $request->lname;
@@ -217,7 +224,7 @@ public function eLibrary($slug=null){
         $application->gender = $request->gender;
         $application->desire_class = $request->desire_class;
         $application->present_school = $request->present_school;
-  
+
         if ($request->hasFile('student_photo')) {
             $file = $request->file('student_photo'); // File ko retrieve karna
             $extension = $file->getClientOriginalExtension(); // File extension lena
@@ -225,7 +232,7 @@ public function eLibrary($slug=null){
             $file->move('uploads/student_photos/', $filename); // File ko manually move karna
             $application->student_photo = 'uploads/student_photos/' . $filename; // Database me save karna
         }
-        
+
         if ($request->hasFile('birth_document')) {
             $file = $request->file('birth_document'); // File ko retrieve karna
             $extension = $file->getClientOriginalExtension(); // File extension lena
@@ -233,11 +240,11 @@ public function eLibrary($slug=null){
             $file->move('uploads/birth_documents/', $filename); // File ko manually move karna
             $application->birth_document = 'uploads/birth_documents/' . $filename; // Database me save karna
         }
-        
-    
-        $application->save(); 
-    
- 
+
+
+        $application->save();
+
+
         return redirect()->back()->with('success', 'Application submitted successfully!');
     }
 
@@ -296,5 +303,5 @@ $homepage = Seo::first();
     }
 
 
-    
+
 }

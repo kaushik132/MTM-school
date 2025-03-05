@@ -158,6 +158,19 @@ class SeoController extends AdminController
         $form->text('seo_user-signup_title', __('Seo user signup title'));
         $form->textarea('seo_user-signup_des', __('Seo user signup des'));
         $form->textarea('seo_user-signup_key', __('Seo user signup key'));
+        $form->text('seo_admission_procedure_title', __('Seo Admission Procedure title'));
+        $form->textarea('seo_admission_procedure_des', __('Seo Admission Procedure des'));
+        $form->textarea('seo_admission_procedure_key', __('Seo Admission Procedure key'));
+        // $form->text('seo_beyond_academic_title', __('Seo Beyond Academic title'));
+        // $form->textarea('seo_beyond_academic_des', __('Seo Beyond Academic des'));
+        // $form->textarea('seo_beyond_academic_key', __('Seo Beyond Academic key'));
+        // $form->text('seo_blogs_title', __('Seo Blogs title'));
+        // $form->textarea('seo_blogs_des', __('Seo Blogs des'));
+        // $form->textarea('seo_blogs_key', __('Seo Blogs key'));
+        $form->text('seo_e_labrary_title', __('Seo E Labrary title'));
+        $form->textarea('seo_e_labrary_des', __('Seo E Labrary des'));
+        $form->textarea('seo_e_labraby_key', __('Seo E Labrary key'));
+
 
         return $form;
     }

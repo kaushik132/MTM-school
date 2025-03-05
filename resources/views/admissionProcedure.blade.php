@@ -18,24 +18,20 @@
             <span><i class="fa-solid fa-graduation-cap"></i> Admission Procedure</span>
             <h2>Step-by-Step Guide for a <br><span class="footer-icon-show">Smooth Enrollment </span></h2>
         </div>
-        <div class="row">
+        @if ($admition->isNotEmpty())
+            @php
+            $ad = $admition->first();
+            @endphp
+            <div class="row">
             <div class="col-md-12 mt-4">
-                <div><img src="https://growingkids.com/wp-content/uploads/elementor/thumbs/M3791-The-Benefits-of-Preschool-Featured-Image-qmwkvv7svsw6proauxbob0a3nvs1v1q0y3w6gbqb2g.jpg" alt="image" class="admission-procedure"></div>
-              <div class="about-us-content-show">
-               <p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don't look even slightly believable. If you are going to use passage There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don't look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don't look even slightly believable. If you are going to use passage..</p>
-               <ul>
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.</li>
-                 <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.</li>
-            </ul>
-            <ol>
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.</li>
-                 <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.</li>
-            </ol>
-               <p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don't look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don't look even slightly believable. If you are going to use passage. There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don't look even slightly believable. If you are going to use passage.</p>
-              </div>
+                <div><img src="{{url('uploads/'.$ad->image)}}" alt="{{$ad->alt}}" class="admission-procedure"></div>
+                <div class="about-us-content-show">
+                <p>{!!$ad->content!!}</p>
+                </div>
             </div>
+            </div>
+        @endif
         </div>
-        </div>
-        </section>    
+        </section>
 
 @endsection

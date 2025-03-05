@@ -27,11 +27,11 @@ class ElibraryController extends AdminController
     {
         $grid = new Grid(new Elibrary());
 
-   
+
         $grid->column('title', __('Title'));
         $grid->column('class.name', __('Category id'));
         $grid->column('image', __('Image'))->image(url('uploads'), 100, 100);
-       
+
 
         return $grid;
     }
@@ -51,7 +51,7 @@ class ElibraryController extends AdminController
         $show->field('slug', __('Slug'));
         $show->field('category_id', __('Category id'));
         $show->field('image', __('Image'));
-      
+
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -75,11 +75,14 @@ class ElibraryController extends AdminController
 
            $form->slug = strtolower(preg_replace('/[^A-Za-z0-9-]+/', '-',trim($form->name)));
         });
-       
+
         $form->image('image', __('Image'));
         $form->file('pdf', __('PDF File'));
+        $form->text('seo_title', __('Seo Title'));
+        $form->textarea('seo_des', __('Seo Description'));
+        $form->textarea('seo_key', __('Seo Keywords'));
 
-       
+
 
         return $form;
     }
