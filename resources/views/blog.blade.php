@@ -21,33 +21,27 @@
 
        
             <div class="row mb-4">
+              @foreach ($blogList as $blog)
+                  
+        
                 <div class="col-md-6 mt-3">
                     <div class="main-blog-box-show">
-                        <div><img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/2f/aa/4c.jpg" alt="blog-image" class="main-blog-image"></div>
+                        <div><img src="{{url('uploads/'.$blog->image)}}" alt="{{$blog->alt}}" class="main-blog-image"></div>
                         <div class="updation-title-show">Updated</div>
-                         <h3>It is a long established fact that a reader</h3>
-                         <p>The Mobility Arrangement for Talented Early-professionals Scheme (MATES) Visa offers young Indian professionals a unique chance to live and work in Australia for up to two years.</p>
+                         <h3>{{$blog->title}}</h3>
+                         <p>{{$blog->short_content}}</p>
                        <div class="d-flex justify-content-between align-items-center mt-2">
-                         <a href="blog-details.html"><div style="color:var(--first-color)">Read More</div></a>
+                         <a href="{{url('blog/'.$blog->slug)}}"><div style="color:var(--first-color)">Read More</div></a>
                          <div class="text-muted"><small><i class="bi bi-calendar-fill"></i> 16 January 2025</small></div>
                        </div>
                      </div>
                 </div>
-                <div class="col-md-6 mt-3">
-                    <div class="main-blog-box-show">
-                        <div><img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/2f/aa/4c.jpg" alt="blog-image" class="main-blog-image"></div>
-                        <div class="updation-title-show">Updated</div>
-                         <h3>It is a long established fact that a reader</h3>
-                         <p>The Mobility Arrangement for Talented Early-professionals Scheme (MATES) Visa offers young Indian professionals a unique chance to live and work in Australia for up to two years.</p>
-                       <div class="d-flex justify-content-between align-items-center mt-2">
-                         <a href="blog-details.html"><div style="color:var(--first-color)">Read More</div></a>
-                         <div class="text-muted"><small><i class="bi bi-calendar-fill"></i> 16 January 2025</small></div>
-                       </div>
-                     </div>
-                </div>
+                @endforeach
         </div>
 
-        <div class="mt-5">
+{{$blogList->links()}}
+
+        {{-- <div class="mt-5">
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                   <li class="page-item">
@@ -65,7 +59,7 @@
                   </li>
                 </ul>
               </nav>
-        </div>
+        </div> --}}
     </div>
 </section>    
 

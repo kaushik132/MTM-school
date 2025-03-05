@@ -54,12 +54,12 @@ class SeoController extends AdminController
         $grid->column('seo_gallery_title', __('Seo gallery title'));
         $grid->column('seo_gallery_des', __('Seo gallery des'));
         $grid->column('seo_gallery_key', __('Seo gallery key'));
-        $grid->column('seo_user-login_title', __('Seo user login title'));
-        $grid->column('seo_user-login_des', __('Seo user login des'));
-        $grid->column('seo_user-login_key', __('Seo user login key'));
-        $grid->column('seo_user-signup_title', __('Seo user signup title'));
-        $grid->column('seo_user-signup_des', __('Seo user signup des'));
-        $grid->column('seo_user-signup_key', __('Seo user signup key'));
+        $grid->column('seo_user_login_title', __('Seo user login title'));
+        $grid->column('seo_user_login_des', __('Seo user login des'));
+        $grid->column('seo_user_login_key', __('Seo user login key'));
+        $grid->column('seo_user_signup_title', __('Seo user signup title'));
+        $grid->column('seo_user_signup_des', __('Seo user signup des'));
+        $grid->column('seo_user_signup_key', __('Seo user signup key'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -104,12 +104,12 @@ class SeoController extends AdminController
         $show->field('seo_gallery_title', __('Seo gallery title'));
         $show->field('seo_gallery_des', __('Seo gallery des'));
         $show->field('seo_gallery_key', __('Seo gallery key'));
-        $show->field('seo_user-login_title', __('Seo user login title'));
-        $show->field('seo_user-login_des', __('Seo user login des'));
-        $show->field('seo_user-login_key', __('Seo user login key'));
-        $show->field('seo_user-signup_title', __('Seo user signup title'));
-        $show->field('seo_user-signup_des', __('Seo user signup des'));
-        $show->field('seo_user-signup_key', __('Seo user signup key'));
+        $show->field('seo_user_login_title', __('Seo user login title'));
+        $show->field('seo_user_login_des', __('Seo user login des'));
+        $show->field('seo_user_login_key', __('Seo user login key'));
+        $show->field('seo_user_signup_title', __('Seo user signup title'));
+        $show->field('seo_user_signup_des', __('Seo user signup des'));
+        $show->field('seo_user_signup_key', __('Seo user signup key'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -152,12 +152,12 @@ class SeoController extends AdminController
         $form->text('seo_gallery_title', __('Seo gallery title'));
         $form->textarea('seo_gallery_des', __('Seo gallery des'));
         $form->textarea('seo_gallery_key', __('Seo gallery key'));
-        $form->text('seo_user-login_title', __('Seo user login title'));
-        $form->textarea('seo_user-login_des', __('Seo user login des'));
-        $form->textarea('seo_user-login_key', __('Seo user login key'));
-        $form->text('seo_user-signup_title', __('Seo user signup title'));
-        $form->textarea('seo_user-signup_des', __('Seo user signup des'));
-        $form->textarea('seo_user-signup_key', __('Seo user signup key'));
+        $form->text('seo_user_login_title', __('Seo user login title'));
+        $form->textarea('seo_user_login_des', __('Seo user login des'));
+        $form->textarea('seo_user_login_key', __('Seo user login key'));
+        $form->text('seo_user_signup_title', __('Seo user signup title'));
+        $form->textarea('seo_user_signup_des', __('Seo user signup des'));
+        $form->textarea('seo_user_signup_key', __('Seo user signup key'));
         $form->text('seo_admission_procedure_title', __('Seo Admission Procedure title'));
         $form->textarea('seo_admission_procedure_des', __('Seo Admission Procedure des'));
         $form->textarea('seo_admission_procedure_key', __('Seo Admission Procedure key'));
@@ -170,6 +170,14 @@ class SeoController extends AdminController
         $form->text('seo_e_labrary_title', __('Seo E Labrary title'));
         $form->textarea('seo_e_labrary_des', __('Seo E Labrary des'));
         $form->textarea('seo_e_labraby_key', __('Seo E Labrary key'));
+
+        $form->text('seo_title_blog', __('Seo Blog title'));
+        $form->textarea('seo_des_blog', __('Seo Blog des'));
+        $form->textarea('seo_key_blog', __('Seo Blog key'));
+
+        $form->text('beyond_academic_title', __('Seo Beyound Academic title'));
+        $form->textarea('beyond_academic_des', __('Seo Beyound Academic des'));
+        $form->textarea('beyond_academic_key', __('Seo Beyound Academic key'));
 
 
         return $form;

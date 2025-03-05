@@ -26,14 +26,13 @@ class BlogCategoryController extends AdminController
     {
         $grid = new Grid(new BlogCategory());
 
-        $grid->column('id', __('Id'));
+ 
         $grid->column('name', __('Name'));
 
         $grid->column('created_at', __('Created at'))->display(function ($created_at) {
             return \Carbon\Carbon::parse($created_at)->format('d-M-Y');
         });
-        $grid->column('updated_at', __('Updated at'));
-
+  
         return $grid;
     }
 
@@ -77,7 +76,7 @@ class BlogCategoryController extends AdminController
            $form->slug = strtolower(preg_replace('/[^A-Za-z0-9-]+/', '-',trim($form->name)));
         });
 
-        $form->text('description', __('Description'));
+        // $form->text('description', __('Description'));
         $form->text('seo_title', __('Seo title'));
         $form->textarea('seo_des', __('Seo des'));
         $form->textarea('seo_key', __('Seo key'));

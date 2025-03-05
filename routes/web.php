@@ -26,9 +26,9 @@ Route::get('facility',[HomeController::class,'facility']);
 Route::get('fees-structure',[HomeController::class,'feesStructure']);
 Route::get('gallery',[HomeController::class,'gallery']);
 Route::get('admission-procedure',[HomeController::class,'admissionProcedure']);
-Route::get('beyond-academic',[HomeController::class,'beyondAcademic']);
-Route::get('blogs',[HomeController::class,'blogs']);
-Route::get('blog',[HomeController::class,'blogDetail']);
+Route::get('beyond-academic/{slug?}',[HomeController::class,'beyondAcademic']);
+Route::get('blogs/{slug?}',[HomeController::class,'blogs']);
+Route::get('blog/{slug?}',[HomeController::class,'blogDetail']);
 Route::get('e-library/{slug?}',[HomeController::class,'eLibrary']);
 
 

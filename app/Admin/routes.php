@@ -28,6 +28,9 @@ Route::group([
     $router->resource('elibraries', ElibraryController::class);
     $router->resource('admission-procedures', AdmissionProcedureController::class);
     $router->resource('blog-categories', BlogCategoryController::class);
+    $router->resource('blogs', BlogController::class);
+    $router->resource('fees-structures', FeesStructureController::class);
+    $router->resource('beyond-academics', BeyondAcademicController::class);
 
 
 });

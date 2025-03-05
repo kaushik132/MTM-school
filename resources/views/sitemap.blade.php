@@ -71,6 +71,68 @@
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
+    <url>
+        <loc>{{ url('admission-procedure') }}</loc>
+        <lastmod>{{ now()->toAtomString() }}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+
+    <url>
+        <loc>{{ url('e-library') }}</loc>
+        <lastmod>{{ now()->toAtomString() }}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    @foreach ($class as $classies)
+        
+    <url>
+        <loc>{{ url('e-library/'.$classies->slug) }}</loc>
+        <lastmod>{{ $classies->created_at->toAtomString() }}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    @endforeach
+    
+@foreach ($be as $beyondAcademic)
+    
+<url>
+    <loc>{{ url('beyond-academic/'.$beyondAcademic->slug) }}</loc>
+    <lastmod>{{ $beyondAcademic->created_at->toAtomString() }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+@endforeach
+
+<url>
+    <loc>{{ url('blogs')}}</loc>
+    <lastmod>{{ now()->toAtomString() }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+@foreach ($blogcategories as $blogcategory)
+    
+<url>
+    <loc>{{ url('blogs/'.$blogcategory->slug)}}</loc>
+    <lastmod>{{ $blogcategory->created_at->toAtomString() }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+</url>
+@endforeach
+
+    @foreach ($blogs as $blog)
+        
+    <url>
+        <loc>{{ url('blog/'.$blog->slug) }}</loc>
+        <lastmod>{{ $blog->created_at->toAtomString() }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    @endforeach
 
  
 

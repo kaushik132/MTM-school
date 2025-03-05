@@ -6,12 +6,17 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Seo;
 
 class AuthController extends Controller
 {
     public function register()
     {
-        return view('usersignup');
+        $homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_user_signup_title;
+        $seo_data['seo_description'] = $homepage->seo_user_signup_des;
+        $seo_data['keywords'] = $homepage->seo_user_signup_key;
+        return view('usersignup',compact('seo_data'));
     }
  
     public function registerPost(Request $request)
@@ -40,7 +45,11 @@ class AuthController extends Controller
     }
     public function login()
     {
-        return view('userlogin');
+        $homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->seo_user_login_title;
+        $seo_data['seo_description'] = $homepage->seo_user_login_des;
+        $seo_data['keywords'] = $homepage->seo_user_login_key;
+        return view('userlogin',compact('seo_data'));
     }
  
     public function loginPost(Request $request)

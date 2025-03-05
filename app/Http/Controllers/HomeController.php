@@ -18,6 +18,10 @@ use App\Models\Seo;
 use App\Models\ClassModel;
 use App\Models\Elibrary;
 use App\Models\AdmissionProcedure;
+use App\Models\Blog;
+use App\Models\BlogCategory;
+use App\Models\FeesStructure;
+use App\Models\BeyondAcademic;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\Storage;
 
@@ -117,9 +121,14 @@ $homepage = Seo::first();
     }
 
 
-    public function beyondAcademic(){
+    public function beyondAcademic($slug=null){
+        $beyodData = BeyondAcademic::latest()->where('slug',$slug)->first();
+        $homepage = Seo::first();
+        $seo_data['seo_title'] = $homepage->beyond_academic_title;
+        $seo_data['seo_description'] = $homepage->beyond_academic_des;
+        $seo_data['keywords'] = $homepage->beyond_academic_key;
 
-        return view('beyondAcademic');
+        return view('beyondAcademic',compact('seo_data','beyodData'));
     }
 
 public function eLibrary($slug=null){
@@ -149,23 +158,41 @@ public function eLibrary($slug=null){
 
 
 
-    public function blogs(){
-        // $homepage = Seo::first();
-        // $seo_data['seo_title'] = $homepage->seo_blogs_title;
-        // $seo_data['seo_description'] = $homepage->seo_blogs_des;
-        // $seo_data['keywords'] = $homepage->seo_blogs_key;
+    public function blogs($slug=null){
+        $homepage = Seo::select('seo_title_blog','seo_des_blog','seo_key_blog')->first();
+        if($slug!=null){
+            $blogCategory = BlogCategory::where('slug',$slug)->first();
+            $blogList = Blog::latest()->with('blogCategory')->where('category_id',$blogCategory->id)->paginate(4);
+            $seo_data['seo_title'] =$blogCategory->seo_title;
+            $seo_data['seo_description'] =$blogCategory->seo_des;
+           $seo_data['keywords'] =$blogCategory->seo_key;
+        
 
-        return view('blog');
+         
+
+        }else{
+            $blogList = Blog::latest()->with('blogCategory')->paginate(4);
+            $seo_data['seo_title'] =$homepage->seo_title_blog;
+            $seo_data['seo_description'] =$homepage->seo_des_blog;
+            $seo_data['keywords'] =$homepage->seo_key_blog;
+        
+         
+         }
+
+        return view('blog',compact('blogList','seo_data'));
     }
 
 
-    public function blogDetail(){
-        // $homepage = Seo::first();
-        // $seo_data['seo_title'] = $homepage->seo_blog_detail_title;
-        // $seo_data['seo_description'] = $homepage->seo_blog_detail_des;
-        // $seo_data['keywords'] = $homepage->seo_blog_detail_key;
+    public function blogDetail($slug=null){
+        $blogCategory = BlogCategory::all();
+        $blog = Blog::latest()->limit(3)->get();
+        $blogData = Blog::with('blogCategory')->where('slug',$slug)->first();
+        $seo_data['seo_title'] =$blogData->seo_title;
+        $seo_data['seo_description'] =$blogData->seo_description;
+       $seo_data['keywords'] =$blogData->seo_keyword;
 
-        return view('blogDetails');
+
+        return view('blogDetails',compact('blogData','blog','seo_data','blogCategory'));
     }
 
 
@@ -270,8 +297,10 @@ $homepage = Seo::first();
         $seo_data['seo_description'] = $homepage->seo_fees_des;
         $seo_data['keywords'] = $homepage->seo_fees_key;
 
+        $fees = FeesStructure::orderBy('id', 'desc')->get();
 
-        return view('feesStructure',compact('seo_data'));
+
+        return view('feesStructure',compact('seo_data','fees'));
     }
 
     public function gallery(){
@@ -285,22 +314,8 @@ $homepage = Seo::first();
         return view('gallery', compact('galleryImages','galleryVideos','seo_data'));
     }
 
-    public function userLogin(){
-        $homepage = Seo::first();
-        $seo_data['seo_title'] = $homepage->seo_user_login_title;
-        $seo_data['seo_description'] = $homepage->seo_user_login_des;
-        $seo_data['keywords'] = $homepage->seo_user_login_key;
+   
 
-        return view('userlogin',compact('seo_data'));
-    }
-
-    public function userRegister(){
-        $homepage = Seo::first();
-        $seo_data['seo_title'] = $homepage->seo_user_signup_title;
-        $seo_data['seo_description'] = $homepage->seo_user_signup_des;
-        $seo_data['keywords'] = $homepage->seo_user_signup_key;
-        return view('usersignup' ,compact('seo_data'));
-    }
 
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2025 at 01:00 PM
+-- Generation Time: Mar 05, 2025 at 01:26 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -71,36 +71,41 @@ CREATE TABLE `admin_menu` (
 --
 
 INSERT INTO `admin_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `permission`, `created_at`, `updated_at`) VALUES
-(1, 0, 1, 'Dashboard', 'icon-chart-bar', '/', NULL, NULL, NULL),
-(2, 0, 2, 'Admin', 'icon-server', '', NULL, NULL, NULL),
-(3, 2, 3, 'Users', 'icon-users', 'auth/users', NULL, NULL, NULL),
-(4, 2, 4, 'Roles', 'icon-user', 'auth/roles', NULL, NULL, NULL),
-(5, 2, 5, 'Permission', 'icon-ban', 'auth/permissions', NULL, NULL, NULL),
-(6, 2, 6, 'Menu', 'icon-bars', 'auth/menu', NULL, NULL, NULL),
-(7, 2, 7, 'Operation log', 'icon-history', 'auth/logs', NULL, NULL, NULL),
-(8, 0, 8, 'Helpers', 'icon-cogs', '', NULL, '2025-02-21 04:26:55', '2025-02-26 23:55:08'),
-(9, 8, 9, 'Scaffold', 'icon-keyboard', 'helpers/scaffold', NULL, '2025-02-21 04:26:55', '2025-02-26 23:55:08'),
-(10, 8, 10, 'Database terminal', 'icon-database', 'helpers/terminal/database', NULL, '2025-02-21 04:26:55', '2025-02-26 23:55:08'),
-(11, 8, 11, 'Laravel artisan', 'icon-terminal', 'helpers/terminal/artisan', NULL, '2025-02-21 04:26:55', '2025-02-26 23:55:08'),
-(12, 8, 12, 'Routes', 'icon-list-alt', 'helpers/routes', NULL, '2025-02-21 04:26:55', '2025-02-26 23:55:08'),
-(13, 0, 13, 'Home-banners', 'icon-file', 'home-banners', NULL, '2025-02-25 23:24:50', '2025-02-26 23:55:08'),
-(14, 31, 14, 'Facilities', 'icon-file', 'facilities', NULL, '2025-02-26 00:22:09', '2025-03-04 06:14:14'),
-(15, 0, 15, 'Gallery', 'icon-air-freshener', NULL, '*', '2025-02-26 01:38:57', '2025-02-26 23:55:08'),
-(16, 15, 16, 'Gallery-images', 'icon-file', 'gallery-images', NULL, '2025-02-26 01:42:43', '2025-02-26 23:55:08'),
-(17, 15, 17, 'Gallery-videos', 'icon-file', 'gallery-videos', NULL, '2025-02-26 01:46:23', '2025-02-26 23:55:08'),
-(18, 0, 18, 'Activities', 'icon-file', 'activities', NULL, '2025-02-26 23:56:53', '2025-03-04 03:39:42'),
-(19, 0, 19, 'Teachers', 'icon-file', 'teachers', NULL, '2025-02-27 00:52:54', '2025-03-04 03:39:42'),
-(21, 0, 20, 'Quick-facts', 'icon-file', 'quick-facts', NULL, '2025-02-27 01:36:28', '2025-03-04 03:39:42'),
-(22, 0, 21, 'Why-choose-uses', 'icon-file', 'why-choose-uses', NULL, '2025-02-27 02:01:46', '2025-03-04 03:39:42'),
-(23, 31, 22, 'Faqs', 'icon-file', 'faqs', NULL, '2025-02-27 03:22:09', '2025-03-04 06:13:28'),
-(24, 0, 23, 'Contacts', 'icon-file', 'contacts', NULL, '2025-02-27 04:11:12', '2025-03-04 03:39:42'),
-(25, 31, 24, 'Application-forms', 'icon-file', 'application-forms', NULL, '2025-02-28 00:18:26', '2025-03-04 06:13:47'),
-(26, 0, 28, 'Seos', 'icon-file', 'seos', NULL, '2025-02-28 05:19:20', '2025-03-04 03:39:42'),
-(28, 30, 26, 'Class', 'icon-file', 'class-models', NULL, '2025-03-04 02:14:39', '2025-03-04 03:39:42'),
-(29, 30, 27, 'E-Libraries', 'icon-file', 'elibraries', NULL, '2025-03-04 03:37:25', '2025-03-04 03:39:42'),
-(30, 0, 25, 'E-Lib', 'icon-adjust', NULL, '*', '2025-03-04 03:38:42', '2025-03-04 03:39:42'),
-(31, 0, 0, 'Addmission', 'icon-align-justify', NULL, '*', '2025-03-04 06:13:07', '2025-03-04 06:13:07'),
-(32, 31, 28, 'Admission-procedures', 'icon-file', 'admission-procedures', NULL, '2025-03-04 06:20:25', '2025-03-04 06:24:51');
+(1, 0, 9, 'Dashboard', 'icon-chart-bar', '/', NULL, NULL, '2025-03-05 05:26:34'),
+(2, 0, 10, 'Admin', 'icon-server', '', NULL, NULL, '2025-03-05 05:26:34'),
+(3, 2, 11, 'Users', 'icon-users', 'auth/users', NULL, NULL, '2025-03-05 05:26:34'),
+(4, 2, 12, 'Roles', 'icon-user', 'auth/roles', NULL, NULL, '2025-03-05 05:26:34'),
+(5, 2, 13, 'Permission', 'icon-ban', 'auth/permissions', NULL, NULL, '2025-03-05 05:26:34'),
+(6, 2, 14, 'Menu', 'icon-bars', 'auth/menu', NULL, NULL, '2025-03-05 05:26:34'),
+(7, 2, 15, 'Operation log', 'icon-history', 'auth/logs', NULL, NULL, '2025-03-05 05:26:34'),
+(8, 0, 16, 'Helpers', 'icon-cogs', '', NULL, '2025-02-21 04:26:55', '2025-03-05 05:26:34'),
+(9, 8, 17, 'Scaffold', 'icon-keyboard', 'helpers/scaffold', NULL, '2025-02-21 04:26:55', '2025-03-05 05:26:34'),
+(10, 8, 18, 'Database terminal', 'icon-database', 'helpers/terminal/database', NULL, '2025-02-21 04:26:55', '2025-03-05 05:26:34'),
+(11, 8, 19, 'Laravel artisan', 'icon-terminal', 'helpers/terminal/artisan', NULL, '2025-02-21 04:26:55', '2025-03-05 05:26:34'),
+(12, 8, 20, 'Routes', 'icon-list-alt', 'helpers/routes', NULL, '2025-02-21 04:26:55', '2025-03-05 05:26:34'),
+(13, 0, 21, 'Home-banners', 'icon-file', 'home-banners', NULL, '2025-02-25 23:24:50', '2025-03-05 05:26:34'),
+(14, 31, 2, 'Facilities', 'icon-file', 'facilities', NULL, '2025-02-26 00:22:09', '2025-03-05 05:26:34'),
+(15, 0, 22, 'Gallery', 'icon-air-freshener', NULL, '*', '2025-02-26 01:38:57', '2025-03-05 05:26:34'),
+(16, 15, 23, 'Gallery-images', 'icon-file', 'gallery-images', NULL, '2025-02-26 01:42:43', '2025-03-05 05:26:34'),
+(17, 15, 24, 'Gallery-videos', 'icon-file', 'gallery-videos', NULL, '2025-02-26 01:46:23', '2025-03-05 05:26:34'),
+(18, 0, 25, 'Activities', 'icon-file', 'activities', NULL, '2025-02-26 23:56:53', '2025-03-05 05:26:34'),
+(19, 0, 26, 'Teachers', 'icon-file', 'teachers', NULL, '2025-02-27 00:52:54', '2025-03-05 05:26:34'),
+(21, 0, 27, 'Quick-facts', 'icon-file', 'quick-facts', NULL, '2025-02-27 01:36:28', '2025-03-05 05:26:34'),
+(22, 0, 28, 'Why-choose-uses', 'icon-file', 'why-choose-uses', NULL, '2025-02-27 02:01:46', '2025-03-05 05:26:34'),
+(23, 31, 3, 'Faqs', 'icon-file', 'faqs', NULL, '2025-02-27 03:22:09', '2025-03-05 05:26:34'),
+(24, 0, 29, 'Contacts', 'icon-file', 'contacts', NULL, '2025-02-27 04:11:12', '2025-03-05 05:26:34'),
+(25, 31, 4, 'Application-forms', 'icon-file', 'application-forms', NULL, '2025-02-28 00:18:26', '2025-03-05 05:26:34'),
+(26, 0, 33, 'Seos', 'icon-file', 'seos', NULL, '2025-02-28 05:19:20', '2025-03-05 05:26:34'),
+(28, 30, 31, 'Class', 'icon-file', 'class-models', NULL, '2025-03-04 02:14:39', '2025-03-05 05:26:34'),
+(29, 30, 32, 'E-Libraries', 'icon-file', 'elibraries', NULL, '2025-03-04 03:37:25', '2025-03-05 05:26:34'),
+(30, 0, 30, 'E-Lib', 'icon-adjust', NULL, '*', '2025-03-04 03:38:42', '2025-03-05 05:26:34'),
+(31, 0, 1, 'Addmission', 'icon-align-justify', NULL, '*', '2025-03-04 06:13:07', '2025-03-05 05:26:34'),
+(32, 31, 5, 'Admission-procedures', 'icon-file', 'admission-procedures', NULL, '2025-03-04 06:20:25', '2025-03-05 05:26:34'),
+(33, 35, 7, 'Blog-categories', 'icon-file', 'blog-categories', NULL, '2025-03-05 14:25:47', '2025-03-05 05:26:34'),
+(34, 35, 8, 'Blogs', 'icon-file', 'blogs', NULL, '2025-03-05 01:00:48', '2025-03-05 05:26:34'),
+(35, 0, 6, 'Blog', 'icon-address-book', NULL, '*', '2025-03-05 05:25:42', '2025-03-05 05:26:34'),
+(36, 31, 33, 'Fees-structures', 'icon-file', 'fees-structures', '*', '2025-03-05 05:28:40', '2025-03-05 05:34:27'),
+(38, 0, 33, 'Beyond-academics', 'icon-file', 'beyond-academics', NULL, '2025-03-05 06:32:35', '2025-03-05 06:32:35');
 
 -- --------------------------------------------------------
 
@@ -754,7 +759,264 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (626, 1, 'admin/auth/menu/32/edit', 'GET', '127.0.0.1', '[]', '2025-03-04 06:24:47', '2025-03-04 06:24:47'),
 (627, 1, 'admin/auth/menu/32', 'PUT', '127.0.0.1', '{\"parent_id\":\"31\",\"search_terms\":null,\"title\":\"Admission-procedures\",\"icon\":\"icon-file\",\"uri\":\"admission-procedures\",\"roles\":[null],\"permission\":null,\"_token\":\"cLqq4HXs5P9t0pTuOQyp3QhHTAVsaMQ1nMWVmJ8V\",\"_method\":\"PUT\"}', '2025-03-04 06:24:51', '2025-03-04 06:24:51'),
 (628, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-04 06:24:52', '2025-03-04 06:24:52'),
-(629, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-04 06:24:54', '2025-03-04 06:24:54');
+(629, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-04 06:24:54', '2025-03-04 06:24:54'),
+(630, 1, 'admin', 'GET', '127.0.0.1', '[]', '2025-03-05 12:48:24', '2025-03-05 12:48:24'),
+(631, 1, 'admin/admission-procedures', 'GET', '127.0.0.1', '[]', '2025-03-05 12:48:35', '2025-03-05 12:48:35'),
+(632, 1, 'admin/admission-procedures/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 12:48:37', '2025-03-05 12:48:37'),
+(633, 1, 'admin/admission-procedures', 'GET', '127.0.0.1', '[]', '2025-03-05 12:49:22', '2025-03-05 12:49:22'),
+(634, 1, 'admin/admission-procedures/create', 'GET', '127.0.0.1', '[]', '2025-03-05 12:49:24', '2025-03-05 12:49:24'),
+(635, 1, 'admin/admission-procedures', 'POST', '127.0.0.1', '{\"alt\":\"second image\",\"content\":\"<p><strong>this is for testing perpose only for test&nbsp;<\\/strong><\\/p>\",\"_token\":\"rZo8CjvdqYvnSQ2xd1l6A8j2AjVppFQT1D0jsLLL\"}', '2025-03-05 12:50:51', '2025-03-05 12:50:51'),
+(636, 1, 'admin/admission-procedures', 'GET', '127.0.0.1', '[]', '2025-03-05 12:50:51', '2025-03-05 12:50:51'),
+(637, 1, 'admin/admission-procedures/2', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"rZo8CjvdqYvnSQ2xd1l6A8j2AjVppFQT1D0jsLLL\"}', '2025-03-05 12:53:01', '2025-03-05 12:53:01'),
+(638, 1, 'admin/admission-procedures', 'GET', '127.0.0.1', '[]', '2025-03-05 12:53:01', '2025-03-05 12:53:01'),
+(639, 1, 'admin/admission-procedures', 'GET', '127.0.0.1', '[]', '2025-03-05 13:02:59', '2025-03-05 13:02:59'),
+(640, 1, 'admin/seos', 'GET', '127.0.0.1', '[]', '2025-03-05 13:03:00', '2025-03-05 13:03:00'),
+(641, 1, 'admin/seos/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 13:03:03', '2025-03-05 13:03:03'),
+(642, 1, 'admin/seos/1', 'PUT', '127.0.0.1', '{\"seo_home_title\":\"home Title\",\"seo_home_des\":\"home des\",\"seo_home_key\":\"home key\",\"seo_about_title\":\"about title\",\"seo_about_des\":\"about des\",\"seo_about_key\":\"about key\",\"seo_contact_title\":\"contact title\",\"seo_contact_des\":\"contact des\",\"seo_contact_key\":\"contact key\",\"seo_activities_title\":\"activities title\",\"seo_activities_des\":\"activities des\",\"seo_activities_key\":\"activities key\",\"seo_addmission_title\":\"addmission title\",\"seo_addmission_des\":\"addmission des\",\"seo_addmission_key\":\"addmission key\",\"seo_application_title\":\"application title\",\"seo_application_des\":\"application des\",\"seo_application_key\":\"application key\",\"seo_facility_title\":\"facility title\",\"seo_facility_des\":\"facility des\",\"seo_facility_key\":\"facility key\",\"seo_fees_title\":\"fee title\",\"seo_fees_des\":\"fee des\",\"seo_fees_key\":\"fee key\",\"seo_gallery_title\":\"gallery title\",\"seo_gallery_des\":\"gallery des\",\"seo_gallery_key\":\"gallery key\",\"seo_user-login_title\":\"login title\",\"seo_user-login_des\":\"login des\",\"seo_user-login_key\":\"login key\",\"seo_user-signup_title\":\"signup title\",\"seo_user-signup_des\":\"signup  des\",\"seo_user-signup_key\":\"signup  key\",\"seo_admission_procedure_title\":\"Seo Admission Procedure title\",\"seo_admission_procedure_des\":\"Seo Admission Procedure des\",\"seo_admission_procedure_key\":\"Seo Admission Procedure key\",\"_token\":\"rZo8CjvdqYvnSQ2xd1l6A8j2AjVppFQT1D0jsLLL\",\"_method\":\"PUT\"}', '2025-03-05 13:03:24', '2025-03-05 13:03:24'),
+(643, 1, 'admin/seos', 'GET', '127.0.0.1', '[]', '2025-03-05 13:03:25', '2025-03-05 13:03:25'),
+(644, 1, 'admin/seos/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 13:09:49', '2025-03-05 13:09:49'),
+(645, 1, 'admin/seos/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 13:28:25', '2025-03-05 13:28:25'),
+(646, 1, 'admin/seos/1', 'PUT', '127.0.0.1', '{\"seo_home_title\":\"home Title\",\"seo_home_des\":\"home des\",\"seo_home_key\":\"home key\",\"seo_about_title\":\"about title\",\"seo_about_des\":\"about des\",\"seo_about_key\":\"about key\",\"seo_contact_title\":\"contact title\",\"seo_contact_des\":\"contact des\",\"seo_contact_key\":\"contact key\",\"seo_activities_title\":\"activities title\",\"seo_activities_des\":\"activities des\",\"seo_activities_key\":\"activities key\",\"seo_addmission_title\":\"addmission title\",\"seo_addmission_des\":\"addmission des\",\"seo_addmission_key\":\"addmission key\",\"seo_application_title\":\"application title\",\"seo_application_des\":\"application des\",\"seo_application_key\":\"application key\",\"seo_facility_title\":\"facility title\",\"seo_facility_des\":\"facility des\",\"seo_facility_key\":\"facility key\",\"seo_fees_title\":\"fee title\",\"seo_fees_des\":\"fee des\",\"seo_fees_key\":\"fee key\",\"seo_gallery_title\":\"gallery title\",\"seo_gallery_des\":\"gallery des\",\"seo_gallery_key\":\"gallery key\",\"seo_user-login_title\":\"login title\",\"seo_user-login_des\":\"login des\",\"seo_user-login_key\":\"login key\",\"seo_user-signup_title\":\"signup title\",\"seo_user-signup_des\":\"signup  des\",\"seo_user-signup_key\":\"signup  key\",\"seo_admission_procedure_title\":\"Seo Admission Procedure title\",\"seo_admission_procedure_des\":\"Seo Admission Procedure des\",\"seo_admission_procedure_key\":\"Seo Admission Procedure key\",\"seo_e_labrary_title\":\"seo_e_labrary_title\",\"seo_e_labrary_des\":\"seo e labrary des\",\"seo_e_labrary_key\":\"seo e labrary key\",\"_token\":\"rZo8CjvdqYvnSQ2xd1l6A8j2AjVppFQT1D0jsLLL\",\"_method\":\"PUT\"}', '2025-03-05 13:29:43', '2025-03-05 13:29:43'),
+(647, 1, 'admin/seos/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 13:29:43', '2025-03-05 13:29:43'),
+(648, 1, 'admin/seos/1', 'PUT', '127.0.0.1', '{\"seo_home_title\":\"home Title\",\"seo_home_des\":\"home des\",\"seo_home_key\":\"home key\",\"seo_about_title\":\"about title\",\"seo_about_des\":\"about des\",\"seo_about_key\":\"about key\",\"seo_contact_title\":\"contact title\",\"seo_contact_des\":\"contact des\",\"seo_contact_key\":\"contact key\",\"seo_activities_title\":\"activities title\",\"seo_activities_des\":\"activities des\",\"seo_activities_key\":\"activities key\",\"seo_addmission_title\":\"addmission title\",\"seo_addmission_des\":\"addmission des\",\"seo_addmission_key\":\"addmission key\",\"seo_application_title\":\"application title\",\"seo_application_des\":\"application des\",\"seo_application_key\":\"application key\",\"seo_facility_title\":\"facility title\",\"seo_facility_des\":\"facility des\",\"seo_facility_key\":\"facility key\",\"seo_fees_title\":\"fee title\",\"seo_fees_des\":\"fee des\",\"seo_fees_key\":\"fee key\",\"seo_gallery_title\":\"gallery title\",\"seo_gallery_des\":\"gallery des\",\"seo_gallery_key\":\"gallery key\",\"seo_user-login_title\":\"login title\",\"seo_user-login_des\":\"login des\",\"seo_user-login_key\":\"login key\",\"seo_user-signup_title\":\"signup title\",\"seo_user-signup_des\":\"signup  des\",\"seo_user-signup_key\":\"signup  key\",\"seo_admission_procedure_title\":\"Seo Admission Procedure title\",\"seo_admission_procedure_des\":\"Seo Admission Procedure des\",\"seo_admission_procedure_key\":\"Seo Admission Procedure key\",\"seo_e_labrary_title\":\"seo_e_labrary_title\",\"seo_e_labrary_des\":\"seo e labrary des\",\"seo_e_labrary_key\":\"seo e labrary key\",\"_token\":\"rZo8CjvdqYvnSQ2xd1l6A8j2AjVppFQT1D0jsLLL\",\"_method\":\"PUT\"}', '2025-03-05 13:40:20', '2025-03-05 13:40:20'),
+(649, 1, 'admin/seos', 'GET', '127.0.0.1', '[]', '2025-03-05 13:40:20', '2025-03-05 13:40:20'),
+(650, 1, 'admin/seos/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 13:41:04', '2025-03-05 13:41:04'),
+(651, 1, 'admin/seos/1', 'PUT', '127.0.0.1', '{\"seo_home_title\":\"home Title\",\"seo_home_des\":\"home des\",\"seo_home_key\":\"home key\",\"seo_about_title\":\"about title\",\"seo_about_des\":\"about des\",\"seo_about_key\":\"about key\",\"seo_contact_title\":\"contact title\",\"seo_contact_des\":\"contact des\",\"seo_contact_key\":\"contact key\",\"seo_activities_title\":\"activities title\",\"seo_activities_des\":\"activities des\",\"seo_activities_key\":\"activities key\",\"seo_addmission_title\":\"addmission title\",\"seo_addmission_des\":\"addmission des\",\"seo_addmission_key\":\"addmission key\",\"seo_application_title\":\"application title\",\"seo_application_des\":\"application des\",\"seo_application_key\":\"application key\",\"seo_facility_title\":\"facility title\",\"seo_facility_des\":\"facility des\",\"seo_facility_key\":\"facility key\",\"seo_fees_title\":\"fee title\",\"seo_fees_des\":\"fee des\",\"seo_fees_key\":\"fee key\",\"seo_gallery_title\":\"gallery title\",\"seo_gallery_des\":\"gallery des\",\"seo_gallery_key\":\"gallery key\",\"seo_user-login_title\":\"login title\",\"seo_user-login_des\":\"login des\",\"seo_user-login_key\":\"login key\",\"seo_user-signup_title\":\"signup title\",\"seo_user-signup_des\":\"signup  des\",\"seo_user-signup_key\":\"signup  key\",\"seo_admission_procedure_title\":\"Seo Admission Procedure title\",\"seo_admission_procedure_des\":\"Seo Admission Procedure des\",\"seo_admission_procedure_key\":\"Seo Admission Procedure key\",\"seo_e_labrary_title\":\"seo_e_labrary_title\",\"seo_e_labrary_des\":\"seo e labrary des\",\"seo_e_labraby_key\":\"seo e labrary key\",\"_token\":\"rZo8CjvdqYvnSQ2xd1l6A8j2AjVppFQT1D0jsLLL\",\"_method\":\"PUT\"}', '2025-03-05 13:41:30', '2025-03-05 13:41:30'),
+(652, 1, 'admin/seos', 'GET', '127.0.0.1', '[]', '2025-03-05 13:41:30', '2025-03-05 13:41:30'),
+(653, 1, 'admin/admission-procedures', 'GET', '127.0.0.1', '[]', '2025-03-05 13:44:49', '2025-03-05 13:44:49'),
+(654, 1, 'admin/class-models', 'GET', '127.0.0.1', '[]', '2025-03-05 13:44:54', '2025-03-05 13:44:54'),
+(655, 1, 'admin/elibraries', 'GET', '127.0.0.1', '[]', '2025-03-05 13:44:57', '2025-03-05 13:44:57'),
+(656, 1, 'admin/elibraries/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 13:44:58', '2025-03-05 13:44:58'),
+(657, 1, 'admin/class-models', 'GET', '127.0.0.1', '[]', '2025-03-05 13:45:01', '2025-03-05 13:45:01'),
+(658, 1, 'admin/class-models/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 13:45:03', '2025-03-05 13:45:03'),
+(659, 1, 'admin/class-models/1', 'PUT', '127.0.0.1', '{\"name\":\"Class 1\",\"slug\":\"class-1\",\"alt\":\"class 1\",\"seo_title\":\"Class 1\",\"seo_des\":\"Class 1\",\"seo_key\":\"Class 1\",\"_token\":\"rZo8CjvdqYvnSQ2xd1l6A8j2AjVppFQT1D0jsLLL\",\"_method\":\"PUT\"}', '2025-03-05 13:45:36', '2025-03-05 13:45:36'),
+(660, 1, 'admin/class-models', 'GET', '127.0.0.1', '[]', '2025-03-05 13:45:36', '2025-03-05 13:45:36'),
+(661, 1, 'admin/class-models/2/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 13:45:38', '2025-03-05 13:45:38'),
+(662, 1, 'admin/class-models/2', 'PUT', '127.0.0.1', '{\"name\":\"Class 2\",\"slug\":\"class-2\",\"alt\":\"class 2\",\"seo_title\":\"Class 2\",\"seo_des\":\"Class 2\",\"seo_key\":\"Class 2\",\"_token\":\"rZo8CjvdqYvnSQ2xd1l6A8j2AjVppFQT1D0jsLLL\",\"_method\":\"PUT\"}', '2025-03-05 13:45:53', '2025-03-05 13:45:53'),
+(663, 1, 'admin/class-models', 'GET', '127.0.0.1', '[]', '2025-03-05 13:45:53', '2025-03-05 13:45:53'),
+(664, 1, 'admin/class-models/3/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 13:45:55', '2025-03-05 13:45:55'),
+(665, 1, 'admin/class-models/3', 'PUT', '127.0.0.1', '{\"name\":\"Class 3\",\"slug\":\"class-3\",\"alt\":\"class 3\",\"seo_title\":\"Class 3\",\"seo_des\":\"Class 3\",\"seo_key\":\"Class 3\",\"_token\":\"rZo8CjvdqYvnSQ2xd1l6A8j2AjVppFQT1D0jsLLL\",\"_method\":\"PUT\"}', '2025-03-05 13:46:09', '2025-03-05 13:46:09'),
+(666, 1, 'admin/class-models', 'GET', '127.0.0.1', '[]', '2025-03-05 13:46:09', '2025-03-05 13:46:09'),
+(667, 1, 'admin/class-models/4/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 13:46:11', '2025-03-05 13:46:11'),
+(668, 1, 'admin/class-models/4', 'PUT', '127.0.0.1', '{\"name\":\"Class 4\",\"slug\":\"class-4\",\"alt\":\"class 4\",\"seo_title\":\"Class 4\",\"seo_des\":\"Class 4\",\"seo_key\":\"Class 4\",\"_token\":\"rZo8CjvdqYvnSQ2xd1l6A8j2AjVppFQT1D0jsLLL\",\"_method\":\"PUT\"}', '2025-03-05 13:46:24', '2025-03-05 13:46:24'),
+(669, 1, 'admin/class-models', 'GET', '127.0.0.1', '[]', '2025-03-05 13:46:24', '2025-03-05 13:46:24'),
+(670, 1, 'admin/class-models/2/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 13:47:17', '2025-03-05 13:47:17'),
+(671, 1, 'admin/class-models', 'GET', '127.0.0.1', '[]', '2025-03-05 13:50:32', '2025-03-05 13:50:32'),
+(672, 1, 'admin/auth/roles', 'GET', '127.0.0.1', '[]', '2025-03-05 14:20:42', '2025-03-05 14:20:42'),
+(673, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 14:20:45', '2025-03-05 14:20:45'),
+(674, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"blog_category\",\"model_name\":\"App\\\\Models\\\\BlogCategory\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\BlogCategoryController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"name\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"slug\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"description\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"seo_title\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"seo_des\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"seo_key\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"rZo8CjvdqYvnSQ2xd1l6A8j2AjVppFQT1D0jsLLL\"}', '2025-03-05 14:25:47', '2025-03-05 14:25:47'),
+(675, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 14:25:47', '2025-03-05 14:25:47'),
+(676, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 14:26:27', '2025-03-05 14:26:27'),
+(677, 1, 'admin', 'GET', '127.0.0.1', '[]', '2025-03-05 00:19:46', '2025-03-05 00:19:46'),
+(678, 1, 'admin/why-choose-uses', 'GET', '127.0.0.1', '[]', '2025-03-05 00:19:51', '2025-03-05 00:19:51'),
+(679, 1, 'admin/blog-categories', 'GET', '127.0.0.1', '[]', '2025-03-05 00:37:40', '2025-03-05 00:37:40'),
+(680, 1, 'admin/blog-categories', 'GET', '127.0.0.1', '[]', '2025-03-05 00:37:52', '2025-03-05 00:37:52'),
+(681, 1, 'admin/blog-categories', 'GET', '127.0.0.1', '[]', '2025-03-05 00:37:59', '2025-03-05 00:37:59'),
+(682, 1, 'admin/blog-categories/create', 'GET', '127.0.0.1', '[]', '2025-03-05 00:38:06', '2025-03-05 00:38:06'),
+(683, 1, 'admin/blog-categories/create', 'GET', '127.0.0.1', '[]', '2025-03-05 00:38:19', '2025-03-05 00:38:19'),
+(684, 1, 'admin/blog-categories', 'POST', '127.0.0.1', '{\"name\":\"blog 1\",\"slug\":null,\"seo_title\":\"title\",\"seo_des\":\"des\",\"seo_key\":\"key\",\"_token\":\"MrZqJ5zl7GIZzg5C4aLjYHTCavqKml4YxB9aCJeJ\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/blog-categories\"}', '2025-03-05 00:38:40', '2025-03-05 00:38:40'),
+(685, 1, 'admin/blog-categories', 'GET', '127.0.0.1', '[]', '2025-03-05 00:38:40', '2025-03-05 00:38:40'),
+(686, 1, 'admin/blog-categories/create', 'GET', '127.0.0.1', '[]', '2025-03-05 00:38:42', '2025-03-05 00:38:42'),
+(687, 1, 'admin/blog-categories', 'POST', '127.0.0.1', '{\"name\":\"Blog 2\",\"slug\":null,\"seo_title\":\"title\",\"seo_des\":\"des\",\"seo_key\":\"key\",\"_token\":\"MrZqJ5zl7GIZzg5C4aLjYHTCavqKml4YxB9aCJeJ\"}', '2025-03-05 00:38:59', '2025-03-05 00:38:59'),
+(688, 1, 'admin/blog-categories', 'GET', '127.0.0.1', '[]', '2025-03-05 00:38:59', '2025-03-05 00:38:59'),
+(689, 1, 'admin/blog-categories/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 00:39:01', '2025-03-05 00:39:01'),
+(690, 1, 'admin/blog-categories/1', 'PUT', '127.0.0.1', '{\"name\":\"Blog 1\",\"slug\":\"blog-1\",\"seo_title\":\"title\",\"seo_des\":\"des\",\"seo_key\":\"key\",\"_token\":\"MrZqJ5zl7GIZzg5C4aLjYHTCavqKml4YxB9aCJeJ\",\"_method\":\"PUT\"}', '2025-03-05 00:39:04', '2025-03-05 00:39:04'),
+(691, 1, 'admin/blog-categories', 'GET', '127.0.0.1', '[]', '2025-03-05 00:39:04', '2025-03-05 00:39:04'),
+(692, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 00:56:17', '2025-03-05 00:56:17'),
+(693, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 00:56:52', '2025-03-05 00:56:52'),
+(694, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"blogs\",\"model_name\":\"App\\\\Models\\\\Blog\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\BlogController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"category_id\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"title\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"slug\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"short_content\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"alt\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"url\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"description\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"seo_title\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"seo_description\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"seo_keyword\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"question\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"answer\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"MrZqJ5zl7GIZzg5C4aLjYHTCavqKml4YxB9aCJeJ\"}', '2025-03-05 01:00:47', '2025-03-05 01:00:47'),
+(695, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 01:00:48', '2025-03-05 01:00:48'),
+(696, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 01:21:51', '2025-03-05 01:21:51'),
+(697, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2025-03-05 01:21:54', '2025-03-05 01:21:54'),
+(698, 1, 'admin/blogs/create', 'GET', '127.0.0.1', '[]', '2025-03-05 01:21:56', '2025-03-05 01:21:56'),
+(699, 1, 'admin/blogs', 'POST', '127.0.0.1', '{\"category_id\":\"1\",\"search_terms\":null,\"title\":\"Necessitatibus sit a\",\"slug\":null,\"short_content\":\"Quisquam minim ipsum\",\"alt\":\"Pariatur Cum error\",\"url\":\"https:\\/\\/www.gutiwotu.tv\",\"description\":\"<h2>Lorem ipsum dolor sit amet consectetur adipisicing.<\\/h2>\\r\\n\\r\\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage..<\\/p>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ul>\\r\\n\\r\\n<ol>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ol>\\r\\n\\r\\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage. There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.<\\/p>\",\"seo_title\":\"Modi suscipit repell\",\"seo_description\":\"Et et deleniti facil\",\"seo_keyword\":\"Consequat Officia m\",\"question\":\"Voluptatem adipisci\",\"answer\":\"Ratione do asperiore\",\"_token\":\"MrZqJ5zl7GIZzg5C4aLjYHTCavqKml4YxB9aCJeJ\",\"after-save\":\"view\"}', '2025-03-05 01:22:35', '2025-03-05 01:22:35'),
+(700, 1, 'admin/blogs/1', 'GET', '127.0.0.1', '[]', '2025-03-05 01:22:35', '2025-03-05 01:22:35'),
+(701, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2025-03-05 01:22:41', '2025-03-05 01:22:41'),
+(702, 1, 'admin/blogs/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 01:22:43', '2025-03-05 01:22:43'),
+(703, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2025-03-05 01:22:48', '2025-03-05 01:22:48'),
+(704, 1, 'admin', 'GET', '127.0.0.1', '[]', '2025-03-05 03:24:40', '2025-03-05 03:24:40'),
+(705, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2025-03-05 03:30:53', '2025-03-05 03:30:53'),
+(706, 1, 'admin/blogs/create', 'GET', '127.0.0.1', '[]', '2025-03-05 03:30:58', '2025-03-05 03:30:58'),
+(707, 1, 'admin/blogs', 'POST', '127.0.0.1', '{\"category_id\":\"2\",\"search_terms\":null,\"title\":\"In molestias et eum\",\"slug\":null,\"short_content\":\"Ut minus animi aut\",\"alt\":\"Laborum Molestias n\",\"url\":\"https:\\/\\/www.towyge.ws\",\"description\":\"<h2>Lorem ipsum dolor sit amet consectetur adipisicing.<\\/h2>\\r\\n\\r\\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage..<\\/p>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ul>\\r\\n\\r\\n<ol>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ol>\\r\\n\\r\\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage. There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.<\\/p>\",\"seo_title\":\"Soluta voluptates qu\",\"seo_description\":\"Magna irure vel volu\",\"seo_keyword\":\"Voluptatibus non qua\",\"question\":\"Eum labore consequat\",\"answer\":\"Temporibus id sint\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"after-save\":\"view\"}', '2025-03-05 03:31:07', '2025-03-05 03:31:07'),
+(708, 1, 'admin/blogs/2', 'GET', '127.0.0.1', '[]', '2025-03-05 03:31:08', '2025-03-05 03:31:08'),
+(709, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2025-03-05 03:31:15', '2025-03-05 03:31:15'),
+(710, 1, 'admin/blogs/2/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 03:31:17', '2025-03-05 03:31:17'),
+(711, 1, 'admin/blogs/2', 'PUT', '127.0.0.1', '{\"category_id\":\"2\",\"search_terms\":null,\"title\":\"In molestias et eum\",\"slug\":\"in-molestias-et-eum\",\"short_content\":\"Ut minus animi aut\",\"alt\":\"Laborum Molestias n\",\"url\":\"https:\\/\\/www.towyge.ws\",\"description\":\"<h2>Lorem ipsum dolor sit amet consectetur adipisicing.<\\/h2>\\r\\n\\r\\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage..<\\/p>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ul>\\r\\n\\r\\n<ol>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ol>\\r\\n\\r\\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage. There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.<\\/p>\",\"seo_title\":\"Soluta voluptates qu\",\"seo_description\":\"Magna irure vel volu\",\"seo_keyword\":\"Voluptatibus non qua\",\"question\":\"Eum labore consequat\",\"answer\":\"Temporibus id sint\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"_method\":\"PUT\"}', '2025-03-05 03:31:24', '2025-03-05 03:31:24'),
+(712, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2025-03-05 03:31:25', '2025-03-05 03:31:25'),
+(713, 1, 'admin/blog-categories', 'GET', '127.0.0.1', '[]', '2025-03-05 05:21:11', '2025-03-05 05:21:11'),
+(714, 1, 'admin/blog-categories/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 05:21:13', '2025-03-05 05:21:13'),
+(715, 1, 'admin/blog-categories/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 05:21:35', '2025-03-05 05:21:35'),
+(716, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:25:21', '2025-03-05 05:25:21'),
+(717, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":\"0\",\"search_terms\":null,\"title\":\"Blog\",\"icon\":\"icon-address-book\",\"uri\":null,\"roles\":[\"1\",null],\"permission\":\"*\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\"}', '2025-03-05 05:25:42', '2025-03-05 05:25:42'),
+(718, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:25:42', '2025-03-05 05:25:42'),
+(719, 1, 'admin/auth/menu/33/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 05:25:46', '2025-03-05 05:25:46'),
+(720, 1, 'admin/auth/menu/33', 'PUT', '127.0.0.1', '{\"parent_id\":\"35\",\"search_terms\":null,\"title\":\"Blog-categories\",\"icon\":\"icon-file\",\"uri\":\"blog-categories\",\"roles\":[null],\"permission\":null,\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"_method\":\"PUT\"}', '2025-03-05 05:25:51', '2025-03-05 05:25:51'),
+(721, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:25:52', '2025-03-05 05:25:52'),
+(722, 1, 'admin/auth/menu/34/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 05:25:55', '2025-03-05 05:25:55'),
+(723, 1, 'admin/auth/menu/34', 'PUT', '127.0.0.1', '{\"parent_id\":\"35\",\"search_terms\":null,\"title\":\"Blogs\",\"icon\":\"icon-file\",\"uri\":\"blogs\",\"roles\":[null],\"permission\":null,\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"_method\":\"PUT\"}', '2025-03-05 05:26:00', '2025-03-05 05:26:00'),
+(724, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:26:00', '2025-03-05 05:26:00'),
+(725, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_order\":\"[{\\\"id\\\":\\\"31\\\",\\\"children\\\":[{\\\"id\\\":\\\"14\\\"},{\\\"id\\\":\\\"23\\\"},{\\\"id\\\":\\\"25\\\"},{\\\"id\\\":\\\"32\\\"}]},{\\\"id\\\":\\\"35\\\",\\\"children\\\":[{\\\"id\\\":\\\"33\\\"},{\\\"id\\\":\\\"34\\\"}]},{\\\"id\\\":\\\"1\\\"},{\\\"id\\\":\\\"2\\\",\\\"children\\\":[{\\\"id\\\":\\\"3\\\"},{\\\"id\\\":\\\"4\\\"},{\\\"id\\\":\\\"5\\\"},{\\\"id\\\":\\\"6\\\"},{\\\"id\\\":\\\"7\\\"}]},{\\\"id\\\":\\\"8\\\",\\\"children\\\":[{\\\"id\\\":\\\"9\\\"},{\\\"id\\\":\\\"10\\\"},{\\\"id\\\":\\\"11\\\"},{\\\"id\\\":\\\"12\\\"}]},{\\\"id\\\":\\\"13\\\"},{\\\"id\\\":\\\"15\\\",\\\"children\\\":[{\\\"id\\\":\\\"16\\\"},{\\\"id\\\":\\\"17\\\"}]},{\\\"id\\\":\\\"18\\\"},{\\\"id\\\":\\\"19\\\"},{\\\"id\\\":\\\"21\\\"},{\\\"id\\\":\\\"22\\\"},{\\\"id\\\":\\\"24\\\"},{\\\"id\\\":\\\"30\\\",\\\"children\\\":[{\\\"id\\\":\\\"28\\\"},{\\\"id\\\":\\\"29\\\"}]},{\\\"id\\\":\\\"26\\\"}]\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\"}', '2025-03-05 05:26:34', '2025-03-05 05:26:34'),
+(726, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:26:34', '2025-03-05 05:26:34'),
+(727, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_order\":\"[{\\\"id\\\":\\\"31\\\",\\\"children\\\":[{\\\"id\\\":\\\"14\\\"},{\\\"id\\\":\\\"23\\\"},{\\\"id\\\":\\\"25\\\"},{\\\"id\\\":\\\"32\\\"}]},{\\\"id\\\":\\\"35\\\",\\\"children\\\":[{\\\"id\\\":\\\"33\\\"},{\\\"id\\\":\\\"34\\\"}]},{\\\"id\\\":\\\"1\\\"},{\\\"id\\\":\\\"2\\\",\\\"children\\\":[{\\\"id\\\":\\\"3\\\"},{\\\"id\\\":\\\"4\\\"},{\\\"id\\\":\\\"5\\\"},{\\\"id\\\":\\\"6\\\"},{\\\"id\\\":\\\"7\\\"}]},{\\\"id\\\":\\\"8\\\",\\\"children\\\":[{\\\"id\\\":\\\"9\\\"},{\\\"id\\\":\\\"10\\\"},{\\\"id\\\":\\\"11\\\"},{\\\"id\\\":\\\"12\\\"}]},{\\\"id\\\":\\\"13\\\"},{\\\"id\\\":\\\"15\\\",\\\"children\\\":[{\\\"id\\\":\\\"16\\\"},{\\\"id\\\":\\\"17\\\"}]},{\\\"id\\\":\\\"18\\\"},{\\\"id\\\":\\\"19\\\"},{\\\"id\\\":\\\"21\\\"},{\\\"id\\\":\\\"22\\\"},{\\\"id\\\":\\\"24\\\"},{\\\"id\\\":\\\"30\\\",\\\"children\\\":[{\\\"id\\\":\\\"28\\\"},{\\\"id\\\":\\\"29\\\"}]},{\\\"id\\\":\\\"26\\\"}]\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\"}', '2025-03-05 05:26:43', '2025-03-05 05:26:43'),
+(728, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:26:43', '2025-03-05 05:26:43'),
+(729, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:26:44', '2025-03-05 05:26:44'),
+(730, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 05:27:13', '2025-03-05 05:27:13'),
+(731, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"fees_structure\",\"model_name\":\"App\\\\Models\\\\FeesStructure\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\FeesStructure\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"fee_structur_content\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\"}', '2025-03-05 05:28:37', '2025-03-05 05:28:37'),
+(732, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 05:28:42', '2025-03-05 05:28:42'),
+(733, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:27', '2025-03-05 05:30:27'),
+(734, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:30', '2025-03-05 05:30:30'),
+(735, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:31', '2025-03-05 05:30:31'),
+(736, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:31', '2025-03-05 05:30:31'),
+(737, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:32', '2025-03-05 05:30:32'),
+(738, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:33', '2025-03-05 05:30:33'),
+(739, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:33', '2025-03-05 05:30:33'),
+(740, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:34', '2025-03-05 05:30:34'),
+(741, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:34', '2025-03-05 05:30:34'),
+(742, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:35', '2025-03-05 05:30:35'),
+(743, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:35', '2025-03-05 05:30:35'),
+(744, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:36', '2025-03-05 05:30:36'),
+(745, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:37', '2025-03-05 05:30:37'),
+(746, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:37', '2025-03-05 05:30:37'),
+(747, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:38', '2025-03-05 05:30:38'),
+(748, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:38', '2025-03-05 05:30:38'),
+(749, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:39', '2025-03-05 05:30:39'),
+(750, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:39', '2025-03-05 05:30:39'),
+(751, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:40', '2025-03-05 05:30:40'),
+(752, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:41', '2025-03-05 05:30:41'),
+(753, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:41', '2025-03-05 05:30:41'),
+(754, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:42', '2025-03-05 05:30:42'),
+(755, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:45', '2025-03-05 05:30:45'),
+(756, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:46', '2025-03-05 05:30:46'),
+(757, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:46', '2025-03-05 05:30:46'),
+(758, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:47', '2025-03-05 05:30:47'),
+(759, 1, 'admin/seos', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:48', '2025-03-05 05:30:48'),
+(760, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:48', '2025-03-05 05:30:48'),
+(761, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:49', '2025-03-05 05:30:49'),
+(762, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:49', '2025-03-05 05:30:49'),
+(763, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:50', '2025-03-05 05:30:50'),
+(764, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:50', '2025-03-05 05:30:50'),
+(765, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:51', '2025-03-05 05:30:51'),
+(766, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:51', '2025-03-05 05:30:51'),
+(767, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:52', '2025-03-05 05:30:52'),
+(768, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:53', '2025-03-05 05:30:53'),
+(769, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:53', '2025-03-05 05:30:53'),
+(770, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:54', '2025-03-05 05:30:54'),
+(771, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:54', '2025-03-05 05:30:54'),
+(772, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:55', '2025-03-05 05:30:55'),
+(773, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:56', '2025-03-05 05:30:56'),
+(774, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:56', '2025-03-05 05:30:56'),
+(775, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:57', '2025-03-05 05:30:57'),
+(776, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:57', '2025-03-05 05:30:57'),
+(777, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:58', '2025-03-05 05:30:58'),
+(778, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:58', '2025-03-05 05:30:58'),
+(779, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:30:59', '2025-03-05 05:30:59'),
+(780, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:00', '2025-03-05 05:31:00'),
+(781, 1, 'admin/auth/menu/36/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:00', '2025-03-05 05:31:00'),
+(782, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:01', '2025-03-05 05:31:01'),
+(783, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:01', '2025-03-05 05:31:01'),
+(784, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:02', '2025-03-05 05:31:02'),
+(785, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:02', '2025-03-05 05:31:02');
+INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `input`, `created_at`, `updated_at`) VALUES
+(786, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:03', '2025-03-05 05:31:03'),
+(787, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:03', '2025-03-05 05:31:03'),
+(788, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:04', '2025-03-05 05:31:04'),
+(789, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:05', '2025-03-05 05:31:05'),
+(790, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:05', '2025-03-05 05:31:05'),
+(791, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:06', '2025-03-05 05:31:06'),
+(792, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:06', '2025-03-05 05:31:06'),
+(793, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:07', '2025-03-05 05:31:07'),
+(794, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:08', '2025-03-05 05:31:08'),
+(795, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:08', '2025-03-05 05:31:08'),
+(796, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:09', '2025-03-05 05:31:09'),
+(797, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:09', '2025-03-05 05:31:09'),
+(798, 1, 'admin/auth/menu/36', 'PUT', '127.0.0.1', '{\"parent_id\":\"0\",\"search_terms\":null,\"title\":\"Fees-structures\",\"icon\":\"icon-file\",\"uri\":\"fees-structures\",\"roles\":[\"1\",null],\"permission\":\"*\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"_method\":\"PUT\"}', '2025-03-05 05:31:10', '2025-03-05 05:31:10'),
+(799, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:10', '2025-03-05 05:31:10'),
+(800, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:11', '2025-03-05 05:31:11'),
+(801, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:11', '2025-03-05 05:31:11'),
+(802, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:14', '2025-03-05 05:31:14'),
+(803, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:14', '2025-03-05 05:31:14'),
+(804, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:15', '2025-03-05 05:31:15'),
+(805, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:16', '2025-03-05 05:31:16'),
+(806, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:16', '2025-03-05 05:31:16'),
+(807, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:17', '2025-03-05 05:31:17'),
+(808, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:17', '2025-03-05 05:31:17'),
+(809, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:18', '2025-03-05 05:31:18'),
+(810, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:18', '2025-03-05 05:31:18'),
+(811, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:19', '2025-03-05 05:31:19'),
+(812, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:19', '2025-03-05 05:31:19'),
+(813, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:20', '2025-03-05 05:31:20'),
+(814, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:21', '2025-03-05 05:31:21'),
+(815, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:21', '2025-03-05 05:31:21'),
+(816, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:22', '2025-03-05 05:31:22'),
+(817, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:23', '2025-03-05 05:31:23'),
+(818, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:23', '2025-03-05 05:31:23'),
+(819, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:24', '2025-03-05 05:31:24'),
+(820, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:24', '2025-03-05 05:31:24'),
+(821, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:25', '2025-03-05 05:31:25'),
+(822, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:25', '2025-03-05 05:31:25'),
+(823, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:31:43', '2025-03-05 05:31:43'),
+(824, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:32:00', '2025-03-05 05:32:00'),
+(825, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:32:12', '2025-03-05 05:32:12'),
+(826, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:32:18', '2025-03-05 05:32:18'),
+(827, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 05:33:06', '2025-03-05 05:33:06'),
+(828, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"fees_structure\",\"model_name\":\"App\\\\Models\\\\FeesStructure\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\FeesStructureController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"fees_structure_content\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\"}', '2025-03-05 05:33:40', '2025-03-05 05:33:40'),
+(829, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 05:33:40', '2025-03-05 05:33:40'),
+(830, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 05:33:49', '2025-03-05 05:33:49'),
+(831, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:33:51', '2025-03-05 05:33:51'),
+(832, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:33:56', '2025-03-05 05:33:56'),
+(833, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:01', '2025-03-05 05:34:01'),
+(834, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:06', '2025-03-05 05:34:06'),
+(835, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:08', '2025-03-05 05:34:08'),
+(836, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:09', '2025-03-05 05:34:09'),
+(837, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:09', '2025-03-05 05:34:09'),
+(838, 1, 'admin/seos', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:10', '2025-03-05 05:34:10'),
+(839, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:11', '2025-03-05 05:34:11'),
+(840, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:12', '2025-03-05 05:34:12'),
+(841, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:16', '2025-03-05 05:34:16'),
+(842, 1, 'admin/auth/menu/37', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\"}', '2025-03-05 05:34:20', '2025-03-05 05:34:20'),
+(843, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:20', '2025-03-05 05:34:20'),
+(844, 1, 'admin/auth/menu/36/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:22', '2025-03-05 05:34:22'),
+(845, 1, 'admin/auth/menu/36', 'PUT', '127.0.0.1', '{\"parent_id\":\"31\",\"search_terms\":null,\"title\":\"Fees-structures\",\"icon\":\"icon-file\",\"uri\":\"fees-structures\",\"roles\":[\"1\",null],\"permission\":\"*\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"_method\":\"PUT\"}', '2025-03-05 05:34:27', '2025-03-05 05:34:27'),
+(846, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:27', '2025-03-05 05:34:27'),
+(847, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:31', '2025-03-05 05:34:31'),
+(848, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:35', '2025-03-05 05:34:35'),
+(849, 1, 'admin/facilities', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:37', '2025-03-05 05:34:37'),
+(850, 1, 'admin/application-forms', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:39', '2025-03-05 05:34:39'),
+(851, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:41', '2025-03-05 05:34:41'),
+(852, 1, 'admin/fees-structures/create', 'GET', '127.0.0.1', '[]', '2025-03-05 05:34:43', '2025-03-05 05:34:43'),
+(853, 1, 'admin/fees-structures/create', 'GET', '127.0.0.1', '[]', '2025-03-05 05:36:05', '2025-03-05 05:36:05'),
+(854, 1, 'admin/fees-structures/create', 'GET', '127.0.0.1', '[]', '2025-03-05 05:36:19', '2025-03-05 05:36:19'),
+(855, 1, 'admin/fees-structures', 'POST', '127.0.0.1', '{\"fees_structure_content\":\"<ul>\\r\\n\\t<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.<\\/li>\\r\\n\\t<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.<\\/li>\\r\\n\\t<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.<\\/li>\\r\\n\\t<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.<\\/li>\\r\\n\\t<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.<\\/li>\\r\\n\\t<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.<\\/li>\\r\\n\\t<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.<\\/li>\\r\\n\\t<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.<\\/li>\\r\\n\\t<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.<\\/li>\\r\\n<\\/ul>\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\"}', '2025-03-05 05:36:36', '2025-03-05 05:36:36'),
+(856, 1, 'admin/fees-structures', 'GET', '127.0.0.1', '[]', '2025-03-05 05:36:36', '2025-03-05 05:36:36'),
+(857, 1, 'admin/seos', 'GET', '127.0.0.1', '[]', '2025-03-05 05:53:59', '2025-03-05 05:53:59'),
+(858, 1, 'admin/seos/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 05:54:01', '2025-03-05 05:54:01'),
+(859, 1, 'admin/seos/1', 'PUT', '127.0.0.1', '{\"seo_home_title\":\"home Title\",\"seo_home_des\":\"home des\",\"seo_home_key\":\"home key\",\"seo_about_title\":\"about title\",\"seo_about_des\":\"about des\",\"seo_about_key\":\"about key\",\"seo_contact_title\":\"contact title\",\"seo_contact_des\":\"contact des\",\"seo_contact_key\":\"contact key\",\"seo_activities_title\":\"activities title\",\"seo_activities_des\":\"activities des\",\"seo_activities_key\":\"activities key\",\"seo_addmission_title\":\"addmission title\",\"seo_addmission_des\":\"addmission des\",\"seo_addmission_key\":\"addmission key\",\"seo_application_title\":\"application title\",\"seo_application_des\":\"application des\",\"seo_application_key\":\"application key\",\"seo_facility_title\":\"facility title\",\"seo_facility_des\":\"facility des\",\"seo_facility_key\":\"facility key\",\"seo_fees_title\":\"fee title\",\"seo_fees_des\":\"fee des\",\"seo_fees_key\":\"fee key\",\"seo_gallery_title\":\"gallery title\",\"seo_gallery_des\":\"gallery des\",\"seo_gallery_key\":\"gallery key\",\"seo_user-login_title\":null,\"seo_user-login_des\":null,\"seo_user-login_key\":null,\"seo_user-signup_title\":null,\"seo_user-signup_des\":null,\"seo_user-signup_key\":null,\"seo_admission_procedure_title\":\"Seo Admission Procedure title\",\"seo_admission_procedure_des\":\"Seo Admission Procedure des\",\"seo_admission_procedure_key\":\"Seo Admission Procedure key\",\"seo_e_labrary_title\":\"seo_e_labrary_title\",\"seo_e_labrary_des\":\"seo e labrary des\",\"seo_e_labraby_key\":\"seo e labrary key\",\"seo_title_blog\":\"blog\",\"seo_des_blog\":\"blog\",\"seo_key_blog\":\"blog\",\"beyond_academic_title\":\"Seo Beyound Academic title\",\"beyond_academic_des\":\"Seo Beyound Academic des\",\"beyond_academic_key\":\"Seo Beyound Academic key\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"_method\":\"PUT\"}', '2025-03-05 05:54:23', '2025-03-05 05:54:23'),
+(860, 1, 'admin/seos/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 05:54:24', '2025-03-05 05:54:24'),
+(861, 1, 'admin/seos/1', 'PUT', '127.0.0.1', '{\"seo_home_title\":\"home Title\",\"seo_home_des\":\"home des\",\"seo_home_key\":\"home key\",\"seo_about_title\":\"about title\",\"seo_about_des\":\"about des\",\"seo_about_key\":\"about key\",\"seo_contact_title\":\"contact title\",\"seo_contact_des\":\"contact des\",\"seo_contact_key\":\"contact key\",\"seo_activities_title\":\"activities title\",\"seo_activities_des\":\"activities des\",\"seo_activities_key\":\"activities key\",\"seo_addmission_title\":\"addmission title\",\"seo_addmission_des\":\"addmission des\",\"seo_addmission_key\":\"addmission key\",\"seo_application_title\":\"application title\",\"seo_application_des\":\"application des\",\"seo_application_key\":\"application key\",\"seo_facility_title\":\"facility title\",\"seo_facility_des\":\"facility des\",\"seo_facility_key\":\"facility key\",\"seo_fees_title\":\"fee title\",\"seo_fees_des\":\"fee des\",\"seo_fees_key\":\"fee key\",\"seo_gallery_title\":\"gallery title\",\"seo_gallery_des\":\"gallery des\",\"seo_gallery_key\":\"gallery key\",\"seo_user-login_title\":\"Seo user login title\",\"seo_user-login_des\":\"Seo user login des\",\"seo_user-login_key\":\"Seo user login key\",\"seo_user-signup_title\":\"Seo user signup title\",\"seo_user-signup_des\":\"Seo user signup des\",\"seo_user-signup_key\":\"Seo user signup key\",\"seo_admission_procedure_title\":\"Seo Admission Procedure title\",\"seo_admission_procedure_des\":\"Seo Admission Procedure des\",\"seo_admission_procedure_key\":\"Seo Admission Procedure key\",\"seo_e_labrary_title\":\"seo_e_labrary_title\",\"seo_e_labrary_des\":\"seo e labrary des\",\"seo_e_labraby_key\":\"seo e labrary key\",\"seo_title_blog\":\"blog\",\"seo_des_blog\":\"blog\",\"seo_key_blog\":\"blog\",\"beyond_academic_title\":\"Seo Beyound Academic title\",\"beyond_academic_des\":\"Seo Beyound Academic des\",\"beyond_academic_key\":\"Seo Beyound Academic key\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"_method\":\"PUT\"}', '2025-03-05 05:55:40', '2025-03-05 05:55:40'),
+(862, 1, 'admin/seos/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 05:55:41', '2025-03-05 05:55:41'),
+(863, 1, 'admin/seos/1', 'PUT', '127.0.0.1', '{\"seo_home_title\":\"home Title\",\"seo_home_des\":\"home des\",\"seo_home_key\":\"home key\",\"seo_about_title\":\"about title\",\"seo_about_des\":\"about des\",\"seo_about_key\":\"about key\",\"seo_contact_title\":\"contact title\",\"seo_contact_des\":\"contact des\",\"seo_contact_key\":\"contact key\",\"seo_activities_title\":\"activities title\",\"seo_activities_des\":\"activities des\",\"seo_activities_key\":\"activities key\",\"seo_addmission_title\":\"addmission title\",\"seo_addmission_des\":\"addmission des\",\"seo_addmission_key\":\"addmission key\",\"seo_application_title\":\"application title\",\"seo_application_des\":\"application des\",\"seo_application_key\":\"application key\",\"seo_facility_title\":\"facility title\",\"seo_facility_des\":\"facility des\",\"seo_facility_key\":\"facility key\",\"seo_fees_title\":\"fee title\",\"seo_fees_des\":\"fee des\",\"seo_fees_key\":\"fee key\",\"seo_gallery_title\":\"gallery title\",\"seo_gallery_des\":\"gallery des\",\"seo_gallery_key\":\"gallery key\",\"seo_user-login_title\":\"Seo user login title\",\"seo_user-login_des\":\"Seo user login des\",\"seo_user-login_key\":\"Seo user login key\",\"seo_user-signup_title\":\"Seo user signup title\",\"seo_user-signup_des\":\"Seo user signup des\",\"seo_user-signup_key\":\"Seo user signup key\",\"seo_admission_procedure_title\":\"Seo Admission Procedure title\",\"seo_admission_procedure_des\":\"Seo Admission Procedure des\",\"seo_admission_procedure_key\":\"Seo Admission Procedure key\",\"seo_e_labrary_title\":\"seo_e_labrary_title\",\"seo_e_labrary_des\":\"seo e labrary des\",\"seo_e_labraby_key\":\"seo e labrary key\",\"seo_title_blog\":\"blog\",\"seo_des_blog\":\"blog\",\"seo_key_blog\":\"blog\",\"beyond_academic_title\":\"Seo Beyound Academic title\",\"beyond_academic_des\":\"Seo Beyound Academic des\",\"beyond_academic_key\":\"Seo Beyound Academic key\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"_method\":\"PUT\"}', '2025-03-05 05:55:45', '2025-03-05 05:55:45'),
+(864, 1, 'admin/seos/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 05:55:46', '2025-03-05 05:55:46'),
+(865, 1, 'admin/seos/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 05:56:27', '2025-03-05 05:56:27'),
+(866, 1, 'admin/seos/1', 'PUT', '127.0.0.1', '{\"seo_home_title\":\"home Title\",\"seo_home_des\":\"home des\",\"seo_home_key\":\"home key\",\"seo_about_title\":\"about title\",\"seo_about_des\":\"about des\",\"seo_about_key\":\"about key\",\"seo_contact_title\":\"contact title\",\"seo_contact_des\":\"contact des\",\"seo_contact_key\":\"contact key\",\"seo_activities_title\":\"activities title\",\"seo_activities_des\":\"activities des\",\"seo_activities_key\":\"activities key\",\"seo_addmission_title\":\"addmission title\",\"seo_addmission_des\":\"addmission des\",\"seo_addmission_key\":\"addmission key\",\"seo_application_title\":\"application title\",\"seo_application_des\":\"application des\",\"seo_application_key\":\"application key\",\"seo_facility_title\":\"facility title\",\"seo_facility_des\":\"facility des\",\"seo_facility_key\":\"facility key\",\"seo_fees_title\":\"fee title\",\"seo_fees_des\":\"fee des\",\"seo_fees_key\":\"fee key\",\"seo_gallery_title\":\"gallery title\",\"seo_gallery_des\":\"gallery des\",\"seo_gallery_key\":\"gallery key\",\"seo_user_login_title\":\"login title\",\"seo_user_login_des\":\"login des\",\"seo_user_login_key\":\"login key\",\"seo_user_signup_title\":\"signup title\",\"seo_user_signup_des\":\"signup  des\",\"seo_user_signup_key\":\"signup  key\",\"seo_admission_procedure_title\":\"Seo Admission Procedure title\",\"seo_admission_procedure_des\":\"Seo Admission Procedure des\",\"seo_admission_procedure_key\":\"Seo Admission Procedure key\",\"seo_e_labrary_title\":\"seo_e_labrary_title\",\"seo_e_labrary_des\":\"seo e labrary des\",\"seo_e_labraby_key\":\"seo e labrary key\",\"seo_title_blog\":\"blog\",\"seo_des_blog\":\"blog\",\"seo_key_blog\":\"blog\",\"beyond_academic_title\":\"Seo Beyound Academic title\",\"beyond_academic_des\":\"Seo Beyound Academic des\",\"beyond_academic_key\":\"Seo Beyound Academic key\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"_method\":\"PUT\"}', '2025-03-05 05:56:46', '2025-03-05 05:56:46'),
+(867, 1, 'admin/seos', 'GET', '127.0.0.1', '[]', '2025-03-05 05:56:46', '2025-03-05 05:56:46'),
+(868, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 06:29:50', '2025-03-05 06:29:50'),
+(869, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"beyond_academic\",\"model_name\":\"App\\\\Models\\\\BeyondAcademic\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\BeyondAcademicController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":{\"0\":{\"name\":\"banner_image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},\"3\":{\"name\":\"banner_alt\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},\"1\":{\"name\":\"image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},\"2\":{\"name\":\"alt\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},\"4\":{\"name\":\"heading_title\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},\"5\":{\"name\":\"vidoe_link\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},\"6\":{\"name\":\"contant\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}},\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\"}', '2025-03-05 06:32:35', '2025-03-05 06:32:35'),
+(870, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 06:32:36', '2025-03-05 06:32:36'),
+(871, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2025-03-05 06:34:54', '2025-03-05 06:34:54'),
+(872, 1, 'admin/quick-facts', 'GET', '127.0.0.1', '[]', '2025-03-05 06:34:57', '2025-03-05 06:34:57'),
+(873, 1, 'admin/beyond-academics', 'GET', '127.0.0.1', '[]', '2025-03-05 06:34:59', '2025-03-05 06:34:59'),
+(874, 1, 'admin/beyond-academics/create', 'GET', '127.0.0.1', '[]', '2025-03-05 06:35:02', '2025-03-05 06:35:02'),
+(875, 1, 'admin/beyond-academics', 'POST', '127.0.0.1', '{\"banner_alt\":\"banner art\",\"alt\":\"image\",\"heading_title\":\"Art & craft\",\"vidoe_link\":null,\"contant\":\"<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage..<\\/p>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ul>\\r\\n\\r\\n<ol>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ol>\\r\\n\\r\\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage. There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.<\\/p>\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\"}', '2025-03-05 06:37:25', '2025-03-05 06:37:25'),
+(876, 1, 'admin/beyond-academics', 'GET', '127.0.0.1', '[]', '2025-03-05 06:37:25', '2025-03-05 06:37:25'),
+(877, 1, 'admin/beyond-academics', 'GET', '127.0.0.1', '[]', '2025-03-05 06:38:31', '2025-03-05 06:38:31'),
+(878, 1, 'admin/beyond-academics/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 06:38:33', '2025-03-05 06:38:33'),
+(879, 1, 'admin/beyond-academics/1', 'PUT', '127.0.0.1', '{\"banner_alt\":\"banner art\",\"alt\":\"image\",\"heading_title\":\"Art & craft\",\"slug\":null,\"vidoe_link\":null,\"contant\":\"<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage..<\\/p>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ul>\\r\\n\\r\\n<ol>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ol>\\r\\n\\r\\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage. There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.<\\/p>\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"_method\":\"PUT\"}', '2025-03-05 06:38:35', '2025-03-05 06:38:35'),
+(880, 1, 'admin/beyond-academics', 'GET', '127.0.0.1', '[]', '2025-03-05 06:38:36', '2025-03-05 06:38:36'),
+(881, 1, 'admin/beyond-academics', 'GET', '127.0.0.1', '[]', '2025-03-05 06:39:09', '2025-03-05 06:39:09'),
+(882, 1, 'admin/beyond-academics', 'GET', '127.0.0.1', '[]', '2025-03-05 06:39:28', '2025-03-05 06:39:28'),
+(883, 1, 'admin/beyond-academics/1/edit', 'GET', '127.0.0.1', '[]', '2025-03-05 06:53:58', '2025-03-05 06:53:58'),
+(884, 1, 'admin/beyond-academics/1', 'PUT', '127.0.0.1', '{\"banner_alt\":\"banner art\",\"alt\":\"image\",\"heading_title\":\"Art & craft\",\"slug\":\"art-craft\",\"vidoe_link\":\"https:\\/\\/www.youtube.com\\/embed\\/-5krrl0eiKc?si=OU2BP1t1d86ksS74\",\"contant\":\"<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage..<\\/p>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ul>\\r\\n\\r\\n<ol>\\r\\n\\t<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.<\\/li>\\r\\n\\t<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.<\\/li>\\r\\n<\\/ol>\\r\\n\\r\\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage. There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.<\\/p>\",\"_token\":\"7PbGIPFLkzmnJoV7Sc51tKGXeqDCPPJvqy3F8A6o\",\"_method\":\"PUT\"}', '2025-03-05 06:54:06', '2025-03-05 06:54:06'),
+(885, 1, 'admin/beyond-academics', 'GET', '127.0.0.1', '[]', '2025-03-05 06:54:07', '2025-03-05 06:54:07');
 
 -- --------------------------------------------------------
 
@@ -826,7 +1088,9 @@ INSERT INTO `admin_role_menu` (`role_id`, `menu_id`, `created_at`, `updated_at`)
 (1, 2, NULL, NULL),
 (1, 15, NULL, NULL),
 (1, 30, NULL, NULL),
-(1, 31, NULL, NULL);
+(1, 31, NULL, NULL),
+(1, 35, NULL, NULL),
+(1, 36, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -962,6 +1226,93 @@ INSERT INTO `application_form` (`id`, `fname`, `lname`, `father_name`, `mother_n
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `beyond_academic`
+--
+
+CREATE TABLE `beyond_academic` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `banner_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `heading_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `video_image` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `vidoe_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contant` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `beyond_academic`
+--
+
+INSERT INTO `beyond_academic` (`id`, `banner_image`, `banner_alt`, `image`, `alt`, `heading_title`, `slug`, `video_image`, `vidoe_link`, `contant`, `created_at`, `updated_at`) VALUES
+(1, 'images/istockphoto-950887376-612x612.jpg', 'banner art', 'images/M3791-The-Benefits-of-Preschool-Featured-Image-qmwkvv7svsw6proauxbob0a3nvs1v1q0y3w6gbqb2g (1).jpg', 'image', 'Art & craft', 'art-craft', 'images/istockphoto-950887376-612x612_1.jpg', 'https://www.youtube.com/embed/-5krrl0eiKc?si=OU2BP1t1d86ksS74', '<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage..</p>\r\n\r\n<ul>\r\n	<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.</li>\r\n	<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.</li>\r\n</ul>\r\n\r\n<ol>\r\n	<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.</li>\r\n	<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.</li>\r\n</ol>\r\n\r\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage. There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.</p>', '2025-03-05 06:37:25', '2025-03-05 06:54:07');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `category_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `short_content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_keyword` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `question` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `answer` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `category_id`, `title`, `slug`, `short_content`, `image`, `alt`, `url`, `description`, `seo_title`, `seo_description`, `seo_keyword`, `question`, `answer`, `created_at`, `updated_at`) VALUES
+(1, '1', 'Necessitatibus sit a', 'necessitatibus-sit-a', 'Quisquam minim ipsum', 'images/education-10-proven-classroom-management-blog-s.jpg', 'Pariatur Cum error', 'https://www.gutiwotu.tv', '<h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>\r\n\r\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage..</p>\r\n\r\n<ul>\r\n	<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.</li>\r\n	<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.</li>\r\n</ul>\r\n\r\n<ol>\r\n	<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.</li>\r\n	<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.</li>\r\n</ol>\r\n\r\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage. There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.</p>', 'Modi suscipit repell', 'Et et deleniti facil', 'Consequat Officia m', 'Voluptatem adipisci', 'Ratione do asperiore', '2025-03-05 01:22:35', '2025-03-05 01:22:35'),
+(2, '2', 'In molestias et eum', 'in-molestias-et-eum', 'Ut minus animi aut', 'images/M3791-The-Benefits-of-Preschool-Featured-Image-qmwkvv7svsw6proauxbob0a3nvs1v1q0y3w6gbqb2g_1.jpg', 'Laborum Molestias n', 'https://www.towyge.ws', '<h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>\r\n\r\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage..</p>\r\n\r\n<ul>\r\n	<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.</li>\r\n	<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.</li>\r\n</ul>\r\n\r\n<ol>\r\n	<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit repellendus, nulla amet sapiente numquam delectus tempore molestiae aspernatur velit.</li>\r\n	<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In tenetur dicta obcaecati culpa ea ipsum repudiandae recusandae quia accusantium esse.</li>\r\n</ol>\r\n\r\n<p>There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage. There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words which don&#39;t look even slightly believable. If you are going to use passage.</p>', 'Soluta voluptates qu', 'Magna irure vel volu', 'Voluptatibus non qua', 'Eum labore consequat', 'Temporibus id sint', '2025-03-05 03:31:07', '2025-03-05 03:31:25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blog_category`
+--
+
+CREATE TABLE `blog_category` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_key` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `blog_category`
+--
+
+INSERT INTO `blog_category` (`id`, `name`, `slug`, `description`, `seo_title`, `seo_des`, `seo_key`, `created_at`, `updated_at`) VALUES
+(1, 'Blog 1', 'blog-1', NULL, 'title', 'des', 'key', '2025-03-05 00:38:40', '2025-03-05 00:39:04'),
+(2, 'Blog 2', 'blog-2', NULL, 'title', 'des', 'key', '2025-03-05 00:38:59', '2025-03-05 00:38:59');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `classes`
 --
 
@@ -984,10 +1335,10 @@ CREATE TABLE `classes` (
 --
 
 INSERT INTO `classes` (`id`, `name`, `slug`, `image`, `alt`, `description`, `created_at`, `seo_title`, `seo_des`, `seo_key`, `updated_at`) VALUES
-(1, 'Class 1', 'class-1', 'images/unnamed.webp', 'class 1', NULL, '2025-03-04 03:20:48', '0', '0', '0', '2025-03-04 03:23:37'),
-(2, 'Class 2', 'class-2', 'images/unnamed (1).webp', 'class 2', NULL, '2025-03-04 03:23:29', '0', '0', '0', '2025-03-04 03:23:29'),
-(3, 'Class 3', 'class-3', 'images/unnamed (2).webp', 'class 3', NULL, '2025-03-04 03:23:55', '0', '0', '0', '2025-03-04 03:23:55'),
-(4, 'Class 4', 'class-4', 'images/unnamed (3).webp', 'class 4', NULL, '2025-03-04 03:24:10', '0', '0', '0', '2025-03-04 03:24:10');
+(1, 'Class 1', 'class-1', 'images/unnamed.webp', 'class 1', NULL, '2025-03-04 03:20:48', 'Class 1', 'Class 1', 'Class 1', '2025-03-05 13:45:36'),
+(2, 'Class 2', 'class-2', 'images/unnamed (1).webp', 'class 2', NULL, '2025-03-04 03:23:29', 'Class 2', 'Class 2', 'Class 2', '2025-03-05 13:45:53'),
+(3, 'Class 3', 'class-3', 'images/unnamed (2).webp', 'class 3', NULL, '2025-03-04 03:23:55', 'Class 3', 'Class 3', 'Class 3', '2025-03-05 13:46:09'),
+(4, 'Class 4', 'class-4', 'images/unnamed (3).webp', 'class 4', NULL, '2025-03-04 03:24:10', 'Class 4', 'Class 4', 'Class 4', '2025-03-05 13:46:24');
 
 -- --------------------------------------------------------
 
@@ -1113,6 +1464,26 @@ INSERT INTO `faq` (`id`, `question`, `answer`, `created_at`, `updated_at`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `fees_structure`
+--
+
+CREATE TABLE `fees_structure` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `fees_structure_content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `fees_structure`
+--
+
+INSERT INTO `fees_structure` (`id`, `fees_structure_content`, `created_at`, `updated_at`) VALUES
+(1, '<ul>\r\n	<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>\r\n	<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>\r\n	<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>\r\n	<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>\r\n	<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>\r\n	<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>\r\n	<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>\r\n	<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>\r\n	<li>&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>\r\n</ul>', '2025-03-05 05:36:36', '2025-03-05 05:36:36');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `gallery_image`
 --
 
@@ -1225,7 +1596,12 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (19, '2025_03_04_074355_create_class_table', 15),
 (20, '2025_03_04_074439_create_classes_table', 16),
 (21, '2025_03_04_090724_create_elibrary_table', 17),
-(22, '2025_03_04_115024_create_admission_procedure_table', 18);
+(22, '2025_03_04_115024_create_admission_procedure_table', 18),
+(23, '2025_03_05_062547_create_blog_category_table', 19),
+(24, '2025_03_05_063047_create_blogs_table', 20),
+(25, '2025_03_05_105837_create_fees_structure_table', 21),
+(26, '2025_03_05_110340_create_fees_structure_table', 22),
+(27, '2025_03_05_120235_create_beyond_academic_table', 23);
 
 -- --------------------------------------------------------
 
@@ -1332,22 +1708,34 @@ CREATE TABLE `seo` (
   `seo_gallery_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_gallery_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_gallery_key` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_user-login_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_user-login_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_user-login_key` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_user-signup_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_user-signup_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_user-signup_key` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_user_login_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_user_login_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_user_login_key` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_user_signup_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_user_signup_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_user_signup_key` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `seo_admission_procedure_title` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_admission_procedure_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_admission_procedure_key` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_e_labrary_title` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_e_labrary_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_e_labraby_key` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_title_blog` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_des_blog` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_key_blog` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `beyond_academic_title` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `beyond_academic_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `beyond_academic_key` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `seo`
 --
 
-INSERT INTO `seo` (`id`, `seo_home_title`, `seo_home_des`, `seo_home_key`, `seo_about_title`, `seo_about_des`, `seo_about_key`, `seo_contact_title`, `seo_contact_des`, `seo_contact_key`, `seo_activities_title`, `seo_activities_des`, `seo_activities_key`, `seo_addmission_title`, `seo_addmission_des`, `seo_addmission_key`, `seo_application_title`, `seo_application_des`, `seo_application_key`, `seo_facility_title`, `seo_facility_des`, `seo_facility_key`, `seo_fees_title`, `seo_fees_des`, `seo_fees_key`, `seo_gallery_title`, `seo_gallery_des`, `seo_gallery_key`, `seo_user-login_title`, `seo_user-login_des`, `seo_user-login_key`, `seo_user-signup_title`, `seo_user-signup_des`, `seo_user-signup_key`, `created_at`, `updated_at`) VALUES
-(1, 'home Title', 'home des', 'home key', 'about title', 'about des', 'about key', 'contact title', 'contact des', 'contact key', 'activities title', 'activities des', 'activities key', 'addmission title', 'addmission des', 'addmission key', 'application title', 'application des', 'application key', 'facility title', 'facility des', 'facility key', 'fee title', 'fee des', 'fee key', 'gallery title', 'gallery des', 'gallery key', 'login title', 'login des', 'login key', 'signup title', 'signup  des', 'signup  key', '2025-02-28 05:25:30', '2025-02-28 05:25:30');
+INSERT INTO `seo` (`id`, `seo_home_title`, `seo_home_des`, `seo_home_key`, `seo_about_title`, `seo_about_des`, `seo_about_key`, `seo_contact_title`, `seo_contact_des`, `seo_contact_key`, `seo_activities_title`, `seo_activities_des`, `seo_activities_key`, `seo_addmission_title`, `seo_addmission_des`, `seo_addmission_key`, `seo_application_title`, `seo_application_des`, `seo_application_key`, `seo_facility_title`, `seo_facility_des`, `seo_facility_key`, `seo_fees_title`, `seo_fees_des`, `seo_fees_key`, `seo_gallery_title`, `seo_gallery_des`, `seo_gallery_key`, `seo_user_login_title`, `seo_user_login_des`, `seo_user_login_key`, `seo_user_signup_title`, `seo_user_signup_des`, `seo_user_signup_key`, `created_at`, `updated_at`, `seo_admission_procedure_title`, `seo_admission_procedure_des`, `seo_admission_procedure_key`, `seo_e_labrary_title`, `seo_e_labrary_des`, `seo_e_labraby_key`, `seo_title_blog`, `seo_des_blog`, `seo_key_blog`, `beyond_academic_title`, `beyond_academic_des`, `beyond_academic_key`) VALUES
+(1, 'home Title', 'home des', 'home key', 'about title', 'about des', 'about key', 'contact title', 'contact des', 'contact key', 'activities title', 'activities des', 'activities key', 'addmission title', 'addmission des', 'addmission key', 'application title', 'application des', 'application key', 'facility title', 'facility des', 'facility key', 'fee title', 'fee des', 'fee key', 'gallery title', 'gallery des', 'gallery key', 'login title', 'login des', 'login key', 'signup title', 'signup  des', 'signup  key', '2025-02-28 05:25:30', '2025-03-05 05:56:46', 'Seo Admission Procedure title', 'Seo Admission Procedure des', 'Seo Admission Procedure key', 'seo_e_labrary_title', 'seo e labrary des', 'seo e labrary key', 'blog', 'blog', 'blog', 'Seo Beyound Academic title', 'Seo Beyound Academic des', 'Seo Beyound Academic key');
 
 -- --------------------------------------------------------
 
@@ -1511,6 +1899,24 @@ ALTER TABLE `application_form`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `beyond_academic`
+--
+ALTER TABLE `beyond_academic`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blogs`
+--
+ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blog_category`
+--
+ALTER TABLE `blog_category`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `classes`
 --
 ALTER TABLE `classes`
@@ -1545,6 +1951,12 @@ ALTER TABLE `failed_jobs`
 -- Indexes for table `faq`
 --
 ALTER TABLE `faq`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fees_structure`
+--
+ALTER TABLE `fees_structure`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1636,13 +2048,13 @@ ALTER TABLE `activities`
 -- AUTO_INCREMENT for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=630;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=886;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -1666,12 +2078,30 @@ ALTER TABLE `admin_users`
 -- AUTO_INCREMENT for table `admission_procedure`
 --
 ALTER TABLE `admission_procedure`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `application_form`
 --
 ALTER TABLE `application_form`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `beyond_academic`
+--
+ALTER TABLE `beyond_academic`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `blog_category`
+--
+ALTER TABLE `blog_category`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -1711,6 +2141,12 @@ ALTER TABLE `faq`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `fees_structure`
+--
+ALTER TABLE `fees_structure`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `gallery_image`
 --
 ALTER TABLE `gallery_image`
@@ -1732,7 +2168,7 @@ ALTER TABLE `homebanner`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`

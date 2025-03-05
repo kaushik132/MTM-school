@@ -12,17 +12,10 @@
 <!-- ================================ How to Apply =================================== -->
 <section class="mt-5">
 <div class="container">
-        <ul class="admission-check-list">
-            <li><i class="bi bi-check-circle-fill text-success"></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, impedit.</li>
-         </ul>
+    @foreach ($fees as $fee)
+    
+    <p>{!!$fee->fees_structure_content!!}</p> 
+    @endforeach
     
 </div>
     
