@@ -27,6 +27,7 @@ Route::group([
     $router->resource('class-models', ClassContoller::class);
     $router->resource('elibraries', ElibraryController::class);
     $router->resource('admission-procedures', AdmissionProcedureController::class);
+    $router->resource('blog-categories', BlogCategoryController::class);
 
 
 });
