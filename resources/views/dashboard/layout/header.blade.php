@@ -72,7 +72,27 @@
                     </ul>
                 </li>
                 <li class="nav-link-item"><a href="{{url('gallery')}}">Gallery</a></li>
-                <li class="nav-link-item"><a href="{{url('beyond-academic')}}">Beyond Academic</a></li>
+
+                <li class="nav-link-item dropdown-menu-branch">
+                    <a href="#" data-toggle="dropdown-menu">Beyond Academic <i class="fa-solid fa-chevron-down"></i></a>
+
+                    @php
+                        
+use App\Models\BeyondAcademic;
+$beoacc = BeyondAcademic::all();
+
+                    @endphp
+                    <ul class="dropdown-main-menu">
+        
+                            @foreach ($beoacc as $ba)
+                                
+                            <li class="dropdown-menu-item"><a href="{{url('beyond-academic/'.$ba->slug)}}">{{$ba->heading_title}}</a></li>
+                            @endforeach
+                              
+                    </ul>
+                </li>
+
+
                 <li class="nav-link-item"><a href="{{url('activities')}}">Activities</a></li>
                 <li class="nav-link-item"><a href="{{url('about-us')}}">About Us</a></li>
                 <li class="nav-link-item"><a href="{{url('contact-us')}}">Contact us</a></li>

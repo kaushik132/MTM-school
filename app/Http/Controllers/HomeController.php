@@ -36,6 +36,7 @@ class HomeController extends Controller
         $quickFacts = QuickFacts::first();
         $galleryVideos = GalleryVideo::orderBy('created_at', 'desc')->limit(1)->get();
         $wcus = WhyChooseUs::limit(6)->get();
+ 
 
         $homepage = Seo::first();
         $seo_data['seo_title'] = $homepage->seo_home_title;
